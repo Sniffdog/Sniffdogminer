@@ -6,7 +6,9 @@ Please change startsniff.bat to YOUR information concerning MiningPoolHub ie: Us
 
 Workername will be on zpool and hashrefinery as ID=(your Workername)
 
-Start bat file is set for BTC... You can change to your currency
+Startsniff.bat file is set for BTC... You can change to your currency (Make sure you use the same wallet address as currency)
+
+Decide which pool to mine at by -Poolname in Startsniff.bat
 
 Donate is set for 5 minutes... to turn off set start bat file to -Donate 0 (only 5 minutes a day)
 
