@@ -11,7 +11,4 @@ Thank you to aaronsace for devoloping and maintaining "MultiPoolMiner" and Thank
 
 This is a free project feel free to donate be much appreciated: 1MsrCoAt8qM53HUMsUxvy9gMj3QVbHLazH
 
-
-
-
-
+Attached is readme file for more info
