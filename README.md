@@ -3,7 +3,7 @@ Thanks to Arronsace and NemosMiner --SniffDog-- has been created to Monitor Mini
 
 #Auto Benchmarks Each algo to get optimal speeds and benches throughout monitoring 
 
-#Fully automated / Set And Forget / 
+#Fully automated / Set And Forget in Startsniff.bat/ 
 
 #Auto Downloads Miners /   
 
