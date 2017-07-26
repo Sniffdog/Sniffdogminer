@@ -1,1 +1,0 @@
-powershell -version 5.0 -noexit -executionpolicy bypass -windowstyle maximized -command "&.\Ultimate_final.ps1 -Username Tyredas -Workername Grrr -Currency BTC -interval 240 -Wallet 1AMQg6m9GPDN9HGuC3wJGpSuiZr1XQXjxi -Location US -PoolName zpool,hash -Type nvidia -Algorithm skein,Nist5,neoscrypt,skunk -Donate 5
