@@ -4,7 +4,7 @@
     [Parameter(Mandatory=$false)]
     [String]$UserName = "Tyredas", 
     [Parameter(Mandatory=$false)]
-    [String]$WorkerName = "Beeboop", 
+    [String]$WorkerName = "Sniffdog", 
     [Parameter(Mandatory=$false)]
     [Int]$API_ID = 0, 
     [Parameter(Mandatory=$false)]
@@ -59,7 +59,7 @@ if(Test-Path "Stats"){Get-ChildItemContent "Stats" | ForEach {$Stat = Set-Stat $
 $LastDonated = (Get-Date).AddDays(-1).AddHours(1)
 $WalletDonate = "1AMQg6m9GPDN9HGuC3wJGpSuiZr1XQXjxi"
 $UserNameDonate = "1AMQg6m9GPDN9HGuC3wJGpSuiZr1XQXjxi"
-$WorkerNameDonate = "Grrrr"
+$WorkerNameDonate = "Sniffdog"
 $WalletBackup = $Wallet
 $UserNameBackup = $UserName
 $WorkerNameBackup = $WorkerName
