@@ -42,7 +42,7 @@ $Optimizations = [PSCustomObject]@{
     Keccak = ''
     Scrypt = ''
     jha = ''
-    Skunk = ''
+    Skunk = ' -i 24'
 }
 
 $Algorithms | Get-Member -MemberType NoteProperty | Select -ExpandProperty Name | ForEach {
