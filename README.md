@@ -1,4 +1,7 @@
 # SniffDog-Zpool,MiningPoolHub,HashRefinery
+
+*This is Windows software designed for Nvidia
+
 Thanks to Arronsace and NemosMiner --SniffDog-- has been created to Monitor MiningPoolHub,Zpool, and HashRefinery mining pools in real-time in order to find the most profitable Algo /
 
 Auto Benchmarks Each algo to get optimal speeds and benches throughout monitoring 
