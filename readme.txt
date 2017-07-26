@@ -1,6 +1,6 @@
 Few things to note:
 
-Malaware tried to steal Zcash miner...I had to exempt sniffdog folder before running Startsniff.bat
+Malaware tried to steal Zcash miner...You may have to exempt sniffdog folder before running Startsniff.bat
 
 Please change startsniff.bat to YOUR information concerning MiningPoolHub ie: Username and Workername
 
