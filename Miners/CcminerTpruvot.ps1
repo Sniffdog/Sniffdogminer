@@ -29,7 +29,7 @@ $Algorithms = [PSCustomObject]@{
     #Veltor = 'veltor'
     #X11evo = 'x11evo'
     Timetravel = 'timetravel'
-    #Blakcoin = 'blakecoin'
+    Blakecoin = 'blakecoin'
     #Lbry = 'lbry'
     Jha = 'jha'
 }
