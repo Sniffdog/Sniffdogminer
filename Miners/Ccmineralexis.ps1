@@ -12,25 +12,26 @@ $Algorithms = [PSCustomObject]@{
     #Yescrypt = 'yescrypt'
     #BlakeVanilla = 'vanilla'
     #Lyra2RE2 = 'lyra2v2'
-    #Skein = 'skein'
+    Skein = 'skein'
     #Qubit = 'qubit'
     #NeoScrypt = 'neoscrypt'
     #X11 = 'x11'
-    #MyriadGroestl = 'myr-gr'
+    MyriadGroestl = 'myr-gr'
     #Groestl = 'groestl'
-    #Keccak = 'keccak'
+    Keccak = 'keccak'
     #Scrypt = 'scrypt'
     #Bitcore = 'bitcore'
-    #Blake2s = 'blake2s'
-    #Sib = 'sib'
-    #X17 = 'x17'
+    Blake2s = 'blake2s'
+    Sib = 'sib'
+    X17 = 'x17'
     #Quark = 'quark'
     #Hmq1725 = 'hmq1725'
     #Veltor = 'veltor'
-    #X11evo = 'x11evo'
+    X11evo = 'x11evo'
     #Timetravel = 'timetravel'
-    #Blakcoin = 'blakecoin'
+    Blakecoin = 'blakecoin'
     Lbry = 'lbry'
+    C11 = 'c11'
 }
 
 $Optimizations = [PSCustomObject]@{
@@ -61,6 +62,7 @@ $Optimizations = [PSCustomObject]@{
     Timetravel = ''
     Blakecoin = ''
     Lbry = ''
+    C11 = ''
 }
 
 $Algorithms | Get-Member -MemberType NoteProperty | Select -ExpandProperty Name | ForEach {
