@@ -1,6 +1,6 @@
 # SniffDog-Zpool,MiningPoolHub,HashRefinery
 
-*This is Windows software designed for Nvidia
+*This is Windows software designed for Nvidia 1080ti
 
 Thanks to Arronsace and NemosMiner --SniffDog-- has been created to Monitor MiningPoolHub,Zpool, and HashRefinery mining pools in real-time in order to find the most profitable Algo /
 
@@ -12,6 +12,6 @@ Auto Downloads Miners /
 
 Thank you to aaronsace for devoloping and maintaining "MultiPoolMiner" and Thank you nemosminer for maintaining "NemosMiner"
 
-This is a free project feel free to donate be much appreciated: 1MsrCoAt8qM53HUMsUxvy9gMj3QVbHLazH
+This is a free project feel free to donate be much appreciated. Arronance btc address: 1MsrCoAt8qM53HUMsUxvy9gMj3QVbHLazH
 
 Attached is readme file for more info
