@@ -6,7 +6,15 @@ Thanks to Arronsace and NemosMiner --SniffDog-- has been created to Monitor Mini
 
 Auto Benchmarks Each algo to get optimal speeds and benches throughout monitoring 
 
-Fully automated / Set And Forget in Startsniff.bat/ 
+Fully automated / Set And Forget in Startsniff.bat/
+
+How to set in StartSniff.bat:
+
+1) Choose the algos you wish to mine and let SniffDog benchmark
+
+2) Then go back into StartSniff.bat and select which pool you wish to be at and interal you would like the auto switch set at
+
+3) Go out with your friends and enjoy life! This is designed to catch market rise on coins when your not there!
 
 Auto Downloads Miners /   
 
