@@ -31,6 +31,7 @@ $Algorithms = [PSCustomObject]@{
     Timetravel = 'timetravel'
     Blakcoin = 'blakecoin'
     Lbry = 'lbry'
+    Jha = 'jha'
 }
 
 $Optimizations = [PSCustomObject]@{
@@ -61,6 +62,7 @@ $Optimizations = [PSCustomObject]@{
     Timetravel = ''
     Blakecoin = ''
     Lbry = ''
+    Jha = ''
 }
 
 $Algorithms | Get-Member -MemberType NoteProperty | Select -ExpandProperty Name | ForEach {
