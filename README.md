@@ -1,8 +1,8 @@
-# SniffDog-Zpool,MiningPoolHub,HashRefinery
+# SniffDog-Zpool, MiningPoolHub, HashRefinery
 
 *This is Windows software designed for Nvidia 1080ti
 
-Thanks to Arronsace and NemosMiner --SniffDog-- has been created to Monitor MiningPoolHub,Zpool, and HashRefinery mining pools in real-time in order to find the most profitable Algo /
+Thanks to Arronsace and NemosMiner --SniffDog-- has been created to Monitor MiningPoolHub, Zpool, and HashRefinery mining pools in real-time in order to find the most profitable Algo /
 
 Auto Benchmarks Each algo to get optimal speeds and benches throughout monitoring 
 
@@ -20,7 +20,7 @@ How to set in StartSniff.bat:
 
 5) Then go back into StartSniff.bat and select which pool you wish to be at and interval you would like the auto switch set at
 
-6) Go out with your friends and enjoy life! This is designed to catch market rise on coins when your not there!
+6) Go out with your friends and enjoy life! This is designed to catch market rise on coins when you're not there!
 
 Auto Downloads Miners /   
 
