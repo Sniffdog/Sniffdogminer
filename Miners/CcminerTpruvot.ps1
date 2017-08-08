@@ -32,7 +32,7 @@ $Algorithms = [PSCustomObject]@{
     #Blakecoin = 'blakecoin'
     #Lbry = 'lbry'
     Jha = 'jha'
-    Veltor 'veltor'
+    Veltor = 'veltor'
 }
 
 $Optimizations = [PSCustomObject]@{
