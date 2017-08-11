@@ -21,7 +21,7 @@ $Algorithms = [PSCustomObject]@{
     #Keccak = 'keccak'
     #Scrypt = 'scrypt'
     #jha = 'jha'
-    Skunk = 'skunk'
+    #Skunk = 'skunk'
 }
 
 $Optimizations = [PSCustomObject]@{
