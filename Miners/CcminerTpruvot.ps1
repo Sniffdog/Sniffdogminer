@@ -15,27 +15,6 @@ $Algorithms = [PSCustomObject]@{
     #Qubit = 'qubit'
     NeoScrypt = 'neoscrypt'
     #X11 = 'x11'
-    #MyriadGroestl = 'myr'
-
-
-
-
-
-$Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
-
-$Algorithms = [PSCustomObject]@{
-    Lyra2z = 'lyra2z'
-    #Equihash = 'equihash' #not supported
-    Cryptonight = 'cryptonight'
-    #Ethash = 'ethash' #not supported
-    #Sia = 'sia'
-    #Yescrypt = 'yescrypt'
-    #BlakeVanilla = 'vanilla'
-    #Lyra2RE2 = 'lyra2v2'
-    #Skein = 'skein'
-    #Qubit = 'qubit'
-    NeoScrypt = 'neoscrypt'
-    #X11 = 'x11'
     #MyriadGroestl = 'myr-gr'
     #Groestl = 'groestl'
     #Keccak = 'keccak'
