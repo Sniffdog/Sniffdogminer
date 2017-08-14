@@ -53,6 +53,9 @@ $Algorithms = [PSCustomObject]@{
     #Lbry = 'lbry'
     Jha = 'jha'
     Veltor = 'veltor'
+    Tribus = 'tribus'
+    Skunk = 'skunk'
+    
 }
 
 $Optimizations = [PSCustomObject]@{
@@ -84,6 +87,8 @@ $Optimizations = [PSCustomObject]@{
     Blakecoin = ''
     Lbry = ''
     Jha = ''
+    Tribus = ''
+    Skunk = ''
 }
 
 $Algorithms | Get-Member -MemberType NoteProperty | Select -ExpandProperty Name | ForEach {
