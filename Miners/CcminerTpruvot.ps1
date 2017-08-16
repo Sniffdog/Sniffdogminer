@@ -32,7 +32,7 @@ $Algorithms = [PSCustomObject]@{
     #Blakecoin = 'blakecoin'
     #Lbry = 'lbry'
     Jha = 'jha'
-    Skunk = 'skunk'
+    #Skunk = 'skunk'
     Tribus = 'tribus'
 }
 
