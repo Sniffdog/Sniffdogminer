@@ -54,7 +54,7 @@ $Algorithms = [PSCustomObject]@{
     Jha = 'jha'
     Veltor = 'veltor'
     Tribus = 'tribus'
-    Skunk = 'skunk'
+    #Skunk = 'skunk'
     
 }
 
