@@ -14,7 +14,7 @@ $Algorithms = [PSCustomObject]@{
     #Lyra2RE2 = 'lyra2v2'
     #Skein = 'skein'
     #Qubit = 'qubit'
-    NeoScrypt = 'neoscrypt'
+    #NeoScrypt = 'neoscrypt'
     #X11 = 'x11'
     #MyriadGroestl = 'myr-gr'
     #Groestl = 'groestl'
@@ -32,7 +32,7 @@ $Algorithms = [PSCustomObject]@{
     #Blakecoin = 'blakecoin'
     #Lbry = 'lbry'
     Jha = 'jha'
-    #Skunk = 'skunk'
+    Skunk = 'skunk'
     Tribus = 'tribus'
 }
 
