@@ -25,16 +25,16 @@ $Commands = [PSCustomObject]@{
     #"qubit" = "" #Qubit
     #"scrypt" = "" #Scrypt
     #"sia" = "" #Sia
-    #"sib" = "" #Sib
+    "sib" = "" #Sib
     #"skein" = "" #Skein
     #"timetravel" = "" #Timetravel
     #"x11" = "" #X11
     "veltor" = "" #Veltor
-    #"x11evo" = "" #X11evo
+    "x11evo" = "" #X11evo
     #"x17" = "" #X17
     #"yescrypt" = "" #Yescrypt
     #"quark" = "" #Quark
-    "skunk" = "" #skunk
+    #"skunk" = "" #skunk
     #"c11" = "" #C11
 }
 
