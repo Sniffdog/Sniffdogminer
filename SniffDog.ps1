@@ -17,10 +17,6 @@
     [Switch]$SSL = $false, 
     [Parameter(Mandatory=$false)]
     [Array]$Type = $null, #AMD/NVIDIA/CPU
-    [Parameter(Mandatory=$false)] 
-    [String]$SplitSniffEWBF = "0", 
-    [Parameter(Mandatory=$false)] 
-    [String]$SplitSniffCC = "0",
     [Parameter(Mandatory=$false)]
     [Array]$Algorithm = $null, #i.e. Ethash,Equihash,Cryptonight ect.
     [Parameter(Mandatory=$false)]
