@@ -37,9 +37,9 @@ $Algorithms = [PSCustomObject]@{
 }
 
 $Optimizations = [PSCustomObject]@{
-    Lyra2z = '--api-remote --api-allow=0/0'
+    Lyra2z = ' --api-remote --api-allow=0/0'
     Equihash = ''
-    Cryptonight = '--api-remote --api-allow=0/0'
+    Cryptonight = ' --api-remote --api-allow=0/0'
     Ethash = ''
     Sia = ''
     Yescrypt = ''
@@ -53,20 +53,20 @@ $Optimizations = [PSCustomObject]@{
     Groestl = ''
     Keccak = ''
     Scrypt = ''
-    Bitcore = '--api-remote --api-allow=0/0'
+    Bitcore = ' --api-remote --api-allow=0/0'
     Blake2s = ''
     Sib = ''
     X17 = ''
     Quark = ''
-    Hmq1725 = '--api-remote --api-allow=0/0'
+    Hmq1725 = ' --api-remote --api-allow=0/0'
     Veltor = ''
     X11evo = ''
-    Timetravel = '--api-remote --api-allow=0/0'
+    Timetravel = ' --api-remote --api-allow=0/0'
     Blakecoin = ''
     Lbry = ''
-    Jha = '--api-remote --api-allow=0/0'
-    Skunk = '--api-remote --api-allow=0/0'
-    Tribus = '--api-remote --api-allow=0/0'
+    Jha = ' --api-remote --api-allow=0/0'
+    Skunk = ' --api-remote --api-allow=0/0'
+    Tribus = ' --api-remote --api-allow=0/0'
 }
 
 $Algorithms | Get-Member -MemberType NoteProperty | Select -ExpandProperty Name | ForEach {
