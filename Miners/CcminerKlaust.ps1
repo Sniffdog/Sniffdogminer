@@ -34,13 +34,13 @@ $Optimizations = [PSCustomObject]@{
     Lyra2RE2 = ''
     Skein = ''
     Qubit = ''
-    NeoScrypt = ' -d $SplitSniffCC'
+    NeoScrypt = ''
     X11 = ''
     MyriadGroestl = ''
-    Groestl = ' -d $SplitSniffCC'
+    Groestl = ''
     Keccak = ''
     Scrypt = ''
-    Nist5 = ' -d $SplitSniffCC'
+    Nist5 = ''
 }
 
 $Algorithms | Get-Member -MemberType NoteProperty | Select -ExpandProperty Name | ForEach {
