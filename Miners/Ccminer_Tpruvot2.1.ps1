@@ -1,6 +1,6 @@
 . .\Include.ps1
 
-$Path = ".\Bin\NVIDIA-Djm34\ccminer-x64.exe"
+$Path = ".\Bin\NVIDIA-Tpruvot2.1\ccminer.exe"
 $Uri = "https://github.com/tpruvot/ccminer/releases/download/2.2.1-tpruvot/ccminer-x86-2.2.1-cuda9.7z"
 
 $Commands = [PSCustomObject]@{
