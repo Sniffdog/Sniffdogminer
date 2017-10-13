@@ -308,7 +308,8 @@ while($true)
         @{Label = "Speed"; Expression={$_.HashRate | ForEach {"$($_ | ConvertTo-Hash)/s"}}; Align='right'}, 
         @{Label = "Active"; Expression={"{0:dd} Days {0:hh} Hours {0:mm} Minutes" -f $(if($_.Process -eq $null){$_.Active}else{if($_.Process.HasExited){($_.Active)}else{($_.Active+((Get-Date)-$_.Process.StartTime))}})}}, 
         @{Label = "Launched"; Expression={Switch($_.Activated){0 {"Never"} 1 {"Once"} Default {"$_ Times"}}}}, 
-        @{Label = "Algorithm"; Expression={$_.HashRates.PSObject.Properties.Name}}
+        @{Label = "Algorithm"; Expression={$_.Algorithms}},
+        @{Label = "Command"; Expression={if($_.Status -eq "Running"){"$($_.Path.TrimStart((Convert-Path ".\"))) $($_.Arguments)"}}}
     ) | Out-Host
 
     #Do nothing for a few seconds as to not overload the APIs
