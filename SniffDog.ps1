@@ -12,7 +12,9 @@
     [Parameter(Mandatory=$false)]
     [Int]$Interval = 90, #seconds before reading hash rate from miners
     [Parameter(Mandatory=$false)]
-    [String]$Location = "europe", #europe/us/asia
+    [String]$Location = "US", #europe/us/asia
+    [Parameter(Mandatory=$false)]
+    [String]$MPHLocation = "US", #europe/us/asia
     [Parameter(Mandatory=$false)]
     [Switch]$SSL = $false, 
     [Parameter(Mandatory=$false)]
@@ -20,7 +22,11 @@
     [Parameter(Mandatory=$false)]
     [Array]$Algorithm = $null, #i.e. Ethash,Equihash,Cryptonight ect.
     [Parameter(Mandatory=$false)]
-    [Array]$MinerName = $null, 
+    [Array]$MinerName = $null,
+    [Parameter(Mandatory=$false)] 
+    [String]$SplitSniffEWBF = "0", 
+    [Parameter(Mandatory=$false)] 
+    [String]$SplitSniffCC = "0",
     [Parameter(Mandatory=$false)]
     [Array]$PoolName = $null, 
     [Parameter(Mandatory=$false)]

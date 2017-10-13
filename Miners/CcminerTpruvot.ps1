@@ -1,5 +1,5 @@
 ﻿$Path = '.\Bin\NVIDIA-TPruvot\ccminer-x64.exe'
-$Uri = 'https://github.com/Sniffdog/Sniffdogminer/releases/download/1.9/ccminer-x64-2.2.1.zip'
+$Uri = 'https://github.com/tpruvot/ccminer/releases/download/2.2.2-tpruvot/ccminer-x64-2.2.2-cuda9.7z'
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
 
@@ -34,12 +34,14 @@ $Algorithms = [PSCustomObject]@{
     Jha = 'jha'
     Skunk = 'skunk'
     Tribus = 'tribus'
+    Phi = 'phi'
+    Hsr = 'hsr'
 }
 
 $Optimizations = [PSCustomObject]@{
-    Lyra2z = ''
+    Lyra2z = ' --api-remote --api-allow=0/0'
     Equihash = ''
-    Cryptonight = ''
+    Cryptonight = ' --api-remote --api-allow=0/0'
     Ethash = ''
     Sia = ''
     Yescrypt = ''
@@ -53,20 +55,23 @@ $Optimizations = [PSCustomObject]@{
     Groestl = ''
     Keccak = ''
     Scrypt = ''
-    Bitcore = ''
+    Bitcore = ' --api-remote --api-allow=0/0'
     Blake2s = ''
     Sib = ''
     X17 = ''
     Quark = ''
-    Hmq1725 = ''
+    Hmq1725 = ' --api-remote --api-allow=0/0'
     Veltor = ''
     X11evo = ''
-    Timetravel = ''
+    Timetravel = ' --api-remote --api-allow=0/0'
     Blakecoin = ''
     Lbry = ''
-    Jha = ''
-    Skunk = ''
-    Tribus = ''
+    Jha = ' --api-remote --api-allow=0/0'
+    Skunk = ' --api-remote --api-allow=0/0'
+    Tribus = ' --api-remote --api-allow=0/0'
+    Phi = ' --api-remote --api-allow=0/0'
+    Hsr = ' --api-remote --api-allow=0/0'
+    
 }
 
 $Algorithms | Get-Member -MemberType NoteProperty | Select -ExpandProperty Name | ForEach {
