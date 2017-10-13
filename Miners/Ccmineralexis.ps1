@@ -31,7 +31,7 @@ $Algorithms = [PSCustomObject]@{
     #Timetravel = 'timetravel'
     Blakecoin = 'blakecoin'
     Lbry = 'lbry'
-    C11 = 'c11'
+    #C11 = 'c11'
     Nist5 = 'nist5'
 }
 
