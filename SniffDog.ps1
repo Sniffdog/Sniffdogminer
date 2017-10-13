@@ -2,7 +2,7 @@
     [Parameter(Mandatory=$false)]
     [String]$Wallet, 
     [Parameter(Mandatory=$false)]
-    [String]$UserName = "Tyredas", 
+    [String]$UserName = "PutYourMiningPoolHubUserNameHere", 
     [Parameter(Mandatory=$false)]
     [String]$WorkerName = "Sniffdog", 
     [Parameter(Mandatory=$false)]
@@ -28,13 +28,13 @@
     [Parameter(Mandatory=$false)] 
     [String]$SplitSniffCC = "0",
     [Parameter(Mandatory=$false)]
-    [Array]$PoolName = $null, 
+    [Array]$PoolName = "ahashpool", 
     [Parameter(Mandatory=$false)]
-    [Array]$Currency = ("EUR"), #i.e. GBP,EUR,ZEC,ETH ect.
+    [Array]$Currency = ("CNY"), #i.e. GBP,EUR,ZEC,ETH ect.
     [Parameter(Mandatory=$false)]
     [Array]$Passwordcurrency = ("BTC"), #i.e. BTC,LTC,ZEC,ETH ect.
     [Parameter(Mandatory=$false)]
-    [Int]$Donate = 5, #Minutes per Day
+    [Int]$Donate = 0, #Minutes per Day
     [Parameter(Mandatory=$false)]
     [String]$Proxy = "", #i.e http://192.0.0.1:8080 
     [Parameter(Mandatory=$false)]
