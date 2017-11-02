@@ -1,16 +1,30 @@
-Few things to note:
+# SniffDog www.ahashpool.com
 
-Malaware tried to steal Zcash miner...You may have to exempt sniffdog folder before running Startsniff.bat
+*This is Windows software designed for Nvidia 1080ti
 
-Please change startsniff.bat to YOUR information concerning MiningPoolHub ie: Username and Workername
+Thanks to Arronsace and NemosMiner --SniffDog-- has been created to Monitor AHashPool.com mining pools in real-time in order to find the most profitable Algo /
 
-Workername will be on zpool and hashrefinery as ID=(your Workername)
+Auto Benchmarks Each algo to get optimal speeds and benches throughout monitoring 
 
-Startsniff.bat file is set for BTC... You can change to your currency (Make sure you use the same wallet address as currency)
+Fully automated / Set And Forget in Startsniff.bat/
 
-Decide which pool to mine at by -Poolname in Startsniff.bat
+How to set in StartSniff.bat:
 
-Donate is set for 5 minutes... to turn off set start bat file to -Donate 0 (only 5 minutes a day)
+1) Place your Bitcoin BTC address after -u in StartSniff.bat
+
+2) Input your -Workername to StartSniff.bat (your Workername will also be used at ahashpool for identification of your rig)
+
+4) Choose the algos you wish to mine and let SniffDog benchmark
+
+5) Then go back into StartSniff.bat and select which algo you wish to mine and what interval (in seconds) you would like the auto switch set at
+
+6) Go out with your friends and enjoy life! This is designed to catch market rise on coins when you're not there!
+
+Auto Downloads Miners /   
+
+Thank you to aaronsace for devoloping and maintaining "MultiPoolMiner" and Thank you nemosminer for maintaining "NemosMiner"
+
+This is a free project feel free to donate be much appreciated. Arronance btc address: 1MsrCoAt8qM53HUMsUxvy9gMj3QVbHLazH
 
 If you have Windows 7, please update PowerShell:
 https://www.microsoft.com/en-us/download/details.aspx?id=50395
