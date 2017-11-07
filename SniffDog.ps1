@@ -30,7 +30,7 @@
     [Parameter(Mandatory=$false)]
     [Array]$PoolName = "ahashpool", 
     [Parameter(Mandatory=$false)]
-    [Array]$Currency = ("CNY"), #i.e. GBP,EUR,ZEC,ETH ect.
+    [Array]$Currency = ("USD"),
     [Parameter(Mandatory=$false)]
     [Array]$Passwordcurrency = ("BTC"), #i.e. BTC,LTC,ZEC,ETH ect.
     [Parameter(Mandatory=$false)]
