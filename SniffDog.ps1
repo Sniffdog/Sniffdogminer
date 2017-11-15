@@ -10,7 +10,7 @@
     [Parameter(Mandatory=$false)]
     [String]$API_Key = "", 
     [Parameter(Mandatory=$false)]
-    [Int]$Interval = 90, #seconds before reading hash rate from miners
+    [Int]$Interval = 300, #seconds before reading hash rate from miners
     [Parameter(Mandatory=$false)]
     [String]$Location = "US", #europe/us/asia
     [Parameter(Mandatory=$false)]
@@ -252,6 +252,8 @@ while($true)
                 New = $false
                 Active = [TimeSpan]0
                 Activated = 0
+                Failed30sLater = 0
+                Recover30sLater = 0
                 Status = "Idle"
                 HashRate = 0
                 Benchmarked = 0
@@ -311,9 +313,35 @@ while($true)
         @{Label = "Algorithm"; Expression={$_.Algorithms}},
         @{Label = "Command"; Expression={if($_.Status -eq "Running"){"$($_.Path.TrimStart((Convert-Path ".\"))) $($_.Arguments)"}}}
     ) | Out-Host
+   
+    #Do nothing for 15 seconds, and check if ccminer is actually running
+    $CheckMinerInterval = 15
+    Sleep ($CheckMinerInterval)
+    $ActiveMinerPrograms | ForEach {
+        if($_.Process -eq $null -or $_.Process.HasExited)
+        {
+            if($_.Status -eq "Running"){
+                $_.Failed30sLater++
+                
+                if($_.Wrap){$_.Process = Start-Process -FilePath "PowerShell" -ArgumentList "-executionpolicy bypass -command . '$(Convert-Path ".\Wrapper.ps1")' -ControllerProcessID $PID -Id '$($_.Port)' -FilePath '$($_.Path)' -ArgumentList '$($_.Arguments)' -WorkingDirectory '$(Split-Path $_.Path)'" -PassThru}
+                else{$_.Process = Start-SubProcess -FilePath $_.Path -ArgumentList $_.Arguments -WorkingDirectory (Split-Path $_.Path)}
+                
+                Sleep ($CheckMinerInterval)
+                if($_.Process -eq $null -or $_.Process.HasExited) {
+                    continue
+                } else {
+                    $_.Recover30sLater++
+                }
+            }
+        }
+    }
 
-    #Do nothing for a few seconds as to not overload the APIs
-    Sleep $Interval
+    #Do nothing for a set Interval to allow miner to run
+    If ([int]$Interval -gt [int]$CheckMinerInterval) {
+        Sleep ($Interval-$CheckMinerInterval)
+    } else {
+        Sleep ($Interval)
+    }
 
     #Save current hash rates
     $ActiveMinerPrograms | ForEach {
