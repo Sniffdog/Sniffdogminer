@@ -2,7 +2,7 @@
     [Parameter(Mandatory=$false)]
     [String]$Wallet, 
     [Parameter(Mandatory=$false)]
-    [String]$UserName = "Tyredas", 
+    [String]$UserName = "PutYourMiningPoolHubUserNameHere", 
     [Parameter(Mandatory=$false)]
     [String]$WorkerName = "Sniffdog", 
     [Parameter(Mandatory=$false)]
@@ -10,7 +10,7 @@
     [Parameter(Mandatory=$false)]
     [String]$API_Key = "", 
     [Parameter(Mandatory=$false)]
-    [Int]$Interval = 90, #seconds before reading hash rate from miners
+    [Int]$Interval = 300, #seconds before reading hash rate from miners
     [Parameter(Mandatory=$false)]
     [String]$Location = "US", #europe/us/asia
     [Parameter(Mandatory=$false)]
@@ -28,13 +28,13 @@
     [Parameter(Mandatory=$false)] 
     [String]$SplitSniffCC = "0",
     [Parameter(Mandatory=$false)]
-    [Array]$PoolName = $null, 
+    [Array]$PoolName = "ahashpool", 
     [Parameter(Mandatory=$false)]
-    [Array]$Currency = ("EUR"), #i.e. GBP,EUR,ZEC,ETH ect.
+    [Array]$Currency = ("USD"),
     [Parameter(Mandatory=$false)]
     [Array]$Passwordcurrency = ("BTC"), #i.e. BTC,LTC,ZEC,ETH ect.
     [Parameter(Mandatory=$false)]
-    [Int]$Donate = 5, #Minutes per Day
+    [Int]$Donate = 0, #Minutes per Day
     [Parameter(Mandatory=$false)]
     [String]$Proxy = "", #i.e http://192.0.0.1:8080 
     [Parameter(Mandatory=$false)]
@@ -252,6 +252,8 @@ while($true)
                 New = $false
                 Active = [TimeSpan]0
                 Activated = 0
+                Failed30sLater = 0
+                Recover30sLater = 0
                 Status = "Idle"
                 HashRate = 0
                 Benchmarked = 0
@@ -308,11 +310,38 @@ while($true)
         @{Label = "Speed"; Expression={$_.HashRate | ForEach {"$($_ | ConvertTo-Hash)/s"}}; Align='right'}, 
         @{Label = "Active"; Expression={"{0:dd} Days {0:hh} Hours {0:mm} Minutes" -f $(if($_.Process -eq $null){$_.Active}else{if($_.Process.HasExited){($_.Active)}else{($_.Active+((Get-Date)-$_.Process.StartTime))}})}}, 
         @{Label = "Launched"; Expression={Switch($_.Activated){0 {"Never"} 1 {"Once"} Default {"$_ Times"}}}}, 
-        @{Label = "Command"; Expression={"$($_.Path.TrimStart((Convert-Path ".\"))) $($_.Arguments)"}}
+        @{Label = "Algorithm"; Expression={$_.Algorithms}},
+        @{Label = "Command"; Expression={if($_.Status -eq "Running"){"$($_.Path.TrimStart((Convert-Path ".\"))) $($_.Arguments)"}}}
     ) | Out-Host
+   
+    #Do nothing for 15 seconds, and check if ccminer is actually running
+    $CheckMinerInterval = 15
+    Sleep ($CheckMinerInterval)
+    $ActiveMinerPrograms | ForEach {
+        if($_.Process -eq $null -or $_.Process.HasExited)
+        {
+            if($_.Status -eq "Running"){
+                $_.Failed30sLater++
+                
+                if($_.Wrap){$_.Process = Start-Process -FilePath "PowerShell" -ArgumentList "-executionpolicy bypass -command . '$(Convert-Path ".\Wrapper.ps1")' -ControllerProcessID $PID -Id '$($_.Port)' -FilePath '$($_.Path)' -ArgumentList '$($_.Arguments)' -WorkingDirectory '$(Split-Path $_.Path)'" -PassThru}
+                else{$_.Process = Start-SubProcess -FilePath $_.Path -ArgumentList $_.Arguments -WorkingDirectory (Split-Path $_.Path)}
+                
+                Sleep ($CheckMinerInterval)
+                if($_.Process -eq $null -or $_.Process.HasExited) {
+                    continue
+                } else {
+                    $_.Recover30sLater++
+                }
+            }
+        }
+    }
 
-    #Do nothing for a few seconds as to not overload the APIs
-    Sleep $Interval
+    #Do nothing for a set Interval to allow miner to run
+    If ([int]$Interval -gt [int]$CheckMinerInterval) {
+        Sleep ($Interval-$CheckMinerInterval)
+    } else {
+        Sleep ($Interval)
+    }
 
     #Save current hash rates
     $ActiveMinerPrograms | ForEach {
@@ -322,10 +351,10 @@ while($true)
         }
         else
         {
-            $_.HashRate = 0  
-            $Miner_HashRates = $null  
-   
-            if($_.New){$_.Benchmarked++} 
+            $_.HashRate = 0
+            $Miner_HashRates = $null
+
+            if($_.New){$_.Benchmarked++}
 
             $Miner_HashRates = Get-HashRate $_.API $_.Port ($_.New -and $_.Benchmarked -lt 3)
 

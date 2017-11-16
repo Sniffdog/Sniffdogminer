@@ -31,8 +31,8 @@ $Algorithms = [PSCustomObject]@{
     #Timetravel = 'timetravel'
     Blakecoin = 'blakecoin'
     Lbry = 'lbry'
-    C11 = 'c11'
-    #Nist5 = 'nist5'
+    #C11 = 'c11'
+    Nist5 = 'nist5'
 }
 
 $Optimizations = [PSCustomObject]@{
@@ -43,10 +43,10 @@ $Optimizations = [PSCustomObject]@{
     Sia = ''
     Yescrypt = ''
     BlakeVanilla = ''
-    Lyra2RE2 = ''
-    Skein = ' --api-remote'
+    Lyra2RE2 = ' -i 24 --api-remote'
+    Skein = ' -i 28 --api-remote'
     Qubit = ''
-    NeoScrypt = ''
+    NeoScrypt = ' -i 15 --api-remote'
     X11 = ' --api-remote'
     MyriadGroestl = ' --api-remote'
     Groestl = ''
@@ -54,17 +54,17 @@ $Optimizations = [PSCustomObject]@{
     Scrypt = ''
     Bitcore = ''
     Blake2s = ' --api-remote'
-    Sib = ' --api-remote'
-    X17 = ' --api-remote'
+    Sib = ' -i 21 --api-remote'
+    X17 = ' -i 21 --api-remote'
     Quark = ''
     Hmq1725 = ''
     Veltor = ' --api-remote'
-    X11evo = ''
-    Timetravel = ''
+    X11evo = ' -i 21 --api-remote'
+    Timetravel = ' -i 25 --api-remote'
     Blakecoin = ' --api-remote'
-    Lbry = ' --api-remote'
+    Lbry = ' -i 28 --api-remote'
     C11 = ' --api-remote'
-    Nist5 = ''
+    Nist5 = ' -i 25 --api-remote'
 }
 
 $Algorithms | Get-Member -MemberType NoteProperty | Select -ExpandProperty Name | ForEach {
