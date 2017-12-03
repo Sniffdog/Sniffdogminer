@@ -39,7 +39,7 @@ $Algorithms = [PSCustomObject]@{
 }
 
 $Optimizations = [PSCustomObject]@{
-    Lyra2z = ' --api-remote --api-allow=0/0'
+    Lyra2z = ''
     Equihash = ''
     Cryptonight = ' --api-remote --api-allow=0/0'
     Ethash = ''
