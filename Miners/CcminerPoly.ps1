@@ -4,7 +4,7 @@ $Uri = 'https://github.com/punxsutawneyphil/ccminer/releases/download/polytimosv
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
 
 $Algorithms = [PSCustomObject]@{
-    Lyra2z = 'lyra2z'
+    #Lyra2z = 'lyra2z'
     #Equihash = 'equihash' #not supported
     Cryptonight = 'cryptonight'
     #Ethash = 'ethash' #not supported
