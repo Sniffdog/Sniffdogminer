@@ -36,6 +36,7 @@ $Algorithms = [PSCustomObject]@{
     Tribus = 'tribus'
     Phi = 'phi'
     Hsr = 'hsr'
+    Polytimos = 'polytimos'
 }
 
 $Optimizations = [PSCustomObject]@{
@@ -71,6 +72,7 @@ $Optimizations = [PSCustomObject]@{
     Tribus = ' --api-remote --api-allow=0/0'
     Phi = ' --api-remote --api-allow=0/0'
     Hsr = ' --api-remote --api-allow=0/0'
+    Polytimos = ' --api-remote --api-allow=0/0'
     
 }
 
