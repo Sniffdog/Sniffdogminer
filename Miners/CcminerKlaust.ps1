@@ -18,7 +18,7 @@ $Algorithms = [PSCustomObject]@{
     #X11 = 'x11' #use TpruvoT
     #MyriadGroestl = 'myr-gr'
     Groestl = 'groestl'
-    #Keccak = 'keccak' #use TpruvoT
+    Keccak = 'keccak' 
     #Scrypt = 'scrypt' #use TpruvoT
     #Nist5 = 'nist5'
 }
