@@ -1,5 +1,5 @@
 ﻿$Path = '.\Bin\NVIDIA-KlausT\ccminer.exe'
-$Uri = 'https://github.com/KlausT/ccminer/releases/download/8.15/ccminer-815-cuda9-x64.zip'
+$Uri = 'https://github.com/KlausT/ccminer/releases/download/8.16/ccminer-816-cuda91-x64.zip'
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
 
