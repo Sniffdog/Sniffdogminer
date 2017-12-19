@@ -30,8 +30,8 @@ $Commands = [PSCustomObject]@{
     #"tribus" = "" #Tribus
     #"veltor" = "" #Veltor
     #"x11evo" = "" #X11evo
-    "x17" = "" #X17
-    "yescrypt" = "" #Yescrypt
+    #"x17" = "" #X17
+    #"yescrypt" = "" #Yescrypt
 }
 
 $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty BaseName
