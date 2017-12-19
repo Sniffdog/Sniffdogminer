@@ -1,4 +1,4 @@
-﻿$Path = ".\Bin\CPU-JayDDee\cpuminer-sse42.exe"
+﻿$Path = ".\Bin\CPU-JayDDee\cpuminer-sse2.exe"
 $Uri = "https://github.com/JayDDee/cpuminer-opt/files/1565849/cpuminer-opt-3.7.7-windows.zip"
 
 $Commands = [PSCustomObject]@{
