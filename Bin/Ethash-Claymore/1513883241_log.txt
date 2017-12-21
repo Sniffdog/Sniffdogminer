@@ -1,0 +1,8 @@
+12:07:21:816	2db0	Check and remove old log files...
+12:07:21:819	2db0	args: -dpool us-east.ethash-hub.miningpoolhub.com:17020 -dwal Tyredas.Beeboop -dpsw x 
+12:07:21:820	2db0	
+12:07:21:821	2db0	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+12:07:21:822	2db0	บ     Claymore's Dual ETH + DCR/SC/LBC/PASC GPU Miner v10.2      บ
+12:07:21:823	2db0	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+12:07:21:824	2db0	
+12:07:22:039	2db0	ETH: No pools specified! Specify at least one valid pool in "-epool" parameter. 

@@ -1,0 +1,137 @@
+12:11:48:433	1ddc	Check and remove old log files...
+12:11:48:439	1ddc	args: -epool us-east.ethash-hub.miningpoolhub.com:17020 -ewal Tyredas.Beeboop -epsw x 
+12:11:48:439	1ddc	
+12:11:48:439	1ddc	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+12:11:48:439	1ddc	บ     Claymore's Dual ETH + DCR/SC/LBC/PASC GPU Miner v10.2      บ
+12:11:48:439	1ddc	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+12:11:48:439	1ddc	
+12:11:48:655	1ddc	ETH: 1 pool is specified
+12:11:48:655	1ddc	Main Ethereum pool is us-east.ethash-hub.miningpoolhub.com:17020
+12:11:48:655	1ddc	DCR: 0 pool is specified
+12:11:49:072	1ddc	OpenCL platform: NVIDIA CUDA
+12:11:49:072	1ddc	AMD OpenCL platform not found 
+12:11:49:241	1ddc	CUDA initializing...
+
+12:11:49:241	1ddc	NVIDIA Cards available: 2 
+12:11:49:241	1ddc	CUDA Driver Version/Runtime Version: 9.1/8.0
+12:11:49:241	1ddc	GPU #0: GeForce GTX 1070, 8192 MB available, 15 compute units, capability: 6.1
+
+12:11:49:241	1ddc	GPU #1: GeForce GTX 1080, 8192 MB available, 20 compute units, capability: 6.1
+
+12:11:49:241	1ddc	Total cards: 2 
+12:11:53:295	1ddc	No AMD cards in the list, ADL library will not be used.
+12:11:53:301	1ddc	NVML version: 9.388.59
+12:11:53:620	f74	ETH: Stratum - connecting to 'us-east.ethash-hub.miningpoolhub.com' <192.81.129.199> port 17020
+12:11:53:692	f74	send: {"worker": "eth1.0", "jsonrpc": "2.0", "params": ["Tyredas.Beeboop", "x"], "id": 2, "method": "eth_submitLogin"}
+
+12:11:53:695	f74	ETH: Stratum - Connected (us-east.ethash-hub.miningpoolhub.com:17020)
+12:11:53:699	1ddc	No pool specified for Decred! Ethereum-only mining mode is enabled
+12:11:53:701	1ddc	ETHEREUM-ONLY MINING MODE ENABLED (-mode 1)
+12:11:53:703	1ddc	ETH: eth-proxy stratum mode
+12:11:53:704	1ddc	Watchdog enabled
+12:11:53:706	1ddc	Remote management (READ-ONLY MODE) is enabled on port 3333
+12:11:53:708	1ddc	
+12:11:58:374	f74	checkread timeout
+12:12:03:048	f74	checkread timeout
+12:12:07:724	f74	checkread timeout
+12:12:12:399	f74	checkread timeout
+12:12:17:073	f74	checkread timeout
+12:12:18:797	122c	GPU0 t=32C fan=24%, GPU1 t=41C fan=0%
+12:12:21:158	28a8	em hbt: 27562, fm hbt: 47, 
+12:12:21:160	28a8	watchdog - thread 0 (gpu0), hb time 0
+12:12:21:161	28a8	watchdog - thread 1 (gpu0), hb time 0
+12:12:21:163	28a8	watchdog - thread 2 (gpu1), hb time 0
+12:12:21:164	28a8	watchdog - thread 3 (gpu1), hb time 0
+12:12:21:748	f74	checkread timeout
+12:12:26:423	f74	checkread timeout
+12:12:31:099	f74	checkread timeout
+12:12:35:774	f74	checkread timeout
+12:12:40:449	f74	checkread timeout
+12:12:40:451	f74	ETH: Job timeout, disconnect, retry in 20 sec...
+12:12:48:928	122c	GPU0 t=32C fan=24%, GPU1 t=43C fan=0%
+12:12:53:772	28a8	em hbt: 60172, fm hbt: 47, 
+12:12:53:774	28a8	watchdog - thread 0 (gpu0), hb time 94
+12:12:53:775	28a8	watchdog - thread 1 (gpu0), hb time 109
+12:12:53:776	28a8	watchdog - thread 2 (gpu1), hb time 109
+12:12:53:777	28a8	watchdog - thread 3 (gpu1), hb time 109
+12:13:00:471	f74	ETH: Stratum - connecting to 'us-east.ethash-hub.miningpoolhub.com' <192.81.129.199> port 17020
+12:13:00:530	f74	send: {"worker": "eth1.0", "jsonrpc": "2.0", "params": ["Tyredas.Beeboop", "x"], "id": 2, "method": "eth_submitLogin"}
+
+12:13:00:532	f74	ETH: Stratum - Connected (us-east.ethash-hub.miningpoolhub.com:17020)
+12:13:05:205	f74	checkread timeout
+12:13:09:877	f74	checkread timeout
+12:13:14:552	f74	checkread timeout
+12:13:19:058	122c	GPU0 t=32C fan=24%, GPU1 t=45C fan=0%
+12:13:19:227	f74	checkread timeout
+12:13:23:903	f74	checkread timeout
+12:13:26:389	28a8	em hbt: 25922, fm hbt: 47, 
+12:13:26:391	28a8	watchdog - thread 0 (gpu0), hb time 47
+12:13:26:392	28a8	watchdog - thread 1 (gpu0), hb time 47
+12:13:26:393	28a8	watchdog - thread 2 (gpu1), hb time 47
+12:13:26:395	28a8	watchdog - thread 3 (gpu1), hb time 47
+12:13:28:578	f74	checkread timeout
+12:13:33:253	f74	checkread timeout
+12:13:37:927	f74	checkread timeout
+12:13:42:604	f74	checkread timeout
+12:13:47:280	f74	checkread timeout
+12:13:47:281	f74	ETH: Job timeout, disconnect, retry in 20 sec...
+12:13:49:190	122c	GPU0 t=31C fan=24%, GPU1 t=46C fan=0%
+12:13:59:004	28a8	em hbt: 58531, fm hbt: 47, 
+12:13:59:005	28a8	watchdog - thread 0 (gpu0), hb time 109
+12:13:59:007	28a8	watchdog - thread 1 (gpu0), hb time 109
+12:13:59:008	28a8	watchdog - thread 2 (gpu1), hb time 125
+12:13:59:010	28a8	watchdog - thread 3 (gpu1), hb time 125
+12:14:07:299	f74	ETH: Stratum - connecting to 'us-east.ethash-hub.miningpoolhub.com' <192.81.129.199> port 17020
+12:14:07:360	f74	send: {"worker": "eth1.0", "jsonrpc": "2.0", "params": ["Tyredas.Beeboop", "x"], "id": 2, "method": "eth_submitLogin"}
+
+12:14:07:362	f74	ETH: Stratum - Connected (us-east.ethash-hub.miningpoolhub.com:17020)
+12:14:12:036	f74	checkread timeout
+12:14:16:711	f74	checkread timeout
+12:14:19:320	122c	GPU0 t=31C fan=24%, GPU1 t=48C fan=0%
+12:14:21:385	f74	checkread timeout
+12:14:26:060	f74	checkread timeout
+12:14:30:735	f74	checkread timeout
+12:14:31:619	28a8	em hbt: 24328, fm hbt: 47, 
+12:14:31:621	28a8	watchdog - thread 0 (gpu0), hb time 63
+12:14:31:622	28a8	watchdog - thread 1 (gpu0), hb time 63
+12:14:31:623	28a8	watchdog - thread 2 (gpu1), hb time 63
+12:14:31:625	28a8	watchdog - thread 3 (gpu1), hb time 63
+12:14:35:409	f74	checkread timeout
+12:14:40:085	f74	checkread timeout
+12:14:44:758	f74	checkread timeout
+12:14:49:432	f74	checkread timeout
+12:14:49:449	122c	GPU0 t=31C fan=24%, GPU1 t=49C fan=0%
+12:14:54:107	f74	checkread timeout
+12:14:54:109	f74	ETH: Job timeout, disconnect, retry in 20 sec...
+12:15:04:197	28a8	em hbt: 56906, fm hbt: 47, 
+12:15:04:199	28a8	watchdog - thread 0 (gpu0), hb time 62
+12:15:04:201	28a8	watchdog - thread 1 (gpu0), hb time 62
+12:15:04:203	28a8	watchdog - thread 2 (gpu1), hb time 62
+12:15:04:204	28a8	watchdog - thread 3 (gpu1), hb time 62
+12:15:14:120	f74	ETH: Stratum - connecting to 'us-east.ethash-hub.miningpoolhub.com' <192.81.129.199> port 17020
+12:15:14:180	f74	send: {"worker": "eth1.0", "jsonrpc": "2.0", "params": ["Tyredas.Beeboop", "x"], "id": 2, "method": "eth_submitLogin"}
+
+12:15:14:182	f74	ETH: Stratum - Connected (us-east.ethash-hub.miningpoolhub.com:17020)
+12:15:18:856	f74	checkread timeout
+12:15:19:572	122c	GPU0 t=31C fan=24%, GPU1 t=50C fan=0%
+12:15:23:531	f74	checkread timeout
+12:15:28:206	f74	checkread timeout
+12:15:32:881	f74	checkread timeout
+12:15:36:810	28a8	em hbt: 22687, fm hbt: 62, 
+12:15:36:812	28a8	watchdog - thread 0 (gpu0), hb time 62
+12:15:36:813	28a8	watchdog - thread 1 (gpu0), hb time 62
+12:15:36:814	28a8	watchdog - thread 2 (gpu1), hb time 62
+12:15:36:815	28a8	watchdog - thread 3 (gpu1), hb time 62
+12:15:37:555	f74	checkread timeout
+12:15:42:230	f74	checkread timeout
+12:15:46:904	f74	checkread timeout
+12:15:49:699	122c	GPU0 t=32C fan=24%, GPU1 t=51C fan=0%
+12:15:51:580	f74	checkread timeout
+12:15:56:255	f74	checkread timeout
+12:16:00:929	f74	checkread timeout
+12:16:00:931	f74	ETH: Job timeout, disconnect, retry in 20 sec...
+12:16:09:413	28a8	em hbt: 55281, fm hbt: 62, 
+12:16:09:415	28a8	watchdog - thread 0 (gpu0), hb time 31
+12:16:09:416	28a8	watchdog - thread 1 (gpu0), hb time 31
+12:16:09:418	28a8	watchdog - thread 2 (gpu1), hb time 31
+12:16:09:419	28a8	watchdog - thread 3 (gpu1), hb time 31

@@ -1,0 +1,457 @@
+13:24:14:589	3bc	Check and remove old log files...
+13:24:14:594	3bc	args: -r -1 -mport 23333 -epool us-east.ethash-hub.miningpoolhub.com:17020 -ewal Tyredas.Beeboop -eworker Tyredas.Beeboop -epsw x -dpool stratum+tcp://hub.miningpoolhub.com:20550 -dwal Tyredas.Beeboop -dpsw x -dcoin sc -esm 3 -allpools 1 -allcoins 1 -platform 2 
+13:24:14:594	3bc	
+13:24:14:594	3bc	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+13:24:14:594	3bc	บ     Claymore's Dual ETH + DCR/SC/LBC/PASC GPU Miner v10.2      บ
+13:24:14:594	3bc	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+13:24:14:610	3bc	
+13:24:14:826	3bc	ETH: 1 pool is specified
+13:24:14:826	3bc	Main Ethereum pool is us-east.ethash-hub.miningpoolhub.com:17020
+13:24:14:826	3bc	SC: 1 pool is specified
+13:24:14:826	3bc	Main Siacoin pool is hub.miningpoolhub.com:20550
+13:24:15:057	3bc	CUDA initializing...
+
+13:24:15:057	3bc	NVIDIA Cards available: 2 
+13:24:15:057	3bc	CUDA Driver Version/Runtime Version: 9.1/8.0
+13:24:15:057	3bc	GPU #0: GeForce GTX 1070, 8192 MB available, 15 compute units, capability: 6.1
+
+13:24:15:057	3bc	GPU #1: GeForce GTX 1080, 8192 MB available, 20 compute units, capability: 6.1
+
+13:24:15:057	3bc	Total cards: 2 
+13:24:19:101	3bc	No AMD cards in the list, ADL library will not be used.
+13:24:19:106	3bc	NVML version: 9.388.59
+13:24:19:425	2f80	ETH: Stratum - connecting to 'us-east.ethash-hub.miningpoolhub.com' <45.56.113.50> port 17020
+13:24:19:504	2f80	send: {"id": 1, "method": "mining.subscribe", "params": ["MinerName/1.0.0", "EthereumStratum/1.0.0"]}
+
+13:24:19:506	2f80	send: {"id": 5, "method": "mining.extranonce.subscribe", "params": []}
+
+13:24:19:508	2f80	send: {"id": 2, "method": "mining.authorize", "params": ["Tyredas.Beeboop","x"]}
+
+13:24:19:510	2f80	ETH: Stratum - Connected (us-east.ethash-hub.miningpoolhub.com:17020)
+13:24:19:520	3bc	DUAL MINING MODE ENABLED: ETHEREUM+SIACOIN
+13:24:19:522	3bc	ETH: nicehash stratum mode
+13:24:19:524	3bc	"-allpools" option is set, default pools can be used for devfee, check "Readme" file for details.
+13:24:19:525	3bc	"-allcoins" option is set, default pools will be used for devfee, check "Readme" file for details.
+13:24:19:527	3bc	Watchdog enabled
+13:24:19:529	3bc	Remote management is enabled on port 23333
+13:24:19:532	3bc	
+13:24:19:582	2f80	got 117 bytes
+13:24:19:583	2f80	buf: {"id":1,"result":[["mining.notify","deadbeefcafebabe8a43010000000000","EthereumStratum/1.0.0"],"0032"],"error":null}
+
+13:24:19:585	2f80	parse packet: 116
+13:24:19:587	2f80	new buf size: 0
+13:24:19:622	2e1c	 SC: Stratum - connecting to 'hub.miningpoolhub.com' <52.6.227.167> port 20550
+13:24:19:714	2e1c	send: {"id": 1, "method": "mining.subscribe", "params": []}
+
+13:24:19:716	2e1c	send: {"id": 5, "method": "mining.extranonce.subscribe", "params": []}
+
+13:24:19:717	2e1c	send: {"id": 2, "method": "mining.authorize", "params": ["Tyredas.Beeboop","x"]}
+
+13:24:19:719	2e1c	 SC: Stratum - Connected (hub.miningpoolhub.com:20550)
+13:24:19:721	2f80	got 36 bytes
+13:24:19:723	2f80	buf: {"id":2,"result":true,"error":null}
+
+13:24:19:724	2f80	parse packet: 35
+13:24:19:726	2f80	ETH: Authorized
+13:24:19:728	2f80	new buf size: 0
+13:24:19:799	2e1c	got 162 bytes
+13:24:19:801	2e1c	buf: {"id":1,"result":[[["mining.set_difficulty","deadbeefcafebabeabc10f0000000000"],["mining.notify","deadbeefcafebabeabc10f0000000000"]],"1ff08daf",4],"error":null}
+
+13:24:19:803	2e1c	parse packet: 161
+13:24:19:804	2e1c	new buf size: 0
+13:24:19:806	2e1c	got 294 bytes
+13:24:19:808	2e1c	buf: {"id":null,"method":"mining.notify","params":["29a0","0x0000000000000019753fd2f12f852e9b9a910a5c382db56b869c2cf32484f839000000000000000043183c5a00000000f0347bcdc573c2ccc52c3f50b0cd01fe492f9ec5543342f229c86e333cc3ae77","0x0000000012533fe68fd3d1cfe47445abdce0b117994feb3fbbe16e3d0f675ad9",true]}
+
+13:24:19:809	2e1c	parse packet: 293
+13:24:19:811	2e1c	sc: job changed
+13:24:19:812	2e1c	new buf size: 0
+13:24:19:830	2f80	got 270 bytes
+13:24:19:832	2f80	buf: {"id":null,"method":"mining.set_difficulty","params":[1.0011717677116394]}
+{"id":null,"method":"mining.notify","params":["94b7","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","5a6c969098a697c7075c65e2edc867007acf9551da325d4d3599770c2d80c9da",false]}
+
+13:24:19:833	2f80	parse packet: 74
+13:24:19:835	2f80	remove first packet 195
+13:24:19:837	2f80	new buf size: 195
+13:24:19:838	2f80	parse packet: 194
+13:24:19:840	2f80	ETH: job changed
+13:24:19:841	2f80	new buf size: 0
+13:24:19:892	2e1c	got 36 bytes
+13:24:19:894	2e1c	buf: {"id":2,"result":true,"error":null}
+
+13:24:19:894	2140	Setting DAG epoch #159...
+13:24:19:896	2e1c	parse packet: 35
+13:24:19:899	2e1c	 SC: Authorized
+13:24:19:900	2e1c	new buf size: 0
+13:24:23:310	2140	Setting DAG epoch #159 for GPU1
+13:24:23:311	1ce8	Setting DAG epoch #159 for GPU0
+13:24:23:314	2140	Create GPU buffer for GPU1
+13:24:23:316	1ce8	Create GPU buffer for GPU0
+13:24:25:059	2f80	got 195 bytes
+13:24:25:061	2f80	buf: {"id":null,"method":"mining.notify","params":["94b8","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","c7bb70c8cfa0709b3939eb02c967a74dcd3d0d61468e0e8b4ce4513b90da76a4",false]}
+
+13:24:25:063	2f80	parse packet: 194
+13:24:25:064	2f80	ETH: job changed
+13:24:25:066	2f80	new buf size: 0
+13:24:25:067	2f80	ETH: 12/21/17-13:24:25 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:24:25:069	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:24:25:071	2f80	ETH - Total Speed: 0.000 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:00
+13:24:25:072	2f80	ETH: GPU0 0.000 Mh/s, GPU1 0.000 Mh/s
+13:24:25:074	2f80	 SC - Total Speed: 0.000 Mh/s, Total Shares: 0, Rejected: 0
+13:24:25:076	2f80	 SC: GPU0 0.000 Mh/s, GPU1 0.000 Mh/s
+13:24:26:223	2e1c	got 294 bytes
+13:24:26:225	2e1c	buf: {"id":null,"method":"mining.notify","params":["29a1","0x0000000000000019753fd2f12f852e9b9a910a5c382db56b869c2cf32484f83900000000000000007a183c5a00000000e1642abb113bc7df779fae2082519260bc392e7c3c20782af01e4edb2da4b223","0x0000000012533fe68fd3d1cfe47445abdce0b117994feb3fbbe16e3d0f675ad9",true]}
+
+13:24:26:226	2e1c	parse packet: 293
+13:24:26:227	2e1c	sc: job changed(2)
+13:24:26:228	2e1c	new buf size: 0
+13:24:26:229	2e1c	 SC: 12/21/17-13:24:26 - New job from hub.miningpoolhub.com:20550
+13:24:26:231	2e1c	target: 0x0000000012533fe6 (diff: 60GH)
+13:24:30:399	1ce8	GPU0 DAG creation time - 6983 ms
+13:24:30:533	1ce8	Setting DAG epoch #159 for GPU0 done
+13:24:31:765	2f80	got 195 bytes
+13:24:31:767	2f80	buf: {"id":null,"method":"mining.notify","params":["94b9","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","5102ad751807bfe0a5f6d38a8f68f4a46af8e3c2fda8c9b5ad3bda8b33d283d2",false]}
+
+13:24:31:768	2f80	parse packet: 194
+13:24:31:770	2f80	ETH: job changed
+13:24:31:771	2f80	new buf size: 0
+13:24:31:773	2f80	ETH: 12/21/17-13:24:31 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:24:31:775	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:24:31:777	2f80	ETH - Total Speed: 26.446 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:00
+13:24:31:784	2f80	ETH: GPU0 26.446 Mh/s, GPU1 0.000 Mh/s
+13:24:31:786	2f80	 SC - Total Speed: 264.464 Mh/s, Total Shares: 0, Rejected: 0
+13:24:31:827	2f80	 SC: GPU0 264.464 Mh/s, GPU1 0.000 Mh/s
+13:24:32:196	2140	GPU1 DAG creation time - 8785 ms
+13:24:32:199	2140	Setting DAG epoch #159 for GPU1 done
+13:24:35:074	2f80	got 195 bytes
+13:24:35:076	2f80	buf: {"id":null,"method":"mining.notify","params":["94ba","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","90cb1b0bbf41c2e5b5b0c3724e32b80127763e59cfe19a7bb150f61e5f1ebec7",false]}
+
+13:24:35:077	2f80	parse packet: 194
+13:24:35:078	2f80	ETH: job changed
+13:24:35:079	2f80	new buf size: 0
+13:24:35:081	2f80	ETH: 12/21/17-13:24:35 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:24:35:083	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:24:35:085	2f80	ETH - Total Speed: 47.547 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:00
+13:24:35:092	2f80	ETH: GPU0 26.399 Mh/s, GPU1 21.148 Mh/s
+13:24:35:095	2f80	 SC - Total Speed: 475.469 Mh/s, Total Shares: 0, Rejected: 0
+13:24:35:100	2f80	 SC: GPU0 263.986 Mh/s, GPU1 211.483 Mh/s
+13:24:44:945	1954	GPU0 t=64C fan=31%, GPU1 t=66C fan=45%
+13:24:47:319	48c	em hbt: 0, dm hbt: 0, fm hbt: 78, 
+13:24:47:321	48c	watchdog - thread 0 (gpu0), hb time 62
+13:24:47:322	48c	watchdog - thread 1 (gpu0), hb time 172
+13:24:47:324	48c	watchdog - thread 2 (gpu1), hb time 62
+13:24:47:325	48c	watchdog - thread 3 (gpu1), hb time 250
+13:24:49:524	2f80	got 195 bytes
+13:24:49:525	2f80	buf: {"id":null,"method":"mining.notify","params":["94bb","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","30656d3b78ae6f6fa9336919813c3ae51624b0111950ea8c9fb713b71dd3972b",false]}
+
+13:24:49:527	2f80	parse packet: 194
+13:24:49:529	2f80	ETH: job changed
+13:24:49:530	2f80	new buf size: 0
+13:24:49:532	2f80	ETH: 12/21/17-13:24:49 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:24:49:534	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:24:49:540	2f80	ETH - Total Speed: 47.540 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:00
+13:24:49:542	2f80	ETH: GPU0 26.402 Mh/s, GPU1 21.138 Mh/s
+13:24:49:545	2f80	 SC - Total Speed: 475.399 Mh/s, Total Shares: 0, Rejected: 0
+13:24:49:547	2f80	 SC: GPU0 264.023 Mh/s, GPU1 211.376 Mh/s
+13:24:57:103	2f80	got 195 bytes
+13:24:57:105	2f80	buf: {"id":null,"method":"mining.notify","params":["94bc","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","c3b2b6c3e428d94de36c617c7b404976117253b7ca3f78353dce594765013c43",false]}
+
+13:24:57:107	2f80	parse packet: 194
+13:24:57:108	2f80	ETH: job changed
+13:24:57:109	2f80	new buf size: 0
+13:24:57:111	2f80	ETH: 12/21/17-13:24:57 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:24:57:113	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:24:57:114	2f80	ETH - Total Speed: 47.396 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:00
+13:24:57:118	2f80	ETH: GPU0 26.446 Mh/s, GPU1 20.949 Mh/s
+13:24:57:120	2f80	 SC - Total Speed: 473.956 Mh/s, Total Shares: 0, Rejected: 0
+13:24:57:123	2f80	 SC: GPU0 264.464 Mh/s, GPU1 209.492 Mh/s
+13:25:07:532	2f80	got 195 bytes
+13:25:07:535	2f80	buf: {"id":null,"method":"mining.notify","params":["94bd","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","e7985d8695722d2f16fafa029a56df7d8809c34632bbb5dd264e6ff4f01fd899",false]}
+
+13:25:07:537	2f80	parse packet: 194
+13:25:07:538	2f80	ETH: job changed
+13:25:07:539	2f80	new buf size: 0
+13:25:07:541	2f80	ETH: 12/21/17-13:25:07 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:25:07:543	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:25:07:545	2f80	ETH - Total Speed: 47.638 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:00
+13:25:07:552	2f80	ETH: GPU0 26.461 Mh/s, GPU1 21.177 Mh/s
+13:25:07:554	2f80	 SC - Total Speed: 476.375 Mh/s, Total Shares: 0, Rejected: 0
+13:25:07:561	2f80	 SC: GPU0 264.606 Mh/s, GPU1 211.769 Mh/s
+13:25:15:058	1954	GPU0 t=73C fan=44%, GPU1 t=68C fan=47%
+13:25:19:918	48c	em hbt: 0, dm hbt: 0, fm hbt: 78, 
+13:25:19:920	48c	watchdog - thread 0 (gpu0), hb time 63
+13:25:19:922	48c	watchdog - thread 1 (gpu0), hb time 172
+13:25:19:923	48c	watchdog - thread 2 (gpu1), hb time 188
+13:25:19:925	48c	watchdog - thread 3 (gpu1), hb time 16
+13:25:21:517	2e1c	got 294 bytes
+13:25:21:519	2e1c	buf: {"id":null,"method":"mining.notify","params":["29a2","0x0000000000000019753fd2f12f852e9b9a910a5c382db56b869c2cf32484f8390000000000000000b1183c5a000000008c080fad70424a9e01a5f3337e43a802d4850dd13735017eef80df44d2ab03b4","0x0000000012533fe68fd3d1cfe47445abdce0b117994feb3fbbe16e3d0f675ad9",true]}
+
+13:25:21:521	2e1c	parse packet: 293
+13:25:21:522	2e1c	sc: job changed(2)
+13:25:21:524	2e1c	new buf size: 0
+13:25:21:526	2e1c	 SC: 12/21/17-13:25:21 - New job from hub.miningpoolhub.com:20550
+13:25:21:527	2e1c	target: 0x0000000012533fe6 (diff: 60GH)
+13:25:23:163	2f80	got 195 bytes
+13:25:23:164	2f80	buf: {"id":null,"method":"mining.notify","params":["94be","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","56b9962d315db4fc4bf6e0dfab75e6076075e50a1b7537caafed66cdfe1d5694",false]}
+
+13:25:23:166	2f80	parse packet: 194
+13:25:23:167	2f80	ETH: job changed
+13:25:23:168	2f80	new buf size: 0
+13:25:23:170	2f80	ETH: 12/21/17-13:25:23 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:25:23:171	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:25:23:173	2f80	ETH - Total Speed: 47.607 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:01
+13:25:23:180	2f80	ETH: GPU0 26.433 Mh/s, GPU1 21.174 Mh/s
+13:25:23:182	2f80	 SC - Total Speed: 476.066 Mh/s, Total Shares: 0, Rejected: 0
+13:25:23:190	2f80	 SC: GPU0 264.329 Mh/s, GPU1 211.737 Mh/s
+13:25:43:373	2f80	got 195 bytes
+13:25:43:375	2f80	buf: {"id":null,"method":"mining.notify","params":["94bf","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","71f11e930dca892ab29be6d56fafc80802f219c33c83968e5e82dc3a67c84a4e",false]}
+
+13:25:43:377	2f80	parse packet: 194
+13:25:43:378	2f80	ETH: job changed
+13:25:43:380	2f80	new buf size: 0
+13:25:43:382	2f80	ETH: 12/21/17-13:25:43 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:25:43:383	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:25:43:385	2f80	ETH - Total Speed: 47.613 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:01
+13:25:43:393	2f80	ETH: GPU0 26.436 Mh/s, GPU1 21.177 Mh/s
+13:25:43:395	2f80	 SC - Total Speed: 476.126 Mh/s, Total Shares: 0, Rejected: 0
+13:25:43:402	2f80	 SC: GPU0 264.359 Mh/s, GPU1 211.767 Mh/s
+13:25:45:168	1954	GPU0 t=79C fan=51%, GPU1 t=69C fan=49%
+13:25:52:513	48c	em hbt: 0, dm hbt: 0, fm hbt: 79, 
+13:25:52:515	48c	watchdog - thread 0 (gpu0), hb time 63
+13:25:52:517	48c	watchdog - thread 1 (gpu0), hb time 172
+13:25:52:518	48c	watchdog - thread 2 (gpu1), hb time 282
+13:25:52:520	48c	watchdog - thread 3 (gpu1), hb time 94
+13:25:53:585	2f80	got 195 bytes
+13:25:53:587	2f80	buf: {"id":null,"method":"mining.notify","params":["94c0","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","d7b5ed1c9bf040f405a2c54c47919f9c5f6c63b7467217c9becbc10506c059d2",false]}
+
+13:25:53:588	2f80	parse packet: 194
+13:25:53:590	2f80	ETH: job changed
+13:25:53:591	2f80	new buf size: 0
+13:25:53:593	2f80	ETH: 12/21/17-13:25:53 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:25:53:595	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:25:53:597	2f80	ETH - Total Speed: 47.541 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:01
+13:25:53:599	2f80	ETH: GPU0 26.367 Mh/s, GPU1 21.174 Mh/s
+13:25:53:622	2f80	 SC - Total Speed: 475.412 Mh/s, Total Shares: 0, Rejected: 0
+13:25:53:624	2f80	 SC: GPU0 263.669 Mh/s, GPU1 211.743 Mh/s
+13:26:00:565	2f80	got 195 bytes
+13:26:00:567	2f80	buf: {"id":null,"method":"mining.notify","params":["94c1","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","32eea9a64dcb4447dc74b2e9f114e7122d6b3e0d7a79967fed81a7936a4c31e3",false]}
+
+13:26:00:569	2f80	parse packet: 194
+13:26:00:570	2f80	ETH: job changed
+13:26:00:572	2f80	new buf size: 0
+13:26:00:574	2f80	ETH: 12/21/17-13:26:00 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:26:00:575	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:26:00:577	2f80	ETH - Total Speed: 47.666 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:01
+13:26:00:579	2f80	ETH: GPU0 26.476 Mh/s, GPU1 21.191 Mh/s
+13:26:00:583	2f80	 SC - Total Speed: 476.663 Mh/s, Total Shares: 0, Rejected: 0
+13:26:00:601	2f80	 SC: GPU0 264.756 Mh/s, GPU1 211.907 Mh/s
+13:26:13:377	2f80	got 195 bytes
+13:26:13:379	2f80	buf: {"id":null,"method":"mining.notify","params":["94c2","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","ef103ad978bd912c6009190edd54e76d590ec455c0b96bb54a1d47d67ca8192d",false]}
+
+13:26:13:381	2f80	parse packet: 194
+13:26:13:382	2f80	ETH: job changed
+13:26:13:383	2f80	new buf size: 0
+13:26:13:385	2f80	ETH: 12/21/17-13:26:13 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:26:13:387	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:26:13:388	2f80	ETH - Total Speed: 47.622 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:01
+13:26:13:390	2f80	ETH: GPU0 26.436 Mh/s, GPU1 21.187 Mh/s
+13:26:13:398	2f80	 SC - Total Speed: 476.220 Mh/s, Total Shares: 0, Rejected: 0
+13:26:13:400	2f80	 SC: GPU0 264.355 Mh/s, GPU1 211.865 Mh/s
+13:26:15:281	1954	GPU0 t=82C fan=56%, GPU1 t=69C fan=50%
+13:26:16:786	2e1c	got 294 bytes
+13:26:16:788	2e1c	buf: {"id":null,"method":"mining.notify","params":["29a3","0x0000000000000019753fd2f12f852e9b9a910a5c382db56b869c2cf32484f8390000000000000000e9183c5a000000005e41debfc559606f56ae0765af983d522fa84669eafea6b7a73d99ed00354988","0x0000000012533fe68fd3d1cfe47445abdce0b117994feb3fbbe16e3d0f675ad9",true]}
+
+13:26:16:790	2e1c	parse packet: 293
+13:26:16:791	2e1c	sc: job changed(2)
+13:26:16:793	2e1c	new buf size: 0
+13:26:16:795	2e1c	 SC: 12/21/17-13:26:16 - New job from hub.miningpoolhub.com:20550
+13:26:16:796	2e1c	target: 0x0000000012533fe6 (diff: 60GH)
+13:26:25:018	48c	em hbt: 16, dm hbt: 0, fm hbt: 63, 
+13:26:25:020	48c	watchdog - thread 0 (gpu0), hb time 188
+13:26:25:022	48c	watchdog - thread 1 (gpu0), hb time 79
+13:26:25:023	48c	watchdog - thread 2 (gpu1), hb time 16
+13:26:25:025	48c	watchdog - thread 3 (gpu1), hb time 219
+13:26:45:379	1954	GPU0 t=82C fan=57%, GPU1 t=69C fan=50%
+13:26:49:321	2f80	got 195 bytes
+13:26:49:323	2f80	buf: {"id":null,"method":"mining.notify","params":["94c3","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","5e80bcc37d07762dd3e2e914048e6f469d05c4406b6e987c3c872b7a5a19b0ea",false]}
+
+13:26:49:324	2f80	parse packet: 194
+13:26:49:326	2f80	ETH: job changed
+13:26:49:328	2f80	new buf size: 0
+13:26:49:329	2f80	ETH: 12/21/17-13:26:49 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:26:49:331	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:26:49:333	2f80	ETH - Total Speed: 47.547 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:02
+13:26:49:340	2f80	ETH: GPU0 26.399 Mh/s, GPU1 21.149 Mh/s
+13:26:49:342	2f80	 SC - Total Speed: 475.474 Mh/s, Total Shares: 0, Rejected: 0
+13:26:49:392	2f80	 SC: GPU0 263.988 Mh/s, GPU1 211.486 Mh/s
+13:26:55:783	2f80	got 195 bytes
+13:26:55:785	2f80	buf: {"id":null,"method":"mining.notify","params":["94c4","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","e7ff51287ad0f5ef4d88044aeef762bea3f109697c19b0c0785f330f543f79b3",false]}
+
+13:26:55:786	2f80	parse packet: 194
+13:26:55:787	2f80	ETH: job changed
+13:26:55:789	2f80	new buf size: 0
+13:26:55:790	2f80	ETH: 12/21/17-13:26:55 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:26:55:792	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:26:55:794	2f80	ETH - Total Speed: 47.565 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:02
+13:26:55:800	2f80	ETH: GPU0 26.408 Mh/s, GPU1 21.157 Mh/s
+13:26:55:802	2f80	 SC - Total Speed: 475.645 Mh/s, Total Shares: 0, Rejected: 0
+13:26:55:824	2f80	 SC: GPU0 264.080 Mh/s, GPU1 211.565 Mh/s
+13:26:57:614	48c	em hbt: 0, dm hbt: 0, fm hbt: 62, 
+13:26:57:616	48c	watchdog - thread 0 (gpu0), hb time 156
+13:26:57:617	48c	watchdog - thread 1 (gpu0), hb time 47
+13:26:57:619	48c	watchdog - thread 2 (gpu1), hb time 219
+13:26:57:621	48c	watchdog - thread 3 (gpu1), hb time 31
+13:27:07:857	2f80	got 195 bytes
+13:27:07:859	2f80	buf: {"id":null,"method":"mining.notify","params":["94c5","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","3206a58f4ff249ccee8ffc90c829e011004c5a76971d7d837335d3379c482fe8",false]}
+
+13:27:07:860	2f80	parse packet: 194
+13:27:07:862	2f80	ETH: job changed
+13:27:07:863	2f80	new buf size: 0
+13:27:07:865	2f80	ETH: 12/21/17-13:27:07 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:27:07:867	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:27:07:869	2f80	ETH - Total Speed: 47.221 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:02
+13:27:07:934	2f80	ETH: GPU0 26.423 Mh/s, GPU1 20.798 Mh/s
+13:27:07:936	2f80	 SC - Total Speed: 472.204 Mh/s, Total Shares: 0, Rejected: 0
+13:27:07:971	2f80	 SC: GPU0 264.229 Mh/s, GPU1 207.975 Mh/s
+13:27:12:014	2e1c	got 294 bytes
+13:27:12:016	2e1c	buf: {"id":null,"method":"mining.notify","params":["29a4","0x0000000000000019753fd2f12f852e9b9a910a5c382db56b869c2cf32484f839000000000000000020193c5a000000005bb33774bd11e6b1eaac56c3acc6e828d5011f95b5bcd47d21da8718081c1c68","0x0000000012533fe68fd3d1cfe47445abdce0b117994feb3fbbe16e3d0f675ad9",true]}
+
+13:27:12:018	2e1c	parse packet: 293
+13:27:12:019	2e1c	sc: job changed(2)
+13:27:12:021	2e1c	new buf size: 0
+13:27:12:023	2e1c	 SC: 12/21/17-13:27:12 - New job from hub.miningpoolhub.com:20550
+13:27:12:025	2e1c	target: 0x0000000012533fe6 (diff: 60GH)
+13:27:15:478	1954	GPU0 t=82C fan=57%, GPU1 t=70C fan=51%
+13:27:19:893	2f80	got 195 bytes
+13:27:19:895	2f80	buf: {"id":null,"method":"mining.notify","params":["94c6","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","19f3ee19595d752f1c48d380136e1a8562de3a8928ec532ac81e76fed153b5cc",false]}
+
+13:27:19:897	2f80	parse packet: 194
+13:27:19:898	2f80	ETH: job changed
+13:27:19:900	2f80	new buf size: 0
+13:27:19:901	2f80	ETH: 12/21/17-13:27:19 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:27:19:903	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:27:19:905	2f80	ETH - Total Speed: 47.410 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:03
+13:27:19:914	2f80	ETH: GPU0 26.391 Mh/s, GPU1 21.019 Mh/s
+13:27:19:916	2f80	 SC - Total Speed: 474.097 Mh/s, Total Shares: 0, Rejected: 0
+13:27:19:950	2f80	 SC: GPU0 263.905 Mh/s, GPU1 210.192 Mh/s
+13:27:25:161	2f80	got 195 bytes
+13:27:25:163	2f80	buf: {"id":null,"method":"mining.notify","params":["94c7","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","000d1a55d75c304915fe76b9c4874b7abcb14b8d73be299ced8d8823991ead6a",false]}
+
+13:27:25:165	2f80	parse packet: 194
+13:27:25:166	2f80	ETH: job changed
+13:27:25:168	2f80	new buf size: 0
+13:27:25:169	2f80	ETH: 12/21/17-13:27:25 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:27:25:171	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:27:25:173	2f80	ETH - Total Speed: 47.303 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:03
+13:27:25:349	2f80	ETH: GPU0 26.425 Mh/s, GPU1 20.878 Mh/s
+13:27:25:480	2f80	 SC - Total Speed: 473.029 Mh/s, Total Shares: 0, Rejected: 0
+13:27:25:482	2f80	 SC: GPU0 264.250 Mh/s, GPU1 208.779 Mh/s
+13:27:30:083	48c	em hbt: 0, dm hbt: 0, fm hbt: 94, 
+13:27:30:085	48c	watchdog - thread 0 (gpu0), hb time 0
+13:27:30:087	48c	watchdog - thread 1 (gpu0), hb time 125
+13:27:30:088	48c	watchdog - thread 2 (gpu1), hb time 78
+13:27:30:090	48c	watchdog - thread 3 (gpu1), hb time 266
+13:27:34:299	2f80	got 195 bytes
+13:27:34:300	2f80	buf: {"id":null,"method":"mining.notify","params":["94c8","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","ca40e6cc68bedaad3c651ef4d637d873ad7c6eb6212850ecb5b4216ee2b8cfdf",false]}
+
+13:27:34:302	2f80	parse packet: 194
+13:27:34:304	2f80	ETH: job changed
+13:27:34:305	2f80	new buf size: 0
+13:27:34:307	2f80	ETH: 12/21/17-13:27:34 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:27:34:308	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:27:34:310	2f80	ETH - Total Speed: 47.582 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:03
+13:27:34:312	2f80	ETH: GPU0 26.412 Mh/s, GPU1 21.170 Mh/s
+13:27:34:313	2f80	 SC - Total Speed: 475.818 Mh/s, Total Shares: 0, Rejected: 0
+13:27:34:315	2f80	 SC: GPU0 264.120 Mh/s, GPU1 211.698 Mh/s
+13:27:45:609	1954	GPU0 t=82C fan=57%, GPU1 t=70C fan=51%
+13:27:52:463	2f80	got 195 bytes
+13:27:52:464	2f80	buf: {"id":null,"method":"mining.notify","params":["94c9","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","9dca08e77bb8d0260b38fd2ad0099577930caa9efb631af369742740ff0efb46",false]}
+
+13:27:52:466	2f80	parse packet: 194
+13:27:52:468	2f80	ETH: job changed
+13:27:52:469	2f80	new buf size: 0
+13:27:52:471	2f80	ETH: 12/21/17-13:27:52 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:27:52:473	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:27:52:475	2f80	ETH - Total Speed: 47.552 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:03
+13:27:52:493	2f80	ETH: GPU0 26.426 Mh/s, GPU1 21.126 Mh/s
+13:27:52:495	2f80	 SC - Total Speed: 475.518 Mh/s, Total Shares: 0, Rejected: 0
+13:27:52:502	2f80	 SC: GPU0 264.260 Mh/s, GPU1 211.258 Mh/s
+13:27:58:977	2f80	got 195 bytes
+13:27:58:979	2f80	buf: {"id":null,"method":"mining.notify","params":["94ca","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","dcb1439adc9afbe41cf54fd79e22cfac6ec6e0bfd28097a16d1572ce1d27f5dc",false]}
+
+13:27:58:980	2f80	parse packet: 194
+13:27:58:982	2f80	ETH: job changed
+13:27:58:983	2f80	new buf size: 0
+13:27:58:985	2f80	ETH: 12/21/17-13:27:58 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:27:58:987	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:27:58:989	2f80	ETH - Total Speed: 47.543 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:03
+13:27:58:991	2f80	ETH: GPU0 26.374 Mh/s, GPU1 21.169 Mh/s
+13:27:59:015	2f80	 SC - Total Speed: 475.434 Mh/s, Total Shares: 0, Rejected: 0
+13:27:59:016	2f80	 SC: GPU0 263.742 Mh/s, GPU1 211.692 Mh/s
+13:28:02:620	48c	em hbt: 0, dm hbt: 0, fm hbt: 109, 
+13:28:02:622	48c	watchdog - thread 0 (gpu0), hb time 141
+13:28:02:623	48c	watchdog - thread 1 (gpu0), hb time 31
+13:28:02:625	48c	watchdog - thread 2 (gpu1), hb time 94
+13:28:02:626	48c	watchdog - thread 3 (gpu1), hb time 281
+13:28:03:248	1ce8	ETH: put share nonce 3240000464c677
+13:28:03:250	1ce8	ETH round found 1 shares
+13:28:03:256	2f80	ETH: 12/21/17-13:28:03 - SHARE FOUND - (GPU 0)
+13:28:03:258	2f80	send: {"id": 10, "method": "mining.submit", "params": ["Tyredas.Beeboop","94ca","40000464c677"]}
+
+13:28:03:334	2f80	got 37 bytes
+13:28:03:335	2f80	buf: {"id":10,"result":true,"error":null}
+
+13:28:03:337	2f80	parse packet: 36
+13:28:03:339	2f80	ETH: Share accepted (78 ms)!
+13:28:03:341	2f80	new buf size: 0
+13:28:07:248	2e1c	got 294 bytes
+13:28:07:250	2e1c	buf: {"id":null,"method":"mining.notify","params":["29a5","0x0000000000000019753fd2f12f852e9b9a910a5c382db56b869c2cf32484f839000000000000000057193c5a00000000113e380e28e566400974fde0513d3992b5446c061f89f543b16abacd3d5f6b15","0x0000000012533fe68fd3d1cfe47445abdce0b117994feb3fbbe16e3d0f675ad9",true]}
+
+13:28:07:252	2e1c	parse packet: 293
+13:28:07:253	2e1c	sc: job changed(2)
+13:28:07:255	2e1c	new buf size: 0
+13:28:07:257	2e1c	 SC: 12/21/17-13:28:07 - New job from hub.miningpoolhub.com:20550
+13:28:07:258	2e1c	target: 0x0000000012533fe6 (diff: 60GH)
+13:28:15:479	2f80	got 195 bytes
+13:28:15:482	2f80	buf: {"id":null,"method":"mining.notify","params":["94cb","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","c512b1203141ae2212c1d991d13c6e918c06d416f8998a196afa3aa4f4cdee81",false]}
+
+13:28:15:484	2f80	parse packet: 194
+13:28:15:485	2f80	ETH: job changed
+13:28:15:486	2f80	new buf size: 0
+13:28:15:487	2f80	ETH: 12/21/17-13:28:15 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:28:15:489	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:28:15:491	2f80	ETH - Total Speed: 47.512 Mh/s, Total Shares: 1, Rejected: 0, Time: 00:03
+13:28:15:498	2f80	ETH: GPU0 26.348 Mh/s, GPU1 21.164 Mh/s
+13:28:15:500	2f80	 SC - Total Speed: 475.119 Mh/s, Total Shares: 0, Rejected: 0
+13:28:15:522	2f80	 SC: GPU0 263.478 Mh/s, GPU1 211.641 Mh/s
+13:28:15:713	1954	GPU0 t=82C fan=58%, GPU1 t=70C fan=52%
+13:28:17:961	2dac	srv_thr cnt: 1, IP: 127.0.0.1
+13:28:17:963	2dac	recv: 158
+13:28:17:966	2dac	
+13:28:17:968	2dac	GPU #0: GeForce GTX 1070, 8192 MB available, 15 compute units, capability: 6.1
+
+13:28:17:989	2dac	GPU #1: GeForce GTX 1080, 8192 MB available, 20 compute units, capability: 6.1
+
+13:28:17:991	2dac	ETH - Total Speed: 47.535 Mh/s, Total Shares: 1(1+0), Rejected: 0(0+0), Time: 00:03
+13:28:17:997	2dac	ETH: GPU0 26.361 Mh/s, GPU1 21.174 Mh/s
+13:28:17:999	2dac	 SC - Total Speed: 475.351 Mh/s, Total Shares: 0(0+0), Rejected: 0(0+0)
+13:28:18:021	2dac	 SC: GPU0 263.610 Mh/s, GPU1 211.741 Mh/s
+13:28:18:023	2dac	Incorrect ETH shares: none
+13:28:18:029	2dac	1 minute average ETH total speed: 47.428 Mh/s
+13:28:18:031	2dac	Pool switches: ETH - 0, SC - 0
+13:28:18:050	2dac	Current ETH share target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+Current SC share target: 0x0000000012533fe6 (diff: 60GH)
+13:28:18:054	2dac	GPU0 t=82C fan=58%, GPU1 t=70C fan=52%
+13:28:18:088	2dac	
+13:28:18:091	2dac	sent: 9615
+13:28:24:025	2f80	got 195 bytes
+13:28:24:027	2f80	buf: {"id":null,"method":"mining.notify","params":["94cc","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","77cfdfa202b6dc03df6e5241ce5ff46d151125e241200e37a337918e48dc019a",false]}
+
+13:28:24:028	2f80	parse packet: 194
+13:28:24:029	2f80	ETH: job changed
+13:28:24:031	2f80	new buf size: 0
+13:28:24:032	2f80	ETH: 12/21/17-13:28:24 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:28:24:034	2f80	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:28:24:035	2f80	ETH - Total Speed: 47.321 Mh/s, Total Shares: 1, Rejected: 0, Time: 00:04
+13:28:24:042	2f80	ETH: GPU0 26.403 Mh/s, GPU1 20.919 Mh/s
+13:28:24:044	2f80	 SC - Total Speed: 473.214 Mh/s, Total Shares: 0, Rejected: 0
+13:28:24:052	2f80	 SC: GPU0 264.028 Mh/s, GPU1 209.186 Mh/s

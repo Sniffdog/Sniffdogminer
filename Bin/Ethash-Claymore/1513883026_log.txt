@@ -1,0 +1,11 @@
+12:03:46:078	22dc	Check and remove old log files...
+12:03:46:082	22dc	args: -epool us-east.ethash-hub.miningpoolhub.com:17020 -eworker Tyredas.Beeboop -epsw x 
+12:03:46:083	22dc	
+12:03:46:085	22dc	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+12:03:46:086	22dc	บ     Claymore's Dual ETH + DCR/SC/LBC/PASC GPU Miner v10.2      บ
+12:03:46:088	22dc	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+12:03:46:090	22dc	
+12:03:46:295	22dc	ETH: cannot find any specified wallet address!
+12:03:46:297	22dc	ETH: cannot find any specified wallet address!
+12:03:46:299	22dc	Pool us-east.ethash-hub.miningpoolhub.com removed from the list
+12:03:46:303	22dc	ETH: No pools specified! Specify at least one valid pool in "-epool" parameter. 

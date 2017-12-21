@@ -1,0 +1,481 @@
+13:07:44:895	548	Check and remove old log files...
+13:07:44:897	548	args: -r -1 -mport 23333 -epool us-east.ethash-hub.miningpoolhub.com:17020 -ewal Tyredas.Beeboop -eworker Tyredas.Beeboop -epsw x -dpool stratum+tcp://decred.mine.zpool.ca:5744 -dwal 1AMQg6m9GPDN9HGuC3wJGpSuiZr1XQXjxi -dpsw ID=Beeboop,c=BTC -esm 3 -allpools 1 -allcoins 1 -platform 2 
+13:07:44:897	548	
+13:07:44:897	548	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+13:07:44:897	548	บ     Claymore's Dual ETH + DCR/SC/LBC/PASC GPU Miner v10.2      บ
+13:07:44:913	548	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+13:07:44:915	548	
+13:07:45:132	548	ETH: 1 pool is specified
+13:07:45:132	548	Main Ethereum pool is us-east.ethash-hub.miningpoolhub.com:17020
+13:07:45:132	548	DCR: 1 pool is specified
+13:07:45:132	548	Main Decred pool is decred.mine.zpool.ca:5744
+13:07:45:364	548	CUDA initializing...
+
+13:07:45:364	548	NVIDIA Cards available: 2 
+13:07:45:364	548	CUDA Driver Version/Runtime Version: 9.1/8.0
+13:07:45:364	548	GPU #0: GeForce GTX 1070, 8192 MB available, 15 compute units, capability: 6.1
+
+13:07:45:364	548	GPU #1: GeForce GTX 1080, 8192 MB available, 20 compute units, capability: 6.1
+
+13:07:45:364	548	Total cards: 2 
+13:07:49:407	548	No AMD cards in the list, ADL library will not be used.
+13:07:49:413	548	NVML version: 9.388.59
+13:07:49:761	2fbc	ETH: Stratum - connecting to 'us-east.ethash-hub.miningpoolhub.com' <45.56.113.50> port 17020
+13:07:49:826	548	DUAL MINING MODE ENABLED: ETHEREUM+DECRED
+13:07:49:828	548	ETH: nicehash stratum mode
+13:07:49:830	548	"-allpools" option is set, default pools can be used for devfee, check "Readme" file for details.
+13:07:49:831	548	"-allcoins" option is set, default pools will be used for devfee, check "Readme" file for details.
+13:07:49:833	548	Watchdog enabled
+13:07:49:834	2fbc	send: {"id": 1, "method": "mining.subscribe", "params": ["MinerName/1.0.0", "EthereumStratum/1.0.0"]}
+
+13:07:49:834	548	Remote management is enabled on port 23333
+13:07:49:836	2fbc	send: {"id": 5, "method": "mining.extranonce.subscribe", "params": []}
+
+13:07:49:839	2fbc	send: {"id": 2, "method": "mining.authorize", "params": ["Tyredas.Beeboop","x"]}
+
+13:07:49:839	548	
+13:07:49:842	2fbc	ETH: Stratum - Connected (us-east.ethash-hub.miningpoolhub.com:17020)
+13:07:49:864	1730	 DCR: Stratum - connecting to 'decred.mine.zpool.ca' <144.217.111.81> port 5744
+13:07:49:904	2fbc	got 117 bytes
+13:07:49:905	2fbc	buf: {"id":1,"result":[["mining.notify","deadbeefcafebabe4743010000000000","EthereumStratum/1.0.0"],"0091"],"error":null}
+
+13:07:49:907	2fbc	parse packet: 116
+13:07:49:909	2fbc	new buf size: 0
+13:07:49:925	1730	send: {"id": 1, "method": "mining.subscribe", "params": ["dual 1.0"]}
+
+13:07:49:927	1730	send: {"id": 5, "method": "mining.extranonce.subscribe", "params": []}
+
+13:07:49:929	1730	send: {"id": 2, "method": "mining.authorize", "params": ["1AMQg6m9GPDN9HGuC3wJGpSuiZr1XQXjxi","ID=Beeboop,c=BTC"]}
+
+13:07:49:931	1730	 DCR: Stratum - Connected (decred.mine.zpool.ca:5744)
+13:07:50:123	2fbc	got 36 bytes
+13:07:50:125	2fbc	buf: {"id":2,"result":true,"error":null}
+
+13:07:50:127	2fbc	parse packet: 35
+13:07:50:129	2fbc	ETH: Authorized
+13:07:50:130	2fbc	new buf size: 0
+13:07:50:216	2fbc	got 270 bytes
+13:07:50:218	2fbc	buf: {"id":null,"method":"mining.set_difficulty","params":[1.0011717677116394]}
+{"id":null,"method":"mining.notify","params":["9479","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","8f3c8b4e8f82cf8f1a4ec31efb9b071155e143bff1276e99ae0d27dfd2484683",false]}
+
+13:07:50:219	2fbc	parse packet: 74
+13:07:50:221	2fbc	remove first packet 195
+13:07:50:223	2fbc	new buf size: 195
+13:07:50:224	2fbc	parse packet: 194
+13:07:50:226	2fbc	ETH: job changed
+13:07:50:228	2fbc	new buf size: 0
+13:07:50:232	1730	got 148 bytes
+13:07:50:233	1730	buf: {"id":1,"result":[[["mining.set_difficulty","8"],["mining.notify","2c5f7d334ed88ef77b6053147ff83af0"]],"000000000000000081006fa6",12],"error":null}
+
+13:07:50:235	1730	parse packet: 147
+13:07:50:237	1730	new buf size: 0
+13:07:50:332	1730	got 530 bytes
+13:07:50:334	1730	buf: {"id":5,"result":true,"error":null}
+{"id":2,"result":true,"error":null}
+{"id":null,"method":"mining.set_difficulty","params":[8]}
+{"id":null,"method":"mining.notify","params":["443","8230e6bad5315f6678667e207742898b283eebc1cdf4177e0000004500000000","1ffe53a75491e339ca9553b1592223ddee01f4219b080bfbfe059f6792e4d33c78db870fc4f005c4f985e9ce30b43c68741e0e5a37733af0208ee7a3e95f62840100556a6d94ed05050001007ea00000bf90001ae5e01ff90100000045010300929d00006e143c5a0000000000000000","05000000",[],"05000000","1a0090bf","5a3c146e",true]}
+
+13:07:50:334	2aa8	Setting DAG epoch #159...
+13:07:50:336	1730	parse packet: 35
+13:07:50:339	1730	remove first packet 494
+13:07:50:340	1730	new buf size: 494
+13:07:50:341	1730	parse packet: 35
+13:07:50:342	1730	 DCR: Authorized
+13:07:50:344	1730	remove first packet 458
+13:07:50:345	1730	new buf size: 458
+13:07:50:346	1730	parse packet: 57
+13:07:50:347	1730	remove first packet 400
+13:07:50:349	1730	new buf size: 400
+13:07:50:350	1730	parse packet: 399
+13:07:50:351	1730	new buf size: 0
+13:07:53:771	2aa8	Setting DAG epoch #159 for GPU0
+13:07:53:771	141c	Setting DAG epoch #159 for GPU1
+13:07:53:775	2aa8	Create GPU buffer for GPU0
+13:07:53:777	141c	Create GPU buffer for GPU1
+13:08:00:883	2aa8	GPU0 DAG creation time - 7006 ms
+13:08:00:885	2aa8	Setting DAG epoch #159 for GPU0 done
+13:08:02:404	141c	GPU1 DAG creation time - 8527 ms
+13:08:02:405	141c	Setting DAG epoch #159 for GPU1 done
+13:08:11:710	2fbc	got 195 bytes
+13:08:11:712	2fbc	buf: {"id":null,"method":"mining.notify","params":["947a","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","2b45d623b63da686250eb9ada54a1b6d33b769c6f00532a4c72cd3158184d626",false]}
+
+13:08:11:714	2fbc	parse packet: 194
+13:08:11:714	2fbc	ETH: job changed
+13:08:11:716	2fbc	new buf size: 0
+13:08:11:719	2fbc	ETH: 12/21/17-13:08:11 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:08:11:720	2fbc	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:08:11:722	2fbc	ETH - Total Speed: 46.968 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:00
+13:08:11:724	2fbc	ETH: GPU0 25.914 Mh/s, GPU1 21.054 Mh/s
+13:08:11:726	2fbc	 DCR - Total Speed: 469.678 Mh/s, Total Shares: 0, Rejected: 0
+13:08:11:728	2fbc	 DCR: GPU0 259.142 Mh/s, GPU1 210.536 Mh/s
+13:08:14:132	1730	got 400 bytes
+13:08:14:134	1730	buf: {"id":null,"method":"mining.notify","params":["444","8230e6bad5315f6678667e207742898b283eebc1cdf4177e0000004500000000","7a0357292fe2dfb41ea364d59a17e66fc0d9aba70bdadd4c76e14086e0d99fd178db870fc4f005c4f985e9ce30b43c68741e0e5a37733af0208ee7a3e95f62840100556a6d94ed05050001007ea00000bf90001ae5e01ff9010000004501030052a00000ad143c5a0000000000000000","05000000",[],"05000000","1a0090bf","5a3c14ad",true]}
+
+13:08:14:136	1730	parse packet: 399
+13:08:14:137	1730	new buf size: 0
+13:08:14:139	1730	 DCR: 12/21/17-13:08:14 - New job from decred.mine.zpool.ca:5744
+13:08:14:140	1730	target: 0x000000001fffe000 (diff: 34GH), block #196933
+13:08:15:252	2694	GPU0 t=80C fan=55%, GPU1 t=66C fan=45%
+13:08:17:626	1234	em hbt: 0, dm hbt: 0, fm hbt: 78, 
+13:08:17:628	1234	watchdog - thread 0 (gpu0), hb time 78
+13:08:17:629	1234	watchdog - thread 1 (gpu0), hb time 188
+13:08:17:631	1234	watchdog - thread 2 (gpu1), hb time 344
+13:08:17:632	1234	watchdog - thread 3 (gpu1), hb time 156
+13:08:20:438	2fbc	got 195 bytes
+13:08:20:440	2fbc	buf: {"id":null,"method":"mining.notify","params":["947b","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","9a06075d551c3bcab5ea0541f17ef68f0244e36dc73aab70035539bccede145d",false]}
+
+13:08:20:442	2fbc	parse packet: 194
+13:08:20:442	2fbc	ETH: job changed
+13:08:20:444	2fbc	new buf size: 0
+13:08:20:445	2fbc	ETH: 12/21/17-13:08:20 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:08:20:447	2fbc	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:08:20:449	2fbc	ETH - Total Speed: 46.963 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:00
+13:08:20:450	2fbc	ETH: GPU0 25.889 Mh/s, GPU1 21.074 Mh/s
+13:08:20:452	2fbc	 DCR - Total Speed: 469.632 Mh/s, Total Shares: 0, Rejected: 0
+13:08:20:454	2fbc	 DCR: GPU0 258.892 Mh/s, GPU1 210.740 Mh/s
+13:08:28:729	2aa8	ETH: put share nonce 914000084a3854
+13:08:28:730	2aa8	ETH round found 1 shares
+13:08:28:739	2fbc	ETH: 12/21/17-13:08:28 - SHARE FOUND - (GPU 0)
+13:08:28:927	2fbc	send: {"id": 10, "method": "mining.submit", "params": ["Tyredas.Beeboop","947b","4000084a3854"]}
+
+13:08:29:002	2fbc	got 37 bytes
+13:08:29:004	2fbc	buf: {"id":10,"result":true,"error":null}
+
+13:08:29:005	2fbc	parse packet: 36
+13:08:29:006	2fbc	ETH: Share accepted (78 ms)!
+13:08:29:008	2fbc	new buf size: 0
+13:08:29:859	2aa8	DCR: put share nonce 432d185 enonce 6da40111
+13:08:29:861	2aa8	DCR round found 1 shares
+13:08:29:872	1730	 DCR: 12/21/17-13:08:29 - SHARE FOUND - (GPU 0)
+13:08:29:874	1730	send: {"params": ["1AMQg6m9GPDN9HGuC3wJGpSuiZr1XQXjxi", "444", "000000006da4011181006fa6", "5a3c14ad", "85d13204"], "id": 10, "method": "mining.submit"}
+
+13:08:29:936	1730	got 37 bytes
+13:08:29:937	1730	buf: {"id":10,"result":true,"error":null}
+
+13:08:29:939	1730	parse packet: 36
+13:08:29:941	1730	 DCR: Share accepted (62 ms)!
+13:08:29:942	1730	new buf size: 0
+13:08:30:728	2fbc	got 195 bytes
+13:08:30:730	2fbc	buf: {"id":null,"method":"mining.notify","params":["947c","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","cc3a69648399257e442bfc8a6250c8c4dc986d3178ce23e5a2d7c388534daeea",false]}
+
+13:08:30:731	2fbc	parse packet: 194
+13:08:30:733	2fbc	ETH: job changed
+13:08:30:734	2fbc	new buf size: 0
+13:08:30:736	2fbc	ETH: 12/21/17-13:08:30 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:08:30:738	2fbc	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:08:30:739	2fbc	ETH - Total Speed: 46.749 Mh/s, Total Shares: 1, Rejected: 0, Time: 00:00
+13:08:30:750	2fbc	ETH: GPU0 25.949 Mh/s, GPU1 20.800 Mh/s
+13:08:30:751	2fbc	 DCR - Total Speed: 467.492 Mh/s, Total Shares: 1, Rejected: 0
+13:08:30:810	2fbc	 DCR: GPU0 259.493 Mh/s, GPU1 207.999 Mh/s
+13:08:33:569	2fbc	got 195 bytes
+13:08:33:571	2fbc	buf: {"id":null,"method":"mining.notify","params":["947d","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","55feaed68e2563ec25f1617b63a763eae0c5a6e11d6d4e4042ba7ff4eab4783e",false]}
+
+13:08:33:572	2fbc	parse packet: 194
+13:08:33:574	2fbc	ETH: job changed
+13:08:33:575	2fbc	new buf size: 0
+13:08:33:577	2fbc	ETH: 12/21/17-13:08:33 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:08:33:579	2fbc	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:08:33:581	2fbc	ETH - Total Speed: 46.745 Mh/s, Total Shares: 1, Rejected: 0, Time: 00:00
+13:08:33:582	2fbc	ETH: GPU0 25.964 Mh/s, GPU1 20.781 Mh/s
+13:08:33:636	2fbc	 DCR - Total Speed: 467.445 Mh/s, Total Shares: 1, Rejected: 0
+13:08:33:638	2fbc	 DCR: GPU0 259.639 Mh/s, GPU1 207.806 Mh/s
+13:08:40:522	2fbc	got 195 bytes
+13:08:40:523	2fbc	buf: {"id":null,"method":"mining.notify","params":["947e","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","0d09e2d9cf8c97431ad9579f31e46314b9f698c1a72659c935db3a1d81ed0662",false]}
+
+13:08:40:525	2fbc	parse packet: 194
+13:08:40:527	2fbc	ETH: job changed
+13:08:40:528	2fbc	new buf size: 0
+13:08:40:530	2fbc	ETH: 12/21/17-13:08:40 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:08:40:532	2fbc	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:08:40:533	2fbc	ETH - Total Speed: 46.837 Mh/s, Total Shares: 1, Rejected: 0, Time: 00:00
+13:08:40:536	2fbc	ETH: GPU0 25.907 Mh/s, GPU1 20.930 Mh/s
+13:08:40:538	2fbc	 DCR - Total Speed: 468.373 Mh/s, Total Shares: 1, Rejected: 0
+13:08:40:540	2fbc	 DCR: GPU0 259.071 Mh/s, GPU1 209.302 Mh/s
+13:08:45:368	2694	GPU0 t=82C fan=57%, GPU1 t=67C fan=47%
+13:08:47:790	2fbc	got 195 bytes
+13:08:47:792	2fbc	buf: {"id":null,"method":"mining.notify","params":["947f","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","798de2bb7d12f38f4d3ff9de36e8c4c2c56024b84fa377e404ed83bbe6df3dc1",false]}
+
+13:08:47:793	2fbc	parse packet: 194
+13:08:47:794	2fbc	ETH: job changed
+13:08:47:796	2fbc	new buf size: 0
+13:08:47:797	2fbc	ETH: 12/21/17-13:08:47 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:08:47:799	2fbc	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:08:47:801	2fbc	ETH - Total Speed: 46.962 Mh/s, Total Shares: 1, Rejected: 0, Time: 00:00
+13:08:47:807	2fbc	ETH: GPU0 25.886 Mh/s, GPU1 21.076 Mh/s
+13:08:47:809	2fbc	 DCR - Total Speed: 469.623 Mh/s, Total Shares: 1, Rejected: 0
+13:08:47:816	2fbc	 DCR: GPU0 258.860 Mh/s, GPU1 210.763 Mh/s
+13:08:50:229	1234	em hbt: 0, dm hbt: 0, fm hbt: 93, 
+13:08:50:231	1234	watchdog - thread 0 (gpu0), hb time 234
+13:08:50:232	1234	watchdog - thread 1 (gpu0), hb time 109
+13:08:50:234	1234	watchdog - thread 2 (gpu1), hb time 156
+13:08:50:235	1234	watchdog - thread 3 (gpu1), hb time 343
+13:08:55:873	2fbc	got 195 bytes
+13:08:55:874	2fbc	buf: {"id":null,"method":"mining.notify","params":["9480","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","2e10e217de89ec7d9016fd3d80b48af084c636e20db21494c19b5a32458df7f3",false]}
+
+13:08:55:876	2fbc	parse packet: 194
+13:08:55:877	2fbc	ETH: job changed
+13:08:55:879	2fbc	new buf size: 0
+13:08:55:881	2fbc	ETH: 12/21/17-13:08:55 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:08:55:882	2fbc	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:08:55:884	2fbc	ETH - Total Speed: 46.907 Mh/s, Total Shares: 1, Rejected: 0, Time: 00:01
+13:08:55:885	2fbc	ETH: GPU0 25.838 Mh/s, GPU1 21.068 Mh/s
+13:08:55:892	2fbc	 DCR - Total Speed: 469.067 Mh/s, Total Shares: 1, Rejected: 0
+13:08:55:893	2fbc	 DCR: GPU0 258.384 Mh/s, GPU1 210.683 Mh/s
+13:09:09:891	2fbc	got 195 bytes
+13:09:09:893	2fbc	buf: {"id":null,"method":"mining.notify","params":["9481","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","0e2c36ceefc5565080d4867892cc4c6943ed9a4db4b2e6b0eae9ac2a7a9c3a89",false]}
+
+13:09:09:895	2fbc	parse packet: 194
+13:09:09:896	2fbc	ETH: job changed
+13:09:09:898	2fbc	new buf size: 0
+13:09:09:899	2fbc	ETH: 12/21/17-13:09:09 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:09:09:901	2fbc	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:09:09:903	2fbc	ETH - Total Speed: 46.906 Mh/s, Total Shares: 1, Rejected: 0, Time: 00:01
+13:09:09:909	2fbc	ETH: GPU0 25.857 Mh/s, GPU1 21.048 Mh/s
+13:09:09:911	2fbc	 DCR - Total Speed: 469.055 Mh/s, Total Shares: 1, Rejected: 0
+13:09:09:933	2fbc	 DCR: GPU0 258.574 Mh/s, GPU1 210.481 Mh/s
+13:09:15:471	2694	GPU0 t=82C fan=57%, GPU1 t=68C fan=48%
+13:09:17:162	1730	got 400 bytes
+13:09:17:164	1730	buf: {"id":null,"method":"mining.notify","params":["445","8230e6bad5315f6678667e207742898b283eebc1cdf4177e0000004500000000","7a0357292fe2dfb41ea364d59a17e66fc0d9aba70bdadd4c76e14086e0d99fd178db870fc4f005c4f985e9ce30b43c68741e0e5a37733af0208ee7a3e95f62840100556a6d94ed05050001007ea00000bf90001ae5e01ff9010000004501030052a00000ec143c5a0000000000000000","05000000",[],"05000000","1a0090bf","5a3c14ec",true]}
+
+13:09:17:165	1730	parse packet: 399
+13:09:17:167	1730	new buf size: 0
+13:09:17:168	1730	 DCR: 12/21/17-13:09:17 - New job from decred.mine.zpool.ca:5744
+13:09:17:170	1730	target: 0x000000001fffe000 (diff: 34GH), block #196933
+13:09:20:936	2fbc	got 195 bytes
+13:09:20:938	2fbc	buf: {"id":null,"method":"mining.notify","params":["9482","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","bfd874574febe26143aa1c650cde8c724f5d324a494ac0284f9bb72e02d1a768",false]}
+
+13:09:20:940	2fbc	parse packet: 194
+13:09:20:941	2fbc	ETH: job changed
+13:09:20:943	2fbc	new buf size: 0
+13:09:20:944	2fbc	ETH: 12/21/17-13:09:20 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:09:20:946	2fbc	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:09:20:948	2fbc	ETH - Total Speed: 46.923 Mh/s, Total Shares: 1, Rejected: 0, Time: 00:01
+13:09:20:954	2fbc	ETH: GPU0 25.887 Mh/s, GPU1 21.036 Mh/s
+13:09:20:955	2fbc	 DCR - Total Speed: 469.225 Mh/s, Total Shares: 1, Rejected: 0
+13:09:20:991	2fbc	 DCR: GPU0 258.869 Mh/s, GPU1 210.356 Mh/s
+13:09:22:791	1234	em hbt: 16, dm hbt: 0, fm hbt: 94, 
+13:09:22:792	1234	watchdog - thread 0 (gpu0), hb time 172
+13:09:22:794	1234	watchdog - thread 1 (gpu0), hb time 63
+13:09:22:795	1234	watchdog - thread 2 (gpu1), hb time 94
+13:09:22:797	1234	watchdog - thread 3 (gpu1), hb time 281
+13:09:45:316	2fbc	got 195 bytes
+13:09:45:318	2fbc	buf: {"id":null,"method":"mining.notify","params":["9483","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","52c6e76b57ae8644cfcbc057db59777b431c688d728d7bc8fefd1b619ea7db8e",false]}
+
+13:09:45:320	2fbc	parse packet: 194
+13:09:45:321	2fbc	ETH: job changed
+13:09:45:323	2fbc	new buf size: 0
+13:09:45:324	2fbc	ETH: 12/21/17-13:09:45 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:09:45:326	2fbc	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:09:45:327	2fbc	ETH - Total Speed: 46.817 Mh/s, Total Shares: 1, Rejected: 0, Time: 00:01
+13:09:45:329	2fbc	ETH: GPU0 25.781 Mh/s, GPU1 21.036 Mh/s
+13:09:45:330	2fbc	 DCR - Total Speed: 468.173 Mh/s, Total Shares: 1, Rejected: 0
+13:09:45:332	2fbc	 DCR: GPU0 257.812 Mh/s, GPU1 210.361 Mh/s
+13:09:45:581	2694	GPU0 t=82C fan=57%, GPU1 t=68C fan=49%
+13:09:55:389	1234	em hbt: 0, dm hbt: 0, fm hbt: 94, 
+13:09:55:391	1234	watchdog - thread 0 (gpu0), hb time 125
+13:09:55:392	1234	watchdog - thread 1 (gpu0), hb time 16
+13:09:55:393	1234	watchdog - thread 2 (gpu1), hb time 110
+13:09:55:394	1234	watchdog - thread 3 (gpu1), hb time 297
+13:10:15:696	2694	GPU0 t=82C fan=58%, GPU1 t=69C fan=49%
+13:10:15:763	ce8	ETH: put share nonce 9100001f0b474c
+13:10:15:765	ce8	ETH round found 1 shares
+13:10:15:772	2fbc	ETH: 12/21/17-13:10:15 - SHARE FOUND - (GPU 0)
+13:10:15:774	2fbc	send: {"id": 10, "method": "mining.submit", "params": ["Tyredas.Beeboop","9483","00001f0b474c"]}
+
+13:10:15:850	2fbc	got 37 bytes
+13:10:15:852	2fbc	buf: {"id":10,"result":true,"error":null}
+
+13:10:15:854	2fbc	parse packet: 36
+13:10:15:855	2fbc	ETH: Share accepted (78 ms)!
+13:10:15:857	2fbc	new buf size: 0
+13:10:17:279	141c	ETH: put share nonce 9180001a5d7b8b
+13:10:17:281	141c	ETH round found 1 shares
+13:10:17:294	2fbc	ETH: 12/21/17-13:10:17 - SHARE FOUND - (GPU 1)
+13:10:17:295	2fbc	send: {"id": 11, "method": "mining.submit", "params": ["Tyredas.Beeboop","9483","80001a5d7b8b"]}
+
+13:10:17:371	2fbc	got 37 bytes
+13:10:17:373	2fbc	buf: {"id":11,"result":true,"error":null}
+
+13:10:17:374	2fbc	parse packet: 36
+13:10:17:376	2fbc	ETH: Share accepted (78 ms)!
+13:10:17:384	2fbc	new buf size: 0
+13:10:20:571	1730	got 400 bytes
+13:10:20:573	1730	buf: {"id":null,"method":"mining.notify","params":["446","8230e6bad5315f6678667e207742898b283eebc1cdf4177e0000004500000000","8632cfaf0e4d37050d344cd0a86f4f1e4b0b050f209b63a40a76628adb76d9f078db870fc4f005c4f985e9ce30b43c68741e0e5a37733af0208ee7a3e95f62840100556a6d94ed05050001007ea00000bf90001ae5e01ff901000000450103009eab00002c153c5a0000000000000000","05000000",[],"05000000","1a0090bf","5a3c152c",true]}
+
+13:10:20:574	1730	parse packet: 399
+13:10:20:576	1730	new buf size: 0
+13:10:20:578	1730	 DCR: 12/21/17-13:10:20 - New job from decred.mine.zpool.ca:5744
+13:10:20:579	1730	target: 0x000000001fffe000 (diff: 34GH), block #196933
+13:10:22:907	2fbc	got 195 bytes
+13:10:22:909	2fbc	buf: {"id":null,"method":"mining.notify","params":["9484","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","77dc43cf93fc72f213760d4747adb1f14030e28a712a22704fdfe708ca6c3488",false]}
+
+13:10:22:910	2fbc	parse packet: 194
+13:10:22:912	2fbc	ETH: job changed
+13:10:22:913	2fbc	new buf size: 0
+13:10:22:915	2fbc	ETH: 12/21/17-13:10:22 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:10:22:917	2fbc	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:10:22:918	2fbc	ETH - Total Speed: 46.913 Mh/s, Total Shares: 3, Rejected: 0, Time: 00:02
+13:10:22:925	2fbc	ETH: GPU0 25.866 Mh/s, GPU1 21.048 Mh/s
+13:10:22:927	2fbc	 DCR - Total Speed: 469.131 Mh/s, Total Shares: 1, Rejected: 0
+13:10:22:962	2fbc	 DCR: GPU0 258.656 Mh/s, GPU1 210.475 Mh/s
+13:10:27:986	1234	em hbt: 15, dm hbt: 0, fm hbt: 93, 
+13:10:27:988	1234	watchdog - thread 0 (gpu0), hb time 125
+13:10:27:989	1234	watchdog - thread 1 (gpu0), hb time 15
+13:10:27:991	1234	watchdog - thread 2 (gpu1), hb time 250
+13:10:27:993	1234	watchdog - thread 3 (gpu1), hb time 78
+13:10:36:849	2aa8	ETH: put share nonce 9140000e3bdbde
+13:10:36:851	2aa8	ETH round found 1 shares
+13:10:36:853	2fbc	ETH: 12/21/17-13:10:36 - SHARE FOUND - (GPU 0)
+13:10:36:855	2fbc	send: {"id": 10, "method": "mining.submit", "params": ["Tyredas.Beeboop","9484","40000e3bdbde"]}
+
+13:10:36:931	2fbc	got 37 bytes
+13:10:36:932	2fbc	buf: {"id":10,"result":true,"error":null}
+
+13:10:36:934	2fbc	parse packet: 36
+13:10:36:936	2fbc	ETH: Share accepted (78 ms)!
+13:10:36:938	2fbc	new buf size: 0
+13:10:40:550	2fbc	got 195 bytes
+13:10:40:551	2fbc	buf: {"id":null,"method":"mining.notify","params":["9485","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","65285eeb8113eb95fd5c9bef912914bc632e91fdf50adffab9fbce8e0fc5a017",false]}
+
+13:10:40:553	2fbc	parse packet: 194
+13:10:40:555	2fbc	ETH: job changed
+13:10:40:556	2fbc	new buf size: 0
+13:10:40:559	2fbc	ETH: 12/21/17-13:10:40 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:10:40:560	2fbc	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:10:40:562	2fbc	ETH - Total Speed: 46.790 Mh/s, Total Shares: 4, Rejected: 0, Time: 00:02
+13:10:40:564	2fbc	ETH: GPU0 25.766 Mh/s, GPU1 21.024 Mh/s
+13:10:40:566	2fbc	 DCR - Total Speed: 467.900 Mh/s, Total Shares: 1, Rejected: 0
+13:10:40:568	2fbc	 DCR: GPU0 257.659 Mh/s, GPU1 210.241 Mh/s
+13:10:44:568	141c	DCR: put share nonce d281aa enonce c1c200fe
+13:10:44:570	141c	DCR round found 1 shares
+13:10:44:572	1730	 DCR: 12/21/17-13:10:44 - SHARE FOUND - (GPU 1)
+13:10:44:573	1730	send: {"params": ["1AMQg6m9GPDN9HGuC3wJGpSuiZr1XQXjxi", "446", "00000000c1c200fe81006fa6", "5a3c152c", "aa81d200"], "id": 11, "method": "mining.submit"}
+
+13:10:44:633	1730	got 37 bytes
+13:10:44:634	1730	buf: {"id":11,"result":true,"error":null}
+
+13:10:44:636	1730	parse packet: 36
+13:10:44:638	1730	 DCR: Share accepted (63 ms)!
+13:10:44:640	1730	new buf size: 0
+13:10:45:816	2694	GPU0 t=82C fan=58%, GPU1 t=69C fan=50%
+13:11:00:577	1234	em hbt: 0, dm hbt: 0, fm hbt: 94, 
+13:11:00:579	1234	watchdog - thread 0 (gpu0), hb time 94
+13:11:00:580	1234	watchdog - thread 1 (gpu0), hb time 203
+13:11:00:582	1234	watchdog - thread 2 (gpu1), hb time 312
+13:11:00:583	1234	watchdog - thread 3 (gpu1), hb time 125
+13:11:15:927	2694	GPU0 t=82C fan=58%, GPU1 t=69C fan=50%
+13:11:19:064	2fbc	got 195 bytes
+13:11:19:065	2fbc	buf: {"id":null,"method":"mining.notify","params":["9486","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","a0033f19f5110c7f0be2c3f8aa7ad4a112518f79260baf96cdc328aea490241b",false]}
+
+13:11:19:067	2fbc	parse packet: 194
+13:11:19:069	2fbc	ETH: job changed
+13:11:19:070	2fbc	new buf size: 0
+13:11:19:072	2fbc	ETH: 12/21/17-13:11:19 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:11:19:074	2fbc	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:11:19:076	2fbc	ETH - Total Speed: 46.807 Mh/s, Total Shares: 4, Rejected: 0, Time: 00:03
+13:11:19:077	2fbc	ETH: GPU0 25.750 Mh/s, GPU1 21.056 Mh/s
+13:11:19:100	2fbc	 DCR - Total Speed: 468.068 Mh/s, Total Shares: 2, Rejected: 0
+13:11:19:101	2fbc	 DCR: GPU0 257.504 Mh/s, GPU1 210.564 Mh/s
+13:11:23:586	1730	got 400 bytes
+13:11:23:587	1730	buf: {"id":null,"method":"mining.notify","params":["447","8230e6bad5315f6678667e207742898b283eebc1cdf4177e0000004500000000","8632cfaf0e4d37050d344cd0a86f4f1e4b0b050f209b63a40a76628adb76d9f078db870fc4f005c4f985e9ce30b43c68741e0e5a37733af0208ee7a3e95f62840100556a6d94ed05050001007ea00000bf90001ae5e01ff901000000450103009eab00006b153c5a0000000000000000","05000000",[],"05000000","1a0090bf","5a3c156b",true]}
+
+13:11:23:589	1730	parse packet: 399
+13:11:23:590	1730	new buf size: 0
+13:11:23:591	1730	 DCR: 12/21/17-13:11:23 - New job from decred.mine.zpool.ca:5744
+13:11:23:593	1730	target: 0x000000001fffe000 (diff: 34GH), block #196933
+13:11:26:078	2fbc	got 195 bytes
+13:11:26:080	2fbc	buf: {"id":null,"method":"mining.notify","params":["9487","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","395cc4b81586ba9a902a917d9a43ff0958a44049a118c1ec0fc7a9e3a1dfdac0",false]}
+
+13:11:26:081	2fbc	parse packet: 194
+13:11:26:082	2fbc	ETH: job changed
+13:11:26:083	2fbc	new buf size: 0
+13:11:26:085	2fbc	ETH: 12/21/17-13:11:26 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:11:26:086	2fbc	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:11:26:088	2fbc	ETH - Total Speed: 46.270 Mh/s, Total Shares: 4, Rejected: 0, Time: 00:03
+13:11:26:114	2fbc	ETH: GPU0 25.787 Mh/s, GPU1 20.483 Mh/s
+13:11:26:116	2fbc	 DCR - Total Speed: 462.701 Mh/s, Total Shares: 2, Rejected: 0
+13:11:26:164	2fbc	 DCR: GPU0 257.873 Mh/s, GPU1 204.828 Mh/s
+13:11:31:157	2fbc	got 195 bytes
+13:11:31:158	2fbc	buf: {"id":null,"method":"mining.notify","params":["9488","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","d3cb84b4cf6a49a8d64cca515e7b905fd9cbbce9e6106a4092d6a97590448350",false]}
+
+13:11:31:160	2fbc	parse packet: 194
+13:11:31:161	2fbc	ETH: job changed
+13:11:31:163	2fbc	new buf size: 0
+13:11:31:165	2fbc	ETH: 12/21/17-13:11:31 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:11:31:166	2fbc	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:11:31:168	2fbc	ETH - Total Speed: 46.872 Mh/s, Total Shares: 4, Rejected: 0, Time: 00:03
+13:11:31:170	2fbc	ETH: GPU0 25.811 Mh/s, GPU1 21.060 Mh/s
+13:11:31:178	2fbc	 DCR - Total Speed: 468.714 Mh/s, Total Shares: 2, Rejected: 0
+13:11:31:179	2fbc	 DCR: GPU0 258.112 Mh/s, GPU1 210.602 Mh/s
+13:11:33:113	1234	em hbt: 15, dm hbt: 15, fm hbt: 93, 
+13:11:33:114	1234	watchdog - thread 0 (gpu0), hb time 187
+13:11:33:116	1234	watchdog - thread 1 (gpu0), hb time 62
+13:11:33:117	1234	watchdog - thread 2 (gpu1), hb time 203
+13:11:33:119	1234	watchdog - thread 3 (gpu1), hb time 31
+13:11:36:670	2fbc	got 195 bytes
+13:11:36:672	2fbc	buf: {"id":null,"method":"mining.notify","params":["9489","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","9c411e74b0dc49a3f0be04524b74cf7854176e44dad8bb513d16a897f69665f1",false]}
+
+13:11:36:673	2fbc	parse packet: 194
+13:11:36:675	2fbc	ETH: job changed
+13:11:36:676	2fbc	new buf size: 0
+13:11:36:678	2fbc	ETH: 12/21/17-13:11:36 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:11:36:679	2fbc	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:11:36:681	2fbc	ETH - Total Speed: 46.807 Mh/s, Total Shares: 4, Rejected: 0, Time: 00:03
+13:11:36:683	2fbc	ETH: GPU0 25.787 Mh/s, GPU1 21.019 Mh/s
+13:11:36:690	2fbc	 DCR - Total Speed: 468.064 Mh/s, Total Shares: 2, Rejected: 0
+13:11:36:691	2fbc	 DCR: GPU0 257.873 Mh/s, GPU1 210.191 Mh/s
+13:11:45:269	ce8	DCR: put share nonce 4a0018f enonce 69a50174
+13:11:45:271	ce8	DCR round found 1 shares
+13:11:45:282	1730	 DCR: 12/21/17-13:11:45 - SHARE FOUND - (GPU 0)
+13:11:45:284	1730	send: {"params": ["1AMQg6m9GPDN9HGuC3wJGpSuiZr1XQXjxi", "447", "0000000069a5017481006fa6", "5a3c156b", "8f01a004"], "id": 10, "method": "mining.submit"}
+
+13:11:45:345	1730	got 37 bytes
+13:11:45:346	1730	buf: {"id":10,"result":true,"error":null}
+
+13:11:45:348	1730	parse packet: 36
+13:11:45:350	1730	 DCR: Share accepted (63 ms)!
+13:11:45:352	1730	new buf size: 0
+13:11:46:044	2694	GPU0 t=82C fan=58%, GPU1 t=69C fan=50%
+13:11:46:695	2fbc	got 195 bytes
+13:11:46:697	2fbc	buf: {"id":null,"method":"mining.notify","params":["948a","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","cc35f2472de30570b4dbb25cb69b9be5ca00f58cba07e8c35d7191788c0325b1",false]}
+
+13:11:46:699	2fbc	parse packet: 194
+13:11:46:701	2fbc	ETH: job changed
+13:11:46:702	2fbc	new buf size: 0
+13:11:46:704	2fbc	ETH: 12/21/17-13:11:46 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:11:46:706	2fbc	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:11:46:708	2fbc	ETH - Total Speed: 46.937 Mh/s, Total Shares: 4, Rejected: 0, Time: 00:03
+13:11:46:709	2fbc	ETH: GPU0 25.876 Mh/s, GPU1 21.061 Mh/s
+13:11:46:711	2fbc	 DCR - Total Speed: 469.372 Mh/s, Total Shares: 3, Rejected: 0
+13:11:46:717	2fbc	 DCR: GPU0 258.758 Mh/s, GPU1 210.614 Mh/s
+13:11:48:234	25a0	srv_thr cnt: 1, IP: 127.0.0.1
+13:11:48:236	25a0	recv: 158
+13:11:48:238	25a0	
+13:11:48:244	25a0	GPU #0: GeForce GTX 1070, 8192 MB available, 15 compute units, capability: 6.1
+
+13:11:48:246	25a0	GPU #1: GeForce GTX 1080, 8192 MB available, 20 compute units, capability: 6.1
+
+13:11:48:253	25a0	ETH - Total Speed: 46.874 Mh/s, Total Shares: 4(3+1), Rejected: 0(0+0), Time: 00:03
+13:11:48:255	25a0	ETH: GPU0 25.838 Mh/s, GPU1 21.036 Mh/s
+13:11:48:267	25a0	 DCR - Total Speed: 468.738 Mh/s, Total Shares: 3(2+1), Rejected: 0(0+0)
+13:11:48:269	25a0	 DCR: GPU0 258.375 Mh/s, GPU1 210.363 Mh/s
+13:11:48:276	25a0	Incorrect ETH shares: none
+13:11:48:278	25a0	1 minute average ETH total speed: 46.813 Mh/s
+13:11:48:308	25a0	Pool switches: ETH - 0, DCR - 0
+13:11:48:331	25a0	Current ETH share target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+Current DCR share target: 0x000000001fffe000 (diff: 34GH), block #196933
+13:11:48:334	25a0	GPU0 t=82C fan=58%, GPU1 t=69C fan=50%
+13:11:48:336	25a0	
+13:11:48:337	25a0	sent: 9494
+13:11:55:073	2fbc	got 195 bytes
+13:11:55:075	2fbc	buf: {"id":null,"method":"mining.notify","params":["948b","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","c584a3efb30e670c4b5434b314be6906ef12c245fb0e32ba73dd29db48fe5d62",false]}
+
+13:11:55:076	2fbc	parse packet: 194
+13:11:55:077	2fbc	ETH: job changed
+13:11:55:078	2fbc	new buf size: 0
+13:11:55:079	2fbc	ETH: 12/21/17-13:11:55 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:11:55:081	2fbc	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:11:55:083	2fbc	ETH - Total Speed: 46.888 Mh/s, Total Shares: 4, Rejected: 0, Time: 00:04
+13:11:55:084	2fbc	ETH: GPU0 25.818 Mh/s, GPU1 21.070 Mh/s
+13:11:55:106	2fbc	 DCR - Total Speed: 468.877 Mh/s, Total Shares: 3, Rejected: 0
+13:11:55:124	2fbc	 DCR: GPU0 258.176 Mh/s, GPU1 210.701 Mh/s

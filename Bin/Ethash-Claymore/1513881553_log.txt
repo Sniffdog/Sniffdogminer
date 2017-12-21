@@ -1,0 +1,8 @@
+11:39:13:273	2140	Check and remove old log files...
+11:39:13:275	2140	args: -a ethash -o stratum+tcp://: -u -p 
+11:39:13:277	2140	
+11:39:13:278	2140	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+11:39:13:280	2140	บ     Claymore's Dual ETH + DCR/SC/LBC/PASC GPU Miner v10.2      บ
+11:39:13:282	2140	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+11:39:13:283	2140	
+11:39:13:490	2140	ETH: No pools specified! Specify at least one valid pool in "-epool" parameter. 

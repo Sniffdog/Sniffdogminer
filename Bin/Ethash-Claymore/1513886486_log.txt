@@ -1,0 +1,429 @@
+13:01:26:309	8	Check and remove old log files...
+13:01:26:315	8	args: -r -1 -mport 23333 -epool us-east.ethash-hub.miningpoolhub.com:17020 -ewal Tyredas.Beeboop -eworker Tyredas.Beeboop -epsw x -dpool stratum+tcp://decred.mine.zpool.ca:5744 -dwal 1AMQg6m9GPDN9HGuC3wJGpSuiZr1XQXjxi -dpsw ID=Beeboop,c=BTC -esm 3 -allpools 1 -allcoins 1 -platform 2 
+13:01:26:315	8	
+13:01:26:315	8	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+13:01:26:315	8	บ     Claymore's Dual ETH + DCR/SC/LBC/PASC GPU Miner v10.2      บ
+13:01:26:315	8	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+13:01:26:315	8	
+13:01:26:547	8	ETH: 1 pool is specified
+13:01:26:547	8	Main Ethereum pool is us-east.ethash-hub.miningpoolhub.com:17020
+13:01:26:547	8	DCR: 1 pool is specified
+13:01:26:547	8	Main Decred pool is decred.mine.zpool.ca:5744
+13:01:26:797	8	CUDA initializing...
+
+13:01:26:797	8	NVIDIA Cards available: 2 
+13:01:26:797	8	CUDA Driver Version/Runtime Version: 9.1/8.0
+13:01:26:797	8	GPU #0: GeForce GTX 1070, 8192 MB available, 15 compute units, capability: 6.1
+
+13:01:26:797	8	GPU #1: GeForce GTX 1080, 8192 MB available, 20 compute units, capability: 6.1
+
+13:01:26:797	8	Total cards: 2 
+13:01:30:824	8	No AMD cards in the list, ADL library will not be used.
+13:01:30:824	8	NVML version: 9.388.59
+13:01:31:109	1020	ETH: Stratum - connecting to 'us-east.ethash-hub.miningpoolhub.com' <192.81.129.199> port 17020
+13:01:31:183	1020	send: {"id": 1, "method": "mining.subscribe", "params": ["MinerName/1.0.0", "EthereumStratum/1.0.0"]}
+
+13:01:31:185	1020	send: {"id": 5, "method": "mining.extranonce.subscribe", "params": []}
+
+13:01:31:187	1020	send: {"id": 2, "method": "mining.authorize", "params": ["Tyredas.Beeboop","x"]}
+
+13:01:31:189	1020	ETH: Stratum - Connected (us-east.ethash-hub.miningpoolhub.com:17020)
+13:01:31:218	8	DUAL MINING MODE ENABLED: ETHEREUM+DECRED
+13:01:31:220	2058	 DCR: Stratum - connecting to 'decred.mine.zpool.ca' <144.217.111.81> port 5744
+13:01:31:220	8	ETH: nicehash stratum mode
+13:01:31:223	8	"-allpools" option is set, default pools can be used for devfee, check "Readme" file for details.
+13:01:31:225	8	"-allcoins" option is set, default pools will be used for devfee, check "Readme" file for details.
+13:01:31:227	8	Watchdog enabled
+13:01:31:228	8	Remote management is enabled on port 23333
+13:01:31:230	8	
+13:01:31:249	1020	got 117 bytes
+13:01:31:251	1020	buf: {"id":1,"result":[["mining.notify","deadbeefcafebabe0052010000000000","EthereumStratum/1.0.0"],"00bd"],"error":null}
+
+13:01:31:252	1020	parse packet: 116
+13:01:31:254	1020	new buf size: 0
+13:01:31:279	2058	send: {"id": 1, "method": "mining.subscribe", "params": ["dual 1.0"]}
+
+13:01:31:281	2058	send: {"id": 5, "method": "mining.extranonce.subscribe", "params": []}
+
+13:01:31:282	2058	send: {"id": 2, "method": "mining.authorize", "params": ["1AMQg6m9GPDN9HGuC3wJGpSuiZr1XQXjxi","ID=Beeboop,c=BTC"]}
+
+13:01:31:284	2058	 DCR: Stratum - Connected (decred.mine.zpool.ca:5744)
+13:01:31:594	2058	got 148 bytes
+13:01:31:595	2058	buf: {"id":1,"result":[[["mining.set_difficulty","8"],["mining.notify","7f4a99a02cc27f751d5c3f772f664a56"]],"000000000000000081006f15",12],"error":null}
+
+13:01:31:597	2058	parse packet: 147
+13:01:31:599	2058	new buf size: 0
+13:01:31:703	2058	got 530 bytes
+13:01:31:703	1020	got 36 bytes
+13:01:31:705	2058	buf: {"id":5,"result":true,"error":null}
+{"id":2,"result":true,"error":null}
+{"id":null,"method":"mining.set_difficulty","params":[8]}
+{"id":null,"method":"mining.notify","params":["43c","447e21a8143887ae3efee4bd9284b367da09a6f319ea20590000001b00000000","2ab6c8f346e8ef446e358ca2a4a6ed22d91b47a2a89146d7a9e0e149080b16ae628aa1bed6c5bff8a137f9aa2318be82cc9b558831b5d75c47ed5cbba10b319a0100792741f71c170300140082a00000bf90001ae5e01ff901000000430103003730000004133c5a0000000000000000","05000000",[],"05000000","1a0090bf","5a3c1304",true]}
+
+13:01:31:706	1020	buf: {"id":2,"result":true,"error":null}
+
+13:01:31:708	2058	parse packet: 35
+13:01:31:709	1020	parse packet: 35
+13:01:31:711	2058	remove first packet 494
+13:01:31:714	1020	ETH: Authorized
+13:01:31:714	2058	new buf size: 494
+13:01:31:716	1020	new buf size: 0
+13:01:31:718	2058	parse packet: 35
+13:01:31:721	2058	 DCR: Authorized
+13:01:31:722	2058	remove first packet 458
+13:01:31:724	2058	new buf size: 458
+13:01:31:726	2058	parse packet: 57
+13:01:31:727	2058	remove first packet 400
+13:01:31:729	2058	new buf size: 400
+13:01:31:730	2058	parse packet: 399
+13:01:31:732	2058	new buf size: 0
+13:01:31:827	1020	got 75 bytes
+13:01:31:828	1020	buf: {"id":null,"method":"mining.set_difficulty","params":[1.0011717677116394]}
+
+13:01:31:830	1020	parse packet: 74
+13:01:31:831	1020	new buf size: 0
+13:01:31:935	1020	got 195 bytes
+13:01:31:937	1020	buf: {"id":null,"method":"mining.notify","params":["f598","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","665efaba440a3533c5a7656a461eaa737ad4d777bdf7054d2a82106185d6de13",false]}
+
+13:01:31:938	1020	parse packet: 194
+13:01:31:940	1020	ETH: job changed
+13:01:31:942	1020	new buf size: 0
+13:01:31:982	2c40	Setting DAG epoch #159...
+13:01:35:383	2c40	Setting DAG epoch #159 for GPU0
+13:01:35:384	1354	Setting DAG epoch #159 for GPU1
+13:01:35:387	2c40	Create GPU buffer for GPU0
+13:01:35:389	1354	Create GPU buffer for GPU1
+13:01:42:490	2c40	GPU0 DAG creation time - 7003 ms
+13:01:42:492	2c40	Setting DAG epoch #159 for GPU0 done
+13:01:44:814	1354	GPU1 DAG creation time - 9327 ms
+13:01:44:816	1354	Setting DAG epoch #159 for GPU1 done
+13:01:49:312	19a4	DCR: put share nonce 17a913b enonce cd460075
+13:01:49:314	19a4	DCR round found 1 shares
+13:01:49:320	2058	 DCR: 12/21/17-13:01:49 - SHARE FOUND - (GPU 0)
+13:01:49:322	2058	send: {"params": ["1AMQg6m9GPDN9HGuC3wJGpSuiZr1XQXjxi", "43c", "00000000cd46007581006f15", "5a3c1304", "3b917a01"], "id": 10, "method": "mining.submit"}
+
+13:01:49:382	2058	got 37 bytes
+13:01:49:383	2058	buf: {"id":10,"result":true,"error":null}
+
+13:01:49:385	2058	parse packet: 36
+13:01:49:387	2058	 DCR: Share accepted (63 ms)!
+13:01:49:389	2058	new buf size: 0
+13:01:55:145	2058	got 400 bytes
+13:01:55:147	2058	buf: {"id":null,"method":"mining.notify","params":["43d","447e21a8143887ae3efee4bd9284b367da09a6f319ea20590000001b00000000","bb672a812d202b0b00ea23424e0992319ee81f53c3a478e0e2306126d254215d19b8efca0428a3dea1369bf04cabbdeb76b8f95fecdaf5b23875247c2b7b196d0100792741f71c170500140082a00000bf90001ae5e01ff90100000043010300e44e000032133c5a0000000000000000","05000000",[],"05000000","1a0090bf","5a3c1332",true]}
+
+13:01:55:148	2058	parse packet: 399
+13:01:55:149	2058	new buf size: 0
+13:01:55:151	2058	 DCR: 12/21/17-13:01:55 - New job from decred.mine.zpool.ca:5744
+13:01:55:153	2058	target: 0x000000001fffe000 (diff: 34GH), block #196931
+13:01:55:269	1020	got 195 bytes
+13:01:55:270	1020	buf: {"id":null,"method":"mining.notify","params":["f599","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","cccb399195828b89c394de2368f9bd739489e2143727788b4b568ae721507aac",false]}
+
+13:01:55:272	1020	parse packet: 194
+13:01:55:274	1020	ETH: job changed
+13:01:55:275	1020	new buf size: 0
+13:01:55:276	1020	ETH: 12/21/17-13:01:55 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:01:55:278	1020	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:01:55:279	1020	ETH - Total Speed: 46.806 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:00
+13:01:55:281	1020	ETH: GPU0 25.999 Mh/s, GPU1 20.807 Mh/s
+13:01:55:283	1020	 DCR - Total Speed: 468.058 Mh/s, Total Shares: 1, Rejected: 0
+13:01:55:284	1020	 DCR: GPU0 259.990 Mh/s, GPU1 208.068 Mh/s
+13:01:56:667	524	GPU0 t=80C fan=55%, GPU1 t=64C fan=43%
+13:01:58:777	2694	em hbt: 15, dm hbt: 0, fm hbt: 47, 
+13:01:58:779	2694	watchdog - thread 0 (gpu0), hb time 47
+13:01:58:781	2694	watchdog - thread 1 (gpu0), hb time 156
+13:01:58:782	2694	watchdog - thread 2 (gpu1), hb time 109
+13:01:58:784	2694	watchdog - thread 3 (gpu1), hb time 297
+13:02:03:026	2d50	DCR: put share nonce c803fd enonce 58ad004f
+13:02:03:028	2d50	DCR round found 1 shares
+13:02:03:040	2058	 DCR: 12/21/17-13:02:03 - SHARE FOUND - (GPU 1)
+13:02:03:042	2058	send: {"params": ["1AMQg6m9GPDN9HGuC3wJGpSuiZr1XQXjxi", "43d", "0000000058ad004f81006f15", "5a3c1332", "fd03c800"], "id": 11, "method": "mining.submit"}
+
+13:02:03:117	2058	got 37 bytes
+13:02:03:119	2058	buf: {"id":11,"result":true,"error":null}
+
+13:02:03:121	2058	parse packet: 36
+13:02:03:122	2058	 DCR: Share accepted (78 ms)!
+13:02:03:124	2058	new buf size: 0
+13:02:12:870	2d50	ETH: put share nonce bdc0000e594659
+13:02:12:872	2d50	ETH round found 1 shares
+13:02:12:887	1020	ETH: 12/21/17-13:02:12 - SHARE FOUND - (GPU 1)
+13:02:12:889	1020	send: {"id": 11, "method": "mining.submit", "params": ["Tyredas.Beeboop","f599","c0000e594659"]}
+
+13:02:13:275	1020	got 37 bytes
+13:02:13:277	1020	buf: {"id":11,"result":true,"error":null}
+
+13:02:13:278	1020	parse packet: 36
+13:02:13:280	1020	ETH: Share accepted (390 ms)!
+13:02:13:282	1020	new buf size: 0
+13:02:26:779	524	GPU0 t=82C fan=57%, GPU1 t=66C fan=45%
+13:02:31:361	2694	em hbt: 0, dm hbt: 0, fm hbt: 31, 
+13:02:31:362	2694	watchdog - thread 0 (gpu0), hb time 109
+13:02:31:363	2694	watchdog - thread 1 (gpu0), hb time 218
+13:02:31:365	2694	watchdog - thread 2 (gpu1), hb time 93
+13:02:31:366	2694	watchdog - thread 3 (gpu1), hb time 297
+13:02:36:773	1020	got 195 bytes
+13:02:36:775	1020	buf: {"id":null,"method":"mining.notify","params":["f59a","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","6727e5a9470040fb64ac7702df99618251b030bbeb0c477a24d5d3f2be45af4c",false]}
+
+13:02:36:777	1020	parse packet: 194
+13:02:36:778	1020	ETH: job changed
+13:02:36:780	1020	new buf size: 0
+13:02:36:781	1020	ETH: 12/21/17-13:02:36 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:02:36:783	1020	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:02:36:785	1020	ETH - Total Speed: 46.627 Mh/s, Total Shares: 1, Rejected: 0, Time: 00:01
+13:02:36:786	1020	ETH: GPU0 25.926 Mh/s, GPU1 20.701 Mh/s
+13:02:36:788	1020	 DCR - Total Speed: 466.265 Mh/s, Total Shares: 2, Rejected: 0
+13:02:36:789	1020	 DCR: GPU0 259.256 Mh/s, GPU1 207.009 Mh/s
+13:02:37:363	2058	got 400 bytes
+13:02:37:365	2058	buf: {"id":null,"method":"mining.notify","params":["43e","a415ce95b773ddce357f5eebf7edc04fc6f8334ffa9868870000002800000000","a4db6ec5ed468c141b619ded2d0237a0fa3442b5f165bbfacbc1e42f805bddc69a0b9c1b100147415744e082885b06f887f3b6f8fb67c87b35454981d20ae7920100812f6ac4167105000b0080a00000bf90001ae5e01ff90100000044010300961c00005d133c5a0000000000000000","05000000",[],"05000000","1a0090bf","5a3c135d",true]}
+
+13:02:37:366	2058	parse packet: 399
+13:02:37:368	2058	new buf size: 0
+13:02:37:370	2058	 DCR: 12/21/17-13:02:37 - New job from decred.mine.zpool.ca:5744
+13:02:37:372	2058	target: 0x000000001fffe000 (diff: 34GH), block #196932
+13:02:42:255	1020	got 195 bytes
+13:02:42:257	1020	buf: {"id":null,"method":"mining.notify","params":["f59b","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","74639063390e6e5918293dfed52e25d2e16b3a8ad9837a6e2865e36f8c06b024",false]}
+
+13:02:42:259	1020	parse packet: 194
+13:02:42:260	1020	ETH: job changed
+13:02:42:262	1020	new buf size: 0
+13:02:42:262	1020	ETH: 12/21/17-13:02:42 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:02:42:264	1020	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:02:42:265	1020	ETH - Total Speed: 46.248 Mh/s, Total Shares: 1, Rejected: 0, Time: 00:01
+13:02:42:267	1020	ETH: GPU0 25.932 Mh/s, GPU1 20.317 Mh/s
+13:02:42:269	1020	 DCR - Total Speed: 462.483 Mh/s, Total Shares: 2, Rejected: 0
+13:02:42:271	1020	 DCR: GPU0 259.315 Mh/s, GPU1 203.168 Mh/s
+13:02:46:200	1020	got 195 bytes
+13:02:46:202	1020	buf: {"id":null,"method":"mining.notify","params":["f59c","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","8689f005872c47cca5270a64ae563b44ac0d07ce033d9da84437cbd82b5434a5",false]}
+
+13:02:46:204	1020	parse packet: 194
+13:02:46:205	1020	ETH: job changed
+13:02:46:207	1020	new buf size: 0
+13:02:46:209	1020	ETH: 12/21/17-13:02:46 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:02:46:210	1020	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:02:46:212	1020	ETH - Total Speed: 46.578 Mh/s, Total Shares: 1, Rejected: 0, Time: 00:01
+13:02:46:213	1020	ETH: GPU0 25.913 Mh/s, GPU1 20.665 Mh/s
+13:02:46:215	1020	 DCR - Total Speed: 465.780 Mh/s, Total Shares: 2, Rejected: 0
+13:02:46:217	1020	 DCR: GPU0 259.133 Mh/s, GPU1 206.647 Mh/s
+13:02:56:895	524	GPU0 t=83C fan=57%, GPU1 t=67C fan=47%
+13:03:03:950	2694	em hbt: 0, dm hbt: 0, fm hbt: 31, 
+13:03:03:952	2694	watchdog - thread 0 (gpu0), hb time 125
+13:03:03:953	2694	watchdog - thread 1 (gpu0), hb time 16
+13:03:03:955	2694	watchdog - thread 2 (gpu1), hb time 125
+13:03:03:956	2694	watchdog - thread 3 (gpu1), hb time 312
+13:03:08:127	2d50	DCR: put share nonce 3d83057 enonce de30143
+13:03:08:128	2d50	DCR round found 1 shares
+13:03:08:143	2058	 DCR: 12/21/17-13:03:08 - SHARE FOUND - (GPU 1)
+13:03:08:145	2058	send: {"params": ["1AMQg6m9GPDN9HGuC3wJGpSuiZr1XQXjxi", "43e", "000000000de3014381006f15", "5a3c135d", "5730d803"], "id": 11, "method": "mining.submit"}
+
+13:03:08:220	2058	got 37 bytes
+13:03:08:222	2058	buf: {"id":11,"result":true,"error":null}
+
+13:03:08:223	2058	parse packet: 36
+13:03:08:225	2058	 DCR: Share accepted (78 ms)!
+13:03:08:227	2058	new buf size: 0
+13:03:12:245	2d50	DCR: put share nonce 77bc0b9 enonce de3016f
+13:03:12:247	2d50	DCR round found 1 shares
+13:03:12:259	2058	 DCR: 12/21/17-13:03:12 - SHARE FOUND - (GPU 1)
+13:03:12:260	2058	send: {"params": ["1AMQg6m9GPDN9HGuC3wJGpSuiZr1XQXjxi", "43e", "000000000de3016f81006f15", "5a3c135d", "b9c07b07"], "id": 11, "method": "mining.submit"}
+
+13:03:12:337	2058	got 37 bytes
+13:03:12:339	2058	buf: {"id":11,"result":true,"error":null}
+
+13:03:12:340	2058	parse packet: 36
+13:03:12:342	2058	 DCR: Share accepted (78 ms)!
+13:03:12:344	2058	new buf size: 0
+13:03:20:901	1020	got 195 bytes
+13:03:20:903	1020	buf: {"id":null,"method":"mining.notify","params":["f59d","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","8c10c564d881b8cc3b0a1d510c381be8c5d79ec664220bda65d39f3d101be2b3",false]}
+
+13:03:20:905	1020	parse packet: 194
+13:03:20:906	1020	ETH: job changed
+13:03:20:907	1020	new buf size: 0
+13:03:20:908	1020	ETH: 12/21/17-13:03:20 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:03:20:910	1020	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:03:20:912	1020	ETH - Total Speed: 46.575 Mh/s, Total Shares: 1, Rejected: 0, Time: 00:01
+13:03:20:914	1020	ETH: GPU0 25.875 Mh/s, GPU1 20.700 Mh/s
+13:03:20:915	1020	 DCR - Total Speed: 465.746 Mh/s, Total Shares: 4, Rejected: 0
+13:03:20:917	1020	 DCR: GPU0 258.749 Mh/s, GPU1 206.997 Mh/s
+13:03:27:007	524	GPU0 t=82C fan=57%, GPU1 t=68C fan=48%
+13:03:29:272	1020	got 195 bytes
+13:03:29:274	1020	buf: {"id":null,"method":"mining.notify","params":["f59e","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","3bb13acdfb54be1659057ea1c9f27b56ded1c5e11d3382f022e4cf81e26d3919",false]}
+
+13:03:29:276	1020	parse packet: 194
+13:03:29:276	1020	ETH: job changed
+13:03:29:278	1020	new buf size: 0
+13:03:29:280	1020	ETH: 12/21/17-13:03:29 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:03:29:281	1020	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:03:29:283	1020	ETH - Total Speed: 46.629 Mh/s, Total Shares: 1, Rejected: 0, Time: 00:01
+13:03:29:285	1020	ETH: GPU0 25.869 Mh/s, GPU1 20.760 Mh/s
+13:03:29:286	1020	 DCR - Total Speed: 466.292 Mh/s, Total Shares: 4, Rejected: 0
+13:03:29:288	1020	 DCR: GPU0 258.694 Mh/s, GPU1 207.598 Mh/s
+13:03:36:563	2694	em hbt: 0, dm hbt: 0, fm hbt: 46, 
+13:03:36:565	2694	watchdog - thread 0 (gpu0), hb time 125
+13:03:36:566	2694	watchdog - thread 1 (gpu0), hb time 15
+13:03:36:568	2694	watchdog - thread 2 (gpu1), hb time 140
+13:03:36:569	2694	watchdog - thread 3 (gpu1), hb time 328
+13:03:40:386	2058	got 400 bytes
+13:03:40:388	2058	buf: {"id":null,"method":"mining.notify","params":["43f","a415ce95b773ddce357f5eebf7edc04fc6f8334ffa9868870000002800000000","a4db6ec5ed468c141b619ded2d0237a0fa3442b5f165bbfacbc1e42f805bddc69a0b9c1b100147415744e082885b06f887f3b6f8fb67c87b35454981d20ae7920100812f6ac4167105000b0080a00000bf90001ae5e01ff90100000044010300961c00009c133c5a0000000000000000","05000000",[],"05000000","1a0090bf","5a3c139c",true]}
+
+13:03:40:389	2058	parse packet: 399
+13:03:40:391	2058	new buf size: 0
+13:03:40:392	2058	 DCR: 12/21/17-13:03:40 - New job from decred.mine.zpool.ca:5744
+13:03:40:393	2058	target: 0x000000001fffe000 (diff: 34GH), block #196932
+13:03:46:115	1020	got 195 bytes
+13:03:46:117	1020	buf: {"id":null,"method":"mining.notify","params":["f59f","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","6bff776a4e2c910ea24da120c21897058c4cb8ad8f1097d5749182d20b710f69",false]}
+
+13:03:46:119	1020	parse packet: 194
+13:03:46:120	1020	ETH: job changed
+13:03:46:122	1020	new buf size: 0
+13:03:46:124	1020	ETH: 12/21/17-13:03:46 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:03:46:125	1020	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:03:46:127	1020	ETH - Total Speed: 46.282 Mh/s, Total Shares: 1, Rejected: 0, Time: 00:02
+13:03:46:130	1020	ETH: GPU0 25.861 Mh/s, GPU1 20.421 Mh/s
+13:03:46:131	1020	 DCR - Total Speed: 462.818 Mh/s, Total Shares: 4, Rejected: 0
+13:03:46:135	1020	 DCR: GPU0 258.613 Mh/s, GPU1 204.205 Mh/s
+13:03:56:156	1020	got 195 bytes
+13:03:56:158	1020	buf: {"id":null,"method":"mining.notify","params":["f5a0","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","b38e080d60482cdec2b00e6e707fdba437094746d51edd783a365a4c72cf402c",false]}
+
+13:03:56:160	1020	parse packet: 194
+13:03:56:162	1020	ETH: job changed
+13:03:56:163	1020	new buf size: 0
+13:03:56:165	1020	ETH: 12/21/17-13:03:56 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:03:56:166	1020	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:03:56:168	1020	ETH - Total Speed: 46.888 Mh/s, Total Shares: 1, Rejected: 0, Time: 00:02
+13:03:56:170	1020	ETH: GPU0 25.866 Mh/s, GPU1 21.022 Mh/s
+13:03:56:172	1020	 DCR - Total Speed: 468.879 Mh/s, Total Shares: 4, Rejected: 0
+13:03:56:173	1020	 DCR: GPU0 258.656 Mh/s, GPU1 210.223 Mh/s
+13:03:57:120	524	GPU0 t=82C fan=58%, GPU1 t=68C fan=48%
+13:04:05:258	19a4	ETH: put share nonce bd400009444e60
+13:04:05:260	19a4	ETH round found 1 shares
+13:04:05:264	1020	ETH: 12/21/17-13:04:05 - SHARE FOUND - (GPU 0)
+13:04:05:265	1020	send: {"id": 10, "method": "mining.submit", "params": ["Tyredas.Beeboop","f5a0","400009444e60"]}
+
+13:04:05:342	1020	got 37 bytes
+13:04:05:343	1020	buf: {"id":10,"result":true,"error":null}
+
+13:04:05:344	1020	parse packet: 36
+13:04:05:346	1020	ETH: Share accepted (78 ms)!
+13:04:05:348	1020	new buf size: 0
+13:04:09:160	2694	em hbt: 15, dm hbt: 0, fm hbt: 47, 
+13:04:09:162	2694	watchdog - thread 0 (gpu0), hb time 140
+13:04:09:163	2694	watchdog - thread 1 (gpu0), hb time 31
+13:04:09:164	2694	watchdog - thread 2 (gpu1), hb time 63
+13:04:09:165	2694	watchdog - thread 3 (gpu1), hb time 250
+13:04:09:285	1020	got 195 bytes
+13:04:09:286	1020	buf: {"id":null,"method":"mining.notify","params":["f5a1","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","e3332b43665a60c03fb65df32e49086b446131e3663e1b922560b755ace780af",false]}
+
+13:04:09:288	1020	parse packet: 194
+13:04:09:290	1020	ETH: job changed
+13:04:09:291	1020	new buf size: 0
+13:04:09:293	1020	ETH: 12/21/17-13:04:09 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:04:09:295	1020	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:04:09:297	1020	ETH - Total Speed: 46.926 Mh/s, Total Shares: 2, Rejected: 0, Time: 00:02
+13:04:09:299	1020	ETH: GPU0 25.846 Mh/s, GPU1 21.080 Mh/s
+13:04:09:305	1020	 DCR - Total Speed: 469.264 Mh/s, Total Shares: 4, Rejected: 0
+13:04:09:307	1020	 DCR: GPU0 258.461 Mh/s, GPU1 210.803 Mh/s
+13:04:20:648	1020	got 195 bytes
+13:04:20:650	1020	buf: {"id":null,"method":"mining.notify","params":["f5a2","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","f51285d6cff23ffda2f56b292493f8beb9d76b8006231841c86dace71a473a18",false]}
+
+13:04:20:651	1020	parse packet: 194
+13:04:20:652	1020	ETH: job changed
+13:04:20:654	1020	new buf size: 0
+13:04:20:656	1020	ETH: 12/21/17-13:04:20 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:04:20:658	1020	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:04:20:665	1020	ETH - Total Speed: 46.906 Mh/s, Total Shares: 2, Rejected: 0, Time: 00:02
+13:04:20:667	1020	ETH: GPU0 25.884 Mh/s, GPU1 21.021 Mh/s
+13:04:20:674	1020	 DCR - Total Speed: 469.056 Mh/s, Total Shares: 4, Rejected: 0
+13:04:20:676	1020	 DCR: GPU0 258.844 Mh/s, GPU1 210.212 Mh/s
+13:04:27:233	524	GPU0 t=82C fan=58%, GPU1 t=68C fan=49%
+13:04:28:973	19a4	DCR: put share nonce 2d4c204 enonce 73a10351
+13:04:28:975	19a4	DCR round found 1 shares
+13:04:28:986	2058	 DCR: 12/21/17-13:04:28 - SHARE FOUND - (GPU 0)
+13:04:28:987	2058	send: {"params": ["1AMQg6m9GPDN9HGuC3wJGpSuiZr1XQXjxi", "43f", "0000000073a1035181006f15", "5a3c139c", "04c2d402"], "id": 10, "method": "mining.submit"}
+
+13:04:29:048	2058	got 37 bytes
+13:04:29:049	2058	buf: {"id":10,"result":true,"error":null}
+
+13:04:29:051	2058	parse packet: 36
+13:04:29:053	2058	 DCR: Share accepted (63 ms)!
+13:04:29:055	2058	new buf size: 0
+13:04:41:747	2694	em hbt: 0, dm hbt: 0, fm hbt: 31, 
+13:04:41:749	2694	watchdog - thread 0 (gpu0), hb time 109
+13:04:41:750	2694	watchdog - thread 1 (gpu0), hb time 234
+13:04:41:752	2694	watchdog - thread 2 (gpu1), hb time 16
+13:04:41:753	2694	watchdog - thread 3 (gpu1), hb time 203
+13:04:43:440	2058	got 400 bytes
+13:04:43:442	2058	buf: {"id":null,"method":"mining.notify","params":["440","a415ce95b773ddce357f5eebf7edc04fc6f8334ffa9868870000002800000000","77a807a17a470d4d1925007a36160aa25e5f03f77890fbf5f41bcf343a8ce8dc04d8f62c16573719ff1c4772d96a2475c5dd595f176f8c5bbea52db0be7eebba0100812f6ac4167105000b0080a00000bf90001ae5e01ff90100000044010300911d0000db133c5a0000000000000000","05000000",[],"05000000","1a0090bf","5a3c13db",true]}
+
+13:04:43:443	2058	parse packet: 399
+13:04:43:445	2058	new buf size: 0
+13:04:43:447	2058	 DCR: 12/21/17-13:04:43 - New job from decred.mine.zpool.ca:5744
+13:04:43:448	2058	target: 0x000000001fffe000 (diff: 34GH), block #196932
+13:04:54:285	1020	got 195 bytes
+13:04:54:287	1020	buf: {"id":null,"method":"mining.notify","params":["f5a3","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","cdab534ea3d26288974c725cb28f7a17f53439ee8899cb7bc534664fea97204a",false]}
+
+13:04:54:289	1020	parse packet: 194
+13:04:54:290	1020	ETH: job changed
+13:04:54:292	1020	new buf size: 0
+13:04:54:294	1020	ETH: 12/21/17-13:04:54 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:04:54:295	1020	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:04:54:297	1020	ETH - Total Speed: 46.592 Mh/s, Total Shares: 2, Rejected: 0, Time: 00:03
+13:04:54:303	1020	ETH: GPU0 25.807 Mh/s, GPU1 20.786 Mh/s
+13:04:54:305	1020	 DCR - Total Speed: 465.920 Mh/s, Total Shares: 5, Rejected: 0
+13:04:54:363	1020	 DCR: GPU0 258.065 Mh/s, GPU1 207.855 Mh/s
+13:04:57:346	524	GPU0 t=82C fan=58%, GPU1 t=68C fan=49%
+13:05:14:342	2694	em hbt: 0, dm hbt: 0, fm hbt: 32, 
+13:05:14:344	2694	watchdog - thread 0 (gpu0), hb time 63
+13:05:14:345	2694	watchdog - thread 1 (gpu0), hb time 188
+13:05:14:347	2694	watchdog - thread 2 (gpu1), hb time 250
+13:05:14:348	2694	watchdog - thread 3 (gpu1), hb time 63
+13:05:20:298	2058	got 400 bytes
+13:05:20:300	2058	buf: {"id":null,"method":"mining.notify","params":["441","8230e6bad5315f6678667e207742898b283eebc1cdf4177e0000004500000000","5e8d4cf0b7674f3fe82a67ccf11e2db763ce1977668ec60fb4d31289250ac54f6ca6c56efeb63370a41119bc9bad59da6536b74a34d94194addc6e7623ed38680100556a6d94ed05040001007ea00000bf90001ae5e01ff90100000045010300eb08000001143c5a0000000000000000","05000000",[],"05000000","1a0090bf","5a3c1401",true]}
+
+13:05:20:302	2058	parse packet: 399
+13:05:20:303	2058	new buf size: 0
+13:05:20:304	2058	 DCR: 12/21/17-13:05:20 - New job from decred.mine.zpool.ca:5744
+13:05:20:306	2058	target: 0x000000001fffe000 (diff: 34GH), block #196933
+13:05:20:795	1020	got 195 bytes
+13:05:20:797	1020	buf: {"id":null,"method":"mining.notify","params":["f5a4","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","a1e917ff49907af36b215ce1d1848529e4d128e03a330daeb52ac620d0f4a317",false]}
+
+13:05:20:798	1020	parse packet: 194
+13:05:20:800	1020	ETH: job changed
+13:05:20:802	1020	new buf size: 0
+13:05:20:804	1020	ETH: 12/21/17-13:05:20 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:05:20:805	1020	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:05:20:807	1020	ETH - Total Speed: 46.941 Mh/s, Total Shares: 2, Rejected: 0, Time: 00:03
+13:05:20:821	1020	ETH: GPU0 25.869 Mh/s, GPU1 21.072 Mh/s
+13:05:20:823	1020	 DCR - Total Speed: 469.410 Mh/s, Total Shares: 5, Rejected: 0
+13:05:20:846	1020	 DCR: GPU0 258.692 Mh/s, GPU1 210.718 Mh/s
+13:05:27:459	524	GPU0 t=82C fan=58%, GPU1 t=68C fan=49%
+13:05:28:637	1020	got 195 bytes
+13:05:28:639	1020	buf: {"id":null,"method":"mining.notify","params":["f5a5","88615dc9f6fe84975a471ca044adecdfde8c8fcdde97d2a3416254d590c52d0c","1d5c061206ab13ec1822e5075c5eae3e89e77f910898c99d2d0bb87bfb0ae178",false]}
+
+13:05:28:640	1020	parse packet: 194
+13:05:28:642	1020	ETH: job changed
+13:05:28:644	1020	new buf size: 0
+13:05:28:645	1020	ETH: 12/21/17-13:05:28 - New job from us-east.ethash-hub.miningpoolhub.com:17020
+13:05:28:647	1020	target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+13:05:28:649	1020	ETH - Total Speed: 46.903 Mh/s, Total Shares: 2, Rejected: 0, Time: 00:03
+13:05:28:654	1020	ETH: GPU0 25.900 Mh/s, GPU1 21.003 Mh/s
+13:05:28:656	1020	 DCR - Total Speed: 469.027 Mh/s, Total Shares: 5, Rejected: 0
+13:05:28:673	1020	 DCR: GPU0 259.001 Mh/s, GPU1 210.026 Mh/s
+13:05:29:323	195c	srv_thr cnt: 1, IP: 127.0.0.1
+13:05:29:325	195c	recv: 158
+13:05:29:328	195c	
+13:05:29:330	195c	GPU #0: GeForce GTX 1070, 8192 MB available, 15 compute units, capability: 6.1
+
+13:05:29:332	195c	GPU #1: GeForce GTX 1080, 8192 MB available, 20 compute units, capability: 6.1
+
+13:05:29:339	195c	ETH - Total Speed: 46.902 Mh/s, Total Shares: 2(1+1), Rejected: 0(0+0), Time: 00:03
+13:05:29:341	195c	ETH: GPU0 25.855 Mh/s, GPU1 21.047 Mh/s
+13:05:29:376	195c	 DCR - Total Speed: 469.018 Mh/s, Total Shares: 5(2+3), Rejected: 0(0+0)
+13:05:29:397	195c	 DCR: GPU0 258.547 Mh/s, GPU1 210.471 Mh/s
+13:05:29:399	195c	Incorrect ETH shares: none
+13:05:29:406	195c	1 minute average ETH total speed: 46.782 Mh/s
+13:05:29:408	195c	Pool switches: ETH - 0, DCR - 0
+13:05:29:425	195c	Current ETH share target: 0x00000000ffb24c4e (diff: 4300MH), epoch 159(2.24GB)
+Current DCR share target: 0x000000001fffe000 (diff: 34GH), block #196933
+13:05:29:447	195c	GPU0 t=82C fan=58%, GPU1 t=68C fan=49%
+13:05:29:449	195c	
+13:05:29:451	195c	sent: 9435

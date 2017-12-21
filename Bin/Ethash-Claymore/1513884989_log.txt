@@ -1,0 +1,241 @@
+12:36:29:822	7c4	Check and remove old log files...
+12:36:29:828	7c4	args: -r -1 -mport 23333 -epool hub.miningpoolhub.com:17022 -ewal Tyredas.Beeboop -epsw x -esm 2 -allpools 1 -allcoins 1 -platform 2 
+12:36:29:828	7c4	
+12:36:29:828	7c4	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+12:36:29:828	7c4	บ     Claymore's Dual ETH + DCR/SC/LBC/PASC GPU Miner v10.2      บ
+12:36:29:828	7c4	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+12:36:29:828	7c4	
+12:36:30:059	7c4	ETH: 1 pool is specified
+12:36:30:059	7c4	Main Ethereum pool is hub.miningpoolhub.com:17022
+12:36:30:059	7c4	DCR: 0 pool is specified
+12:36:30:290	7c4	CUDA initializing...
+
+12:36:30:290	7c4	NVIDIA Cards available: 2 
+12:36:30:290	7c4	CUDA Driver Version/Runtime Version: 9.1/8.0
+12:36:30:290	7c4	GPU #0: GeForce GTX 1070, 8192 MB available, 15 compute units, capability: 6.1
+
+12:36:30:290	7c4	GPU #1: GeForce GTX 1080, 8192 MB available, 20 compute units, capability: 6.1
+
+12:36:30:290	7c4	Total cards: 2 
+12:36:34:342	7c4	No AMD cards in the list, ADL library will not be used.
+12:36:34:348	7c4	NVML version: 9.388.59
+12:36:34:704	7c8	ETH: Stratum - connecting to 'hub.miningpoolhub.com' <52.6.227.167> port 17022
+12:36:34:745	7c4	No pool specified for Decred! Ethereum-only mining mode is enabled
+12:36:34:747	7c4	ETHEREUM-ONLY MINING MODE ENABLED (-mode 1)
+12:36:34:749	7c4	ETH: miner-proxy stratum mode
+12:36:34:751	7c4	"-allpools" option is set, default pools can be used for devfee, check "Readme" file for details.
+12:36:34:752	7c4	"-allcoins" option is set, default pools will be used for devfee, check "Readme" file for details.
+12:36:34:754	7c4	Watchdog enabled
+12:36:34:755	7c4	Remote management is enabled on port 23333
+12:36:34:757	7c4	
+12:36:34:801	7c8	send: {"id": 1, "method": "mining.subscribe", "params": []}
+
+12:36:34:803	7c8	send: {"id": 5, "method": "mining.extranonce.subscribe", "params": []}
+
+12:36:34:805	7c8	send: {"id": 2, "method": "mining.authorize", "params": ["Tyredas.Beeboop","x"]}
+
+12:36:34:807	7c8	ETH: Stratum - Connected (hub.miningpoolhub.com:17022)
+12:36:35:011	7c8	got 162 bytes
+12:36:35:013	7c8	buf: {"id":1,"result":[[["mining.set_difficulty","deadbeefcafebabedc4d000000000000"],["mining.notify","deadbeefcafebabedc4d000000000000"]],"7fffb260",4],"error":null}
+
+12:36:35:014	7c8	parse packet: 161
+12:36:35:016	7c8	new buf size: 0
+12:36:35:088	7c8	got 330 bytes
+12:36:35:090	7c8	buf: {"id":2,"result":true,"error":null}
+{"id":null,"method":"mining.notify","params":["295a","0x0000000000000019753fd2f12f852e9b9a910a5c382db56b869c2cf32484f83900000000000000003c0d3c5a00000000f36c293934dd3de76662c55ef1c81445c0957e06b0cee22d93ae3cdc8e545ea1","0x0000000012533fe68fd3d1cfe47445abdce0b117994feb3fbbe16e3d0f675ad9",true]}
+
+12:36:35:092	7c8	parse packet: 35
+12:36:35:094	7c8	ETH: Authorized
+12:36:35:096	7c8	remove first packet 294
+12:36:35:097	7c8	new buf size: 294
+12:36:35:099	7c8	parse packet: 293
+12:36:35:100	7c8	new buf size: 0
+12:36:39:776	7c8	checkread timeout
+12:36:44:436	7c8	checkread timeout
+12:36:49:111	7c8	checkread timeout
+12:36:53:785	7c8	checkread timeout
+12:36:58:460	7c8	checkread timeout
+12:37:00:202	19cc	GPU0 t=36C fan=24%, GPU1 t=45C fan=0%
+12:37:02:560	2d38	em hbt: 27937, fm hbt: 78, 
+12:37:02:562	2d38	watchdog - thread 0 (gpu0), hb time 0
+12:37:02:564	2d38	watchdog - thread 1 (gpu0), hb time 0
+12:37:02:565	2d38	watchdog - thread 2 (gpu1), hb time 0
+12:37:02:567	2d38	watchdog - thread 3 (gpu1), hb time 0
+12:37:03:135	7c8	checkread timeout
+12:37:07:811	7c8	checkread timeout
+12:37:12:486	7c8	checkread timeout
+12:37:12:490	7c8	ETH: Job timeout, disconnect, retry in 20 sec...
+12:37:30:328	19cc	GPU0 t=35C fan=24%, GPU1 t=47C fan=0%
+12:37:32:502	7c8	ETH: Stratum - connecting to 'hub.miningpoolhub.com' <52.6.227.167> port 17022
+12:37:32:587	7c8	send: {"id": 1, "method": "mining.subscribe", "params": []}
+
+12:37:32:589	7c8	send: {"id": 5, "method": "mining.extranonce.subscribe", "params": []}
+
+12:37:32:591	7c8	send: {"id": 2, "method": "mining.authorize", "params": ["Tyredas.Beeboop","x"]}
+
+12:37:32:593	7c8	ETH: Stratum - Connected (hub.miningpoolhub.com:17022)
+12:37:32:672	7c8	got 162 bytes
+12:37:32:674	7c8	buf: {"id":1,"result":[[["mining.set_difficulty","deadbeefcafebabef14d000000000000"],["mining.notify","deadbeefcafebabef14d000000000000"]],"48004db2",4],"error":null}
+
+12:37:32:676	7c8	parse packet: 161
+12:37:32:677	7c8	new buf size: 0
+12:37:32:750	7c8	got 330 bytes
+12:37:32:752	7c8	buf: {"id":2,"result":true,"error":null}
+{"id":null,"method":"mining.notify","params":["2937","0x0000000000000019753fd2f12f852e9b9a910a5c382db56b869c2cf32484f8390000000000000000740d3c5a00000000a3e6b3fc597033fdaa5052c6bd78920d6a14bf6cd36b6f137c7d1ca729fb9282","0x0000000012533fe68fd3d1cfe47445abdce0b117994feb3fbbe16e3d0f675ad9",true]}
+
+12:37:32:753	7c8	parse packet: 35
+12:37:32:755	7c8	ETH: Authorized
+12:37:32:757	7c8	remove first packet 294
+12:37:32:759	7c8	new buf size: 294
+12:37:32:760	7c8	parse packet: 293
+12:37:32:762	7c8	new buf size: 0
+12:37:35:174	2d38	em hbt: 2672, fm hbt: 78, 
+12:37:35:176	2d38	watchdog - thread 0 (gpu0), hb time 94
+12:37:35:178	2d38	watchdog - thread 1 (gpu0), hb time 94
+12:37:35:179	2d38	watchdog - thread 2 (gpu1), hb time 94
+12:37:35:180	2d38	watchdog - thread 3 (gpu1), hb time 109
+12:37:37:440	7c8	checkread timeout
+12:37:42:114	7c8	checkread timeout
+12:37:46:789	7c8	checkread timeout
+12:37:51:464	7c8	checkread timeout
+12:37:56:140	7c8	checkread timeout
+12:38:00:458	19cc	GPU0 t=35C fan=24%, GPU1 t=49C fan=0%
+12:38:00:814	7c8	checkread timeout
+12:38:05:489	7c8	checkread timeout
+12:38:07:787	2d38	em hbt: 35281, fm hbt: 78, 
+12:38:07:789	2d38	watchdog - thread 0 (gpu0), hb time 47
+12:38:07:790	2d38	watchdog - thread 1 (gpu0), hb time 63
+12:38:07:792	2d38	watchdog - thread 2 (gpu1), hb time 63
+12:38:07:793	2d38	watchdog - thread 3 (gpu1), hb time 63
+12:38:10:164	7c8	checkread timeout
+12:38:10:166	7c8	ETH: Job timeout, disconnect, retry in 20 sec...
+12:38:30:236	7c8	ETH: Stratum - connecting to 'hub.miningpoolhub.com' <52.72.154.189> port 17022
+12:38:30:325	7c8	send: {"id": 1, "method": "mining.subscribe", "params": []}
+
+12:38:30:327	7c8	send: {"id": 5, "method": "mining.extranonce.subscribe", "params": []}
+
+12:38:30:329	7c8	send: {"id": 2, "method": "mining.authorize", "params": ["Tyredas.Beeboop","x"]}
+
+12:38:30:331	7c8	ETH: Stratum - Connected (hub.miningpoolhub.com:17022)
+12:38:30:412	7c8	got 162 bytes
+12:38:30:414	7c8	buf: {"id":1,"result":[[["mining.set_difficulty","deadbeefcafebabe334e000000000000"],["mining.notify","deadbeefcafebabe334e000000000000"]],"37ffb207",4],"error":null}
+
+12:38:30:415	7c8	parse packet: 161
+12:38:30:417	7c8	new buf size: 0
+12:38:30:490	7c8	got 330 bytes
+12:38:30:492	7c8	buf: {"id":2,"result":true,"error":null}
+{"id":null,"method":"mining.notify","params":["2928","0x0000000000000019753fd2f12f852e9b9a910a5c382db56b869c2cf32484f8390000000000000000ab0d3c5a00000000aca00bf06c4cf11829f08d18ff805827d2d53a3e861740c1bb0b4e33665af5a4","0x0000000012533fe68fd3d1cfe47445abdce0b117994feb3fbbe16e3d0f675ad9",true]}
+
+12:38:30:493	7c8	parse packet: 35
+12:38:30:495	7c8	ETH: Authorized
+12:38:30:497	7c8	remove first packet 294
+12:38:30:498	7c8	new buf size: 294
+12:38:30:500	7c8	parse packet: 293
+12:38:30:501	7c8	new buf size: 0
+12:38:30:584	19cc	GPU0 t=34C fan=24%, GPU1 t=50C fan=0%
+12:38:35:065	7c8	checkread timeout
+12:38:39:739	7c8	checkread timeout
+12:38:40:362	2d38	em hbt: 10187, fm hbt: 93, 
+12:38:40:364	2d38	watchdog - thread 0 (gpu0), hb time 47
+12:38:40:366	2d38	watchdog - thread 1 (gpu0), hb time 47
+12:38:40:368	2d38	watchdog - thread 2 (gpu1), hb time 63
+12:38:40:369	2d38	watchdog - thread 3 (gpu1), hb time 63
+12:38:44:414	7c8	checkread timeout
+12:38:49:090	7c8	checkread timeout
+12:38:53:765	7c8	checkread timeout
+12:38:58:439	7c8	checkread timeout
+12:39:00:709	19cc	GPU0 t=34C fan=24%, GPU1 t=51C fan=0%
+12:39:03:114	7c8	checkread timeout
+12:39:07:789	7c8	checkread timeout
+12:39:07:791	7c8	ETH: Job timeout, disconnect, retry in 20 sec...
+12:39:12:976	2d38	em hbt: 42797, fm hbt: 94, 
+12:39:12:978	2d38	watchdog - thread 0 (gpu0), hb time 109
+12:39:12:980	2d38	watchdog - thread 1 (gpu0), hb time 109
+12:39:12:981	2d38	watchdog - thread 2 (gpu1), hb time 109
+12:39:12:982	2d38	watchdog - thread 3 (gpu1), hb time 109
+12:39:27:808	7c8	ETH: Stratum - connecting to 'hub.miningpoolhub.com' <52.72.154.189> port 17022
+12:39:27:893	7c8	send: {"id": 1, "method": "mining.subscribe", "params": []}
+
+12:39:27:895	7c8	send: {"id": 5, "method": "mining.extranonce.subscribe", "params": []}
+
+12:39:27:897	7c8	send: {"id": 2, "method": "mining.authorize", "params": ["Tyredas.Beeboop","x"]}
+
+12:39:27:899	7c8	ETH: Stratum - Connected (hub.miningpoolhub.com:17022)
+12:39:27:978	7c8	got 162 bytes
+12:39:27:980	7c8	buf: {"id":1,"result":[[["mining.set_difficulty","deadbeefcafebabe0d4e000000000000"],["mining.notify","deadbeefcafebabe0d4e000000000000"]],"3fffb232",4],"error":null}
+
+12:39:27:981	7c8	parse packet: 161
+12:39:27:983	7c8	new buf size: 0
+12:39:28:071	7c8	got 330 bytes
+12:39:28:073	7c8	buf: {"id":2,"result":true,"error":null}
+{"id":null,"method":"mining.notify","params":["2966","0x0000000000000019753fd2f12f852e9b9a910a5c382db56b869c2cf32484f8390000000000000000e20d3c5a0000000057ad445be20f6529e49d57d00c1af845acbf8b25b69cd2abd07cccbb7b8d5ea6","0x0000000012533fe68fd3d1cfe47445abdce0b117994feb3fbbe16e3d0f675ad9",true]}
+
+12:39:28:075	7c8	parse packet: 35
+12:39:28:076	7c8	ETH: Authorized
+12:39:28:078	7c8	remove first packet 294
+12:39:28:079	7c8	new buf size: 294
+12:39:28:081	7c8	parse packet: 293
+12:39:28:082	7c8	new buf size: 0
+12:39:30:838	19cc	GPU0 t=34C fan=24%, GPU1 t=52C fan=0%
+12:39:32:762	7c8	checkread timeout
+12:39:37:438	7c8	checkread timeout
+12:39:42:113	7c8	checkread timeout
+12:39:45:592	2d38	em hbt: 17782, fm hbt: 94, 
+12:39:45:594	2d38	watchdog - thread 0 (gpu0), hb time 63
+12:39:45:596	2d38	watchdog - thread 1 (gpu0), hb time 63
+12:39:45:598	2d38	watchdog - thread 2 (gpu1), hb time 63
+12:39:45:599	2d38	watchdog - thread 3 (gpu1), hb time 63
+12:39:46:788	7c8	checkread timeout
+12:39:51:463	7c8	checkread timeout
+12:39:56:138	7c8	checkread timeout
+12:40:00:812	7c8	checkread timeout
+12:40:00:968	19cc	GPU0 t=34C fan=24%, GPU1 t=53C fan=0%
+12:40:05:488	7c8	checkread timeout
+12:40:05:490	7c8	ETH: Job timeout, disconnect, retry in 20 sec...
+12:40:18:193	2d38	em hbt: 50375, fm hbt: 93, 
+12:40:18:195	2d38	watchdog - thread 0 (gpu0), hb time 31
+12:40:18:196	2d38	watchdog - thread 1 (gpu0), hb time 47
+12:40:18:198	2d38	watchdog - thread 2 (gpu1), hb time 47
+12:40:18:199	2d38	watchdog - thread 3 (gpu1), hb time 47
+12:40:25:562	7c8	ETH: Stratum - connecting to 'hub.miningpoolhub.com' <52.6.227.167> port 17022
+12:40:25:651	7c8	send: {"id": 1, "method": "mining.subscribe", "params": []}
+
+12:40:25:653	7c8	send: {"id": 5, "method": "mining.extranonce.subscribe", "params": []}
+
+12:40:25:655	7c8	send: {"id": 2, "method": "mining.authorize", "params": ["Tyredas.Beeboop","x"]}
+
+12:40:25:657	7c8	ETH: Stratum - Connected (hub.miningpoolhub.com:17022)
+12:40:25:742	7c8	got 162 bytes
+12:40:25:744	7c8	buf: {"id":1,"result":[[["mining.set_difficulty","deadbeefcafebabe374e000000000000"],["mining.notify","deadbeefcafebabe374e000000000000"]],"37ffb203",4],"error":null}
+
+12:40:25:745	7c8	parse packet: 161
+12:40:25:747	7c8	new buf size: 0
+12:40:25:819	7c8	got 330 bytes
+12:40:25:821	7c8	buf: {"id":2,"result":true,"error":null}
+{"id":null,"method":"mining.notify","params":["292a","0x0000000000000019753fd2f12f852e9b9a910a5c382db56b869c2cf32484f83900000000000000001a0e3c5a0000000087d500c862c545a5a2f08cf96b05ccc16205f641d06d532a404a33076a61d565","0x0000000012533fe68fd3d1cfe47445abdce0b117994feb3fbbe16e3d0f675ad9",true]}
+
+12:40:25:823	7c8	parse packet: 35
+12:40:25:825	7c8	ETH: Authorized
+12:40:25:827	7c8	remove first packet 294
+12:40:25:828	7c8	new buf size: 294
+12:40:25:829	7c8	parse packet: 293
+12:40:25:831	7c8	new buf size: 0
+12:40:30:511	7c8	checkread timeout
+12:40:31:102	19cc	GPU0 t=34C fan=24%, GPU1 t=54C fan=0%
+12:40:32:910	13a0	srv_thr cnt: 1, IP: 127.0.0.1
+12:40:32:912	13a0	recv: 158
+12:40:32:915	13a0	
+12:40:32:917	13a0	GPU #0: GeForce GTX 1070, 8192 MB available, 15 compute units, capability: 6.1
+
+12:40:32:919	13a0	GPU #1: GeForce GTX 1080, 8192 MB available, 20 compute units, capability: 6.1
+
+12:40:32:920	13a0	ETH - Total Speed: 0.000 Mh/s, Total Shares: 0(0+0), Rejected: 0(0+0), Time: 00:03
+12:40:32:922	13a0	ETH: GPU0 0.000 Mh/s, GPU1 0.000 Mh/s
+12:40:32:924	13a0	Incorrect ETH shares: none
+12:40:32:925	13a0	1 minute average ETH total speed: 0.000 Mh/s
+12:40:32:927	13a0	Pool switches: ETH - 1, DCR - 0
+12:40:32:929	13a0	GPU0 t=34C fan=24%, GPU1 t=54C fan=0%
+12:40:32:931	13a0	
+12:40:32:933	13a0	sent: 4913
+12:40:35:185	7c8	checkread timeout
+12:40:39:858	7c8	checkread timeout

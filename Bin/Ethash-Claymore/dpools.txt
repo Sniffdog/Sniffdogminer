@@ -1,0 +1,3 @@
+# WARNING! Remove "#" characters to enable lines, with "#" they are disabled and will be ignored by miner! Check README for details.
+
+# POOL: stratum+tcp://dcr.suprnova.cc:3252, WALLET: Redhex.my, PSW: x

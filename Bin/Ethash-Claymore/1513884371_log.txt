@@ -1,0 +1,88 @@
+12:26:11:563	524	Check and remove old log files...
+12:26:11:568	524	args: -r -1 -mport 23333 -epool hub.miningpoolhub.com:17022 -ewal Tyredas.Beeboop -epsw x -esm 3 -allpools 1 -allcoins 1 -platform 2 
+12:26:11:568	524	
+12:26:11:568	524	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+12:26:11:568	524	บ     Claymore's Dual ETH + DCR/SC/LBC/PASC GPU Miner v10.2      บ
+12:26:11:568	524	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+12:26:11:568	524	
+12:26:11:800	524	ETH: 1 pool is specified
+12:26:11:800	524	Main Ethereum pool is hub.miningpoolhub.com:17022
+12:26:11:800	524	DCR: 0 pool is specified
+12:26:12:045	524	CUDA initializing...
+
+12:26:12:045	524	NVIDIA Cards available: 2 
+12:26:12:045	524	CUDA Driver Version/Runtime Version: 9.1/8.0
+12:26:12:045	524	GPU #0: GeForce GTX 1070, 8192 MB available, 15 compute units, capability: 6.1
+
+12:26:12:045	524	GPU #1: GeForce GTX 1080, 8192 MB available, 20 compute units, capability: 6.1
+
+12:26:12:045	524	Total cards: 2 
+12:26:16:071	524	No AMD cards in the list, ADL library will not be used.
+12:26:16:071	524	NVML version: 9.388.59
+12:26:16:287	c58	ETH: Stratum - connecting to 'hub.miningpoolhub.com' <52.72.154.189> port 17022
+12:26:16:372	c58	send: {"id": 1, "method": "mining.subscribe", "params": ["MinerName/1.0.0", "EthereumStratum/1.0.0"]}
+
+12:26:16:388	c58	send: {"id": 5, "method": "mining.extranonce.subscribe", "params": []}
+
+12:26:16:388	c58	send: {"id": 2, "method": "mining.authorize", "params": ["Tyredas.Beeboop","x"]}
+
+12:26:16:388	c58	ETH: Stratum - Connected (hub.miningpoolhub.com:17022)
+12:26:16:403	524	No pool specified for Decred! Ethereum-only mining mode is enabled
+12:26:16:403	524	ETHEREUM-ONLY MINING MODE ENABLED (-mode 1)
+12:26:16:403	524	ETH: nicehash stratum mode
+12:26:16:403	524	"-allpools" option is set, default pools can be used for devfee, check "Readme" file for details.
+12:26:16:403	524	"-allcoins" option is set, default pools will be used for devfee, check "Readme" file for details.
+12:26:16:403	524	Watchdog enabled
+12:26:16:403	524	Remote management is enabled on port 23333
+12:26:16:403	524	
+12:26:16:605	c58	got 162 bytes
+12:26:16:607	c58	buf: {"id":1,"result":[[["mining.set_difficulty","deadbeefcafebabebf4d000000000000"],["mining.notify","deadbeefcafebabebf4d000000000000"]],"28004d82",4],"error":null}
+
+12:26:16:609	c58	parse packet: 161
+12:26:16:610	c58	new buf size: 0
+12:26:16:683	c58	got 330 bytes
+12:26:16:685	c58	buf: {"id":2,"result":true,"error":null}
+{"id":null,"method":"mining.notify","params":["292d","0x000000000000001feba3164250e1e117610bd9d31820f63f09a6b8ccc80477bd0000000000000000b00a3c5a00000000719ab3dfb860c360c520601cc1a323f300afed3fbfc37a6883bc1ead75eb6d90","0x0000000012533fe68fd3d1cfe47445abdce0b117994feb3fbbe16e3d0f675ad9",true]}
+
+12:26:16:686	c58	parse packet: 35
+12:26:16:688	c58	ETH: Authorized
+12:26:16:690	c58	remove first packet 294
+12:26:16:691	c58	new buf size: 294
+12:26:16:693	c58	parse packet: 293
+12:26:16:695	c58	ETH: job changed
+12:26:16:697	c58	new buf size: 0
+12:26:16:699	c58	Pool sent wrong data, cannot set epoch, disconnect
+12:26:16:700	c58	ETH: Connection lost, retry in 20 sec...
+12:26:36:717	c58	ETH: Connection lost, retry in 20 sec...
+12:26:41:937	2d3c	GPU0 t=62C fan=46%, GPU1 t=50C fan=36%
+12:26:44:079	8	em hbt: 27797, fm hbt: 47, 
+12:26:44:081	8	watchdog - thread 0 (gpu0), hb time 94
+12:26:44:082	8	watchdog - thread 1 (gpu0), hb time 94
+12:26:44:084	8	watchdog - thread 2 (gpu1), hb time 94
+12:26:44:085	8	watchdog - thread 3 (gpu1), hb time 94
+12:26:56:790	c58	ETH: Stratum - connecting to 'hub.miningpoolhub.com' <52.6.227.167> port 17022
+12:26:56:875	c58	send: {"id": 1, "method": "mining.subscribe", "params": ["MinerName/1.0.0", "EthereumStratum/1.0.0"]}
+
+12:26:56:877	c58	send: {"id": 5, "method": "mining.extranonce.subscribe", "params": []}
+
+12:26:56:879	c58	send: {"id": 2, "method": "mining.authorize", "params": ["Tyredas.Beeboop","x"]}
+
+12:26:56:881	c58	ETH: Stratum - Connected (hub.miningpoolhub.com:17022)
+12:26:56:969	c58	got 162 bytes
+12:26:56:971	c58	buf: {"id":1,"result":[[["mining.set_difficulty","deadbeefcafebabead4d000000000000"],["mining.notify","deadbeefcafebabead4d000000000000"]],"08004d79",4],"error":null}
+
+12:26:56:972	c58	parse packet: 161
+12:26:56:974	c58	new buf size: 0
+12:26:57:046	c58	got 330 bytes
+12:26:57:048	c58	buf: {"id":2,"result":true,"error":null}
+{"id":null,"method":"mining.notify","params":["2945","0x000000000000001feba3164250e1e117610bd9d31820f63f09a6b8ccc80477bd0000000000000000e70a3c5a0000000050720b6730253f8cada4bd8b46acc80d79d77eca1b1d5f3e30d25dee834c4231","0x0000000012533fe68fd3d1cfe47445abdce0b117994feb3fbbe16e3d0f675ad9",true]}
+
+12:26:57:050	c58	parse packet: 35
+12:26:57:052	c58	ETH: Authorized
+12:26:57:053	c58	remove first packet 294
+12:26:57:055	c58	new buf size: 294
+12:26:57:057	c58	parse packet: 293
+12:26:57:058	c58	ETH: job changed
+12:26:57:060	c58	new buf size: 0
+12:26:57:062	c58	Pool sent wrong data, cannot set epoch, disconnect
+12:26:57:064	c58	ETH: Connection lost, retry in 20 sec...

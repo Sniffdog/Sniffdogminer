@@ -1,0 +1,11 @@
+12:04:58:642	3b4	Check and remove old log files...
+12:04:58:646	3b4	args: -epool us-east.ethash-hub.miningpoolhub.com:17020 -eworker Tyredas.Beeboop -epsw x 
+12:04:58:647	3b4	
+12:04:58:649	3b4	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+12:04:58:651	3b4	บ     Claymore's Dual ETH + DCR/SC/LBC/PASC GPU Miner v10.2      บ
+12:04:58:652	3b4	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+12:04:58:654	3b4	
+12:04:58:859	3b4	ETH: cannot find any specified wallet address!
+12:04:58:861	3b4	ETH: cannot find any specified wallet address!
+12:04:58:863	3b4	Pool us-east.ethash-hub.miningpoolhub.com removed from the list
+12:04:58:865	3b4	ETH: No pools specified! Specify at least one valid pool in "-epool" parameter. 

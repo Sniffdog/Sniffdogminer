@@ -1,0 +1,11 @@
+11:54:37:461	300	Check and remove old log files...
+11:54:37:463	300	args: -epool : -u -p ESM: 2 
+11:54:37:464	300	
+11:54:37:466	300	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+11:54:37:468	300	บ     Claymore's Dual ETH + DCR/SC/LBC/PASC GPU Miner v10.2      บ
+11:54:37:469	300	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+11:54:37:471	300	
+11:54:37:678	300	ETH: cannot find any specified wallet address!
+11:54:37:680	300	ETH: cannot find any specified wallet address!
+11:54:37:682	300	Pool  removed from the list
+11:54:37:684	300	ETH: No pools specified! Specify at least one valid pool in "-epool" parameter. 
