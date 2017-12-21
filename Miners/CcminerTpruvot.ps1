@@ -37,6 +37,7 @@ $Algorithms = [PSCustomObject]@{
     Phi = 'phi'
     Hsr = 'hsr'
     #Polytimos = 'polytimos'
+    Decred = 'decred'
 }
 
 $Optimizations = [PSCustomObject]@{
@@ -73,6 +74,7 @@ $Optimizations = [PSCustomObject]@{
     Phi = ' --api-remote --api-allow=0/0'
     Hsr = ' --api-remote --api-allow=0/0'
     Polytimos = ' --api-remote --api-allow=0/0'
+    Decred = ' --api-remote --api-allow=0/0'
     
 }
 
