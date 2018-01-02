@@ -1,7 +1,7 @@
 ﻿. .\Include.ps1
 
 $Path = ".\Bin\NeoScrypt-AMD\nsgminer.exe"
-$Uri = "https://github.com/ghostlander/nsgminer/releases/download/nsgminer-v0.9.2/nsgminer-win64-0.9.2.zip"
+$Uri = "https://github.com/ghostlander/nsgminer/releases/download/nsgminer-v0.9.3/nsgminer-win64-0.9.3.zip"
 
 $Commands = [PSCustomObject]@{
     "neoscrypt" = " --gpu-threads 1 --worksize 64 --intensity 11 --thread-concurrency 64" #NeoScrypt
