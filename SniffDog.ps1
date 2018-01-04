@@ -93,6 +93,7 @@ while($true)
     Write-host "Loading BTC rate from 'api.coinbase.com'.." -foregroundcolor "Yellow"
     $Rates = Invoke-RestMethod "https://api.coinbase.com/v2/exchange-rates?currency=BTC" -UseBasicParsing | Select-Object -ExpandProperty data | Select-Object -ExpandProperty rates
     $Currency | Where-Object {$Rates.$_} | ForEach-Object {$Rates | Add-Member $_ ([Double]$Rates.$_) -Force}
+    Write-Host -ForegroundColor Yellow "Last Refresh: $(Get-Date)"
 
     #Load the Stats
     $Stats = [PSCustomObject]@{}
