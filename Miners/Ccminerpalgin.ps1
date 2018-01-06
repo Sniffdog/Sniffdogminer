@@ -1,5 +1,3 @@
-. .\Include.ps1
-
 $Path = ".\Bin\NVIDIA-Palgin\ccminer.exe"
 $Uri = "https://github.com/krnlx/ccminer-xevan/releases/download/0.1/ccminer.exe"
 
