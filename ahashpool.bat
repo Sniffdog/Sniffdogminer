@@ -1,0 +1,1 @@
++powershell -version 5.0 -noexit -executionpolicy bypass -windowstyle maximized -command "&.\SniffDog.ps1 -Workername Miner001 -Currency USD -interval 300 -Delay 1 -Wallet 1AMQg6m9GPDN9HGuC3wJGpSuiZr1XQXjxi -Location US -PoolName ahashpool -Type nvidia -Algorithm blake2s,MyriadGroestl,skein,x17,neoscrypt,sib,Lyra2RE2,xevan,tribus,phi,hsr,Nist5,groestl,lbry
