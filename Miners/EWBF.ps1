@@ -1,5 +1,5 @@
-$Path = ".\Bin\NVIDIA-EWBF\\Zminer.exe"
-$Uri = "https://github.com/nemosminer/EWBF-Zec-Miner/releases/download/0.3.4b/0.3.4b.7z"
+$Path = ".\Bin\NVIDIA-EWBF\\miner.exe"
+
 
 $Commands = [PSCustomObject]@{
     #"bitcore" = "" #Bitcore
