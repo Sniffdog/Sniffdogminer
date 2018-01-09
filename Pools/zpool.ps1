@@ -48,7 +48,7 @@ $Zpool_Request | Get-Member -MemberType NoteProperty | Select -ExpandProperty Na
             Host = $Zpool_Host
             Port = $Zpool_Port
             User = $Wallet
-            Pass = "ID=$Workername,c=$Passwordcurrency"
+            Pass = "ID=$RigName,c=$Passwordcurrency"
             Location = $Location
             SSL = $false
         }
