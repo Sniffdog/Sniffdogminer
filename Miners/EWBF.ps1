@@ -1,5 +1,5 @@
 $Path = ".\Bin\NVIDIA-EWBF\\miner.exe"
-
+$Uri = "https://github.com/Sniffdog/ewbf-miner-btg-edition/releases/download/v0.3.4b/ewbf-miner-btg.zip"
 
 $Commands = [PSCustomObject]@{
     #"bitcore" = "" #Bitcore
