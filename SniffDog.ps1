@@ -4,7 +4,7 @@
     [Parameter(Mandatory=$false)]
     [String]$UserName = "Tyredas", 
     [Parameter(Mandatory=$false)]
-    [String]$WorkerName = "Sniffdog",
+    [String]$WorkerName = "Beeboop",
     [Parameter(Mandatory=$false)]
     [String]$RigName = "Sniffdog",
     [Parameter(Mandatory=$false)]
