@@ -52,7 +52,7 @@ $ahashpool_Request | Get-Member -MemberType NoteProperty | Select -ExpandPropert
             Host = $ahashpool_Host
             Port = $ahashpool_Port
             User = $Wallet
-            Pass = "ID=$Rigname,c=$Passwordcurrency"
+            Pass = "ID=$RigName,c=$Passwordcurrency"
             Location = $Location
             SSL = $false
         }
