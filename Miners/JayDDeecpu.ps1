@@ -1,5 +1,5 @@
 ﻿$Path = ".\Bin\CPU-JayDDee\cpuminer-sse2.exe"
-$Uri = "https://github.com/JayDDee/cpuminer-opt/files/1595441/cpuminer-opt-3.7.8-windows-v2.zip"
+$Uri = "https://github.com/JayDDee/cpuminer-opt/files/1613739/cpuminer-opt-3.7.9-windows.zip"
 
 $Commands = [PSCustomObject]@{
     #"bitcore" = "" #Bitcore
@@ -32,6 +32,7 @@ $Commands = [PSCustomObject]@{
     "yescrypt" = "" #Yescrypt
     "m7m" = "" #M7M
     "lyra2h" = "" #Lyra2h
+    "yescryptr8" = "" #Yescryptr8
 }
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
