@@ -10,9 +10,14 @@ $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty Ba
      $ahashpool_Request = Invoke-RestMethod "https://www.ahashpool.com/api/status" -UseBasicParsing -TimeoutSec 10 -ErrorAction Stop 
  } 
  catch { 
-     Write-Log -Level Warn "Pool API ($Name) has failed. " 
+     Write-Warning "Sniffdog howled at ($Name) for a failed API check. " 
      return 
  }
+ 
+ if (($ahashpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Measure-Object Name).Count -le 1) { 
+     Write-Warning "SniffDog sniffed near ($Name) but ($Name) Pool API had no scent. " 
+     return 
+ } 
   
 $Location = "US"
 
