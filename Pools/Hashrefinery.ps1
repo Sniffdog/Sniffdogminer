@@ -11,13 +11,13 @@
      $Hashrefinery_Request = Invoke-RestMethod "http://pool.hashrefinery.com/api/status" -UseBasicParsing -TimeoutSec 10 -ErrorAction Stop 
  } 
  catch { 
-     Write-Log -Level Warn "Pool API ($Name) has failed. " 
+     Write-Warning "Sniffdog howled at ($Name) for a failed API check. " 
      return 
  } 
  
  
  if (($Hashrefinery_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Measure-Object Name).Count -le 1) { 
-     Write-Log -Level Warn "Pool API ($Name) returned nothing. " 
+      Write-Warning "SniffDog sniffed near ($Name) but ($Name) Pool API had no scent. "
      return 
  } 
  
