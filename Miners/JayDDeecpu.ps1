@@ -1,5 +1,5 @@
 ﻿$Path = ".\Bin\CPU-JayDDee\cpuminer-sse2.exe"
-$Uri = "https://github.com/JayDDee/cpuminer-opt/files/1613739/cpuminer-opt-3.7.9-windows.zip"
+$Uri = "https://github.com/JayDDee/cpuminer-opt/files/1636873/cpuminer-opt-3.7.10-windows.zip"
 
 $Commands = [PSCustomObject]@{
     #"bitcore" = "" #Bitcore
