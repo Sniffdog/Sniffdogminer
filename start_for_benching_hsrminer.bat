@@ -1,0 +1,1 @@
+powershell -version 5.0 -noexit -executionpolicy bypass -windowstyle maximized -command "&.\SniffDog.ps1 -Username Tyredas -Workername Beeboop -RigName Grrrr -Currency USD -Passwordcurrency BTC -interval 120 -Delay 1 -Wallet 1AMQg6m9GPDN9HGuC3wJGpSuiZr1XQXjxi -Location US -PoolName hashrefinery -Type nvidia,cpu -Algorithm neoscrypt -Donate 5
