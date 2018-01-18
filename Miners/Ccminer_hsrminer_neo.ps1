@@ -1,5 +1,5 @@
 $Path = ".\Bin\NVIDIA-SP-modneo\hsrminer_neoscrypt.exe"
-$Uri = "https://github.com/palginpav/hsrminer/raw/master/Neoscrypt%20algo/Windows/hsrminer_neoscrypt.exe"
+$Uri = "https://github.com/Sniffdog/hsrminer-neo/raw/master/NVIDIA-hsrminer-neo.zip"
 
 $Commands = [PSCustomObject]@{
     #"bitcore" = "" #Bitcore
