@@ -12,7 +12,7 @@ $Algorithms = [PSCustomObject]@{
     #Yescrypt = 'yescrypt'
     #BlakeVanilla = 'vanilla'
     #Lyra2RE2 = 'lyra2v2'
-    Skein = 'skein'
+    #Skein = 'skein'
     #Qubit = 'qubit'
     #NeoScrypt = 'neoscrypt'
     X11 = 'x11'
@@ -30,7 +30,7 @@ $Algorithms = [PSCustomObject]@{
     #X11evo = 'x11evo'
     #Timetravel = 'timetravel'
     Blakecoin = 'blakecoin'
-    Lbry = 'lbry'
+    #Lbry = 'lbry'
     C11 = 'c11'
     Nist5 = 'nist5'
 }
