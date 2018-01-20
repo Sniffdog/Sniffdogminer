@@ -1,4 +1,4 @@
-﻿$Path = '.\Bin\NVIDIA-ALEXIS-78\ccminer.exe'
+$Path = '.\Bin\NVIDIA-ALEXIS-78\ccminer.exe'
 $Uri = 'https://github.com/Sniffdog/miners/raw/master/ccmineralexis_78.zip'
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
