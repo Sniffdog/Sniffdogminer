@@ -1,5 +1,5 @@
 $Path = '.\Bin\NVIDIA-ALEXIS-78\ccminer.exe'
-$Uri = 'https://github.com/Sniffdog/miners/raw/master/ccmineralexis_78.zip'
+
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
 
@@ -12,7 +12,7 @@ $Algorithms = [PSCustomObject]@{
     #Yescrypt = 'yescrypt'
     #BlakeVanilla = 'vanilla'
     #Lyra2RE2 = 'lyra2v2'
-    #Skein = 'skein'
+    Skein = 'skein'
     #Qubit = 'qubit'
     #NeoScrypt = 'neoscrypt'
     #X11 = 'x11'
@@ -21,7 +21,7 @@ $Algorithms = [PSCustomObject]@{
     #Keccak = 'keccak'
     #Scrypt = 'scrypt'
     #Bitcore = 'bitcore'
-    #Blake2s = 'blake2s'
+    Blake2s = 'blake2s'
     #Sib = 'sib'
     #X17 = 'x17'
     #Quark = 'quark'
