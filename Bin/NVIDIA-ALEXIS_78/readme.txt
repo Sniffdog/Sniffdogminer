@@ -5,4 +5,4 @@ http://cryptomining-blog.com/9198-the-fastest-public-keccak-ccminer-for-nvidia-m
 
 http://cryptomining-blog.com/wp-content/download/ccminer_alexis_keccak.zip
 
-There all sources and all recognition stays intact and even a mention of Sp miners haha!
+There all sources and all recognition stays intact and even a mention of Sp miners haha! (even bad news is good news!)
