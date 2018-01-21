@@ -1,5 +1,8 @@
-new
+We have received some requests for the fastest public fork of ccMiner for the Keccak algorithm and it seems that the version from alexis78 (source-https://github.com/alexis78/ccminer) is giving one of the best performances out there from the popular open source forks. There seems to be even more optimized version available as a private miner being sold, though we have not tested that one and cannot comment on the performance it offers. Alternatively the ccMiner fork from KlausT (source-https://github.com/KlausT/ccminer) also does seem to offer very similar performance as far as Keccak mining goes.
+We have prepared a 64-bit Windows binary compiled from the alexis78’s source using CUDA 8.0 and compiled with VC 2013 that you can download and try if you want to mine Keccak on NiceHash or directly mine a specific crypto coin using this mining algorithm for its Proof of Work (PoW). The default intensity might be a bit high for some cards, so you might want to dial it down a bit if the miner is unstable on your mining rigs. If you are interested how much a GTX 1080 Ti does using this miner for Keccak, well it can do 1200-1300 MH/s with optimized settings for lower power usage. If you are wondering which altcoin is driving the demand and profitability for Keccak lately it is apparently SmartCash (SMART), prior to that there was also a short peak for MaxCoin (MAX) as well a couple of weeks ago.
 
-Finding out if this is Alexis 1.0 from  http://cryptomining-blog.com/8471-you-should-use-ccminer-alexis-1-0-for-better-x11-ghost-hashrate/
+http://cryptomining-blog.com/9198-the-fastest-public-keccak-ccminer-for-nvidia-mining-gpus/
 
-I'll get back to you soon
+http://cryptomining-blog.com/wp-content/download/ccminer_alexis_keccak.zip
+
+There all sources and all recognition remanes.... 
