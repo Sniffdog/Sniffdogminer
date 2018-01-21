@@ -1,4 +1,4 @@
-$Path = '.\Bin\NVIDIA-ALEXIS-78\ccminer.exe'
+$Path = '.\Bin\NVIDIA-ALEXIS_78\ccminer.exe'
 
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
