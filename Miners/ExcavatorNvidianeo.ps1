@@ -3,7 +3,7 @@
 $Threads = 1
 
 $Path = ".\Bin\Excavator\excavator.exe"
-$Uri = "https://github.com/nicehash/excavator/releases/download/v1.4.0a/excavator_v1.4.0a_NVIDIA_Win64.zip"
+$Uri = "https://github.com/nicehash/excavator/releases/download/v1.4.1a/excavator_v1.4.1a_NVIDIA_Win64.zip"
 
 $Commands = [PSCustomObject]@{
     
