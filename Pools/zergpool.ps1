@@ -43,6 +43,7 @@ $zergpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Se
 	"x11"{$Divisor *= 1000}
 	"scrypt"{$Divisor *= 1000}
 	"qubit"{$Divisor *= 1000}
+	"yescrypt"{$Divisor /= 1000}
 				
     }
 
