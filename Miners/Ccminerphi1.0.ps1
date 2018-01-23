@@ -4,7 +4,7 @@ $Path = ".\Bin\NVIDIA-Ccminer-PHI\ccminer.exe"
 $Uri = 'https://github.com/216k155/ccminer-phi-anxmod/releases/download/ccminer%2Fphi-1.0/ccminer-phi-1.0.zip'
 
 $Commands = [PSCustomObject]@{
-    "phi" = "" #PHI
+    #"phi" = "" #PHI
     
 }
 
