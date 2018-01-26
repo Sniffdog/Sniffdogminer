@@ -1,5 +1,5 @@
-$Path = ".\Bin\NVIDIA-Palgin\ccminer.exe"
-$Uri = "https://github.com/krnlx/ccminer-xevan/releases/download/0.1/ccminer_x86.exe"
+$Path = ".\Bin\Ccminer_x86_krnlx\ccminer_x86.exe"
+$Uri = "https://github.com/Sniffdog/ccminer-xevan/releases/download/1.0/Ccminer_x86_krnlx.zip"
 
 $Commands = [PSCustomObject]@{
     #"bitcore" = "" #Bitcore
