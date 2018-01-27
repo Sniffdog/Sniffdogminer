@@ -16,8 +16,6 @@ From Guytechie...
  rem "%mypath%nircmd.exe" savescreenshot "%scrpath%%TIME:~0,-9%-%TIME:~3,2%-%TIME:~6,2%.png"
  rem echo "%scrpath%%DATE:~6,4%.%DATE:~3,2%.%DATE:~0,2% %TIME:~0,-9%-%TIME:~3,2%-%TIME:~6,2%.png"`
 
- I guess I should just repost a new file instead. Sorry for all these little iterations. It's what we do, no?
-
  If you find it's a good idea to adjust the GPU utilization to detect a single card failure, remember to apply the changes to the    other batch files as well (eg, for 8 rig card, you'll need to detect utilization at around 90%), or lower if you just want to only   reboot if more cards quits mining in a larger rig before considering a failure. 
  
  
