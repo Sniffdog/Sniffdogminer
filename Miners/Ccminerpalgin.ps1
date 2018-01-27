@@ -1,4 +1,4 @@
-$Path = ".\Bin\Ccminer_x86_krnlx\ccminer_x86.exe"
+$Path = ".\Bin\NVIDIA-krnlx\ccminer_x86.exe"
 $Uri = "https://github.com/Sniffdog/ccminer-xevan/releases/download/1.0/Ccminer_x86_krnlx.zip"
 
 $Commands = [PSCustomObject]@{
