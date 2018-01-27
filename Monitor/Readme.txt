@@ -4,6 +4,8 @@ From Guytechie...
  
  dying is 66.66% GPU usage, so would still be considered "Mining is working" if it was set to detect at 40.
  
+ Also, you can increase time inside these bat files before registering a reboot (default is 30 seconds)
+ 
  
  This is an option for you to go in and edit one of these bat files that is equivalent with the number of cards you have on
  
