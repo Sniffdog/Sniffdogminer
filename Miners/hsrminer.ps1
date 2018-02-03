@@ -1,4 +1,4 @@
-﻿$Path = '.\Bin\NVIDIA-hsrminer\hsrminer_neoscrypt_fork.exe'
+﻿$Path = '.\Bin\NVIDIAHsrminer\hsrminer_neoscrypt_fork.exe'
 $Uri = 'https://github.com/justaminer/hsrm-fork/raw/master/hsrminer_neoscrypt_fork.zip'
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
