@@ -4,23 +4,9 @@ $Uri = 'https://github.com/justaminer/hsrm-fork/raw/master/hsrminer_neoscrypt_fo
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
 
 $Algorithms = [PSCustomObject]@{
-    #Lyra2z = 'lyra2z' #not supported
-    #Equihash = 'equihash' #not supported
-    #Cryptonight = 'cryptonight' #not supported
-    #Ethash = 'ethash' #not supported
-    #Sia = 'sia' #use TpruvoT
-    #Yescrypt = 'yescrypt' #use TpruvoT
-    #BlakeVanilla = 'vanilla'
-    #Lyra2RE2 = 'lyra2v2' 
-    #Skein = 'skein' #use TpruvoT
-    #Qubit = 'qubit' #use TpruvoT
+    
     #NeoScrypt = 'neoscrypt'
-    #X11 = 'x11' #use TpruvoT
-    #MyriadGroestl = 'myr-gr'
-    #Groestl = 'groestl'
-    #Keccak = 'keccak' 
-    #Scrypt = 'scrypt' #use TpruvoT
-    #Nist5 = 'nist5'
+    
 }
 
 $Optimizations = [PSCustomObject]@{
