@@ -30,7 +30,7 @@ $Commands = [PSCustomObject]@{
     #"x11evo" = "" #X11evo
     #"x17" = "" #X17
     "yescrypt" = "" #Yescrypt
-    "m7m" = "" #M7M
+    #"m7m" = "" #M7M
     "lyra2h" = "" #Lyra2h
     "yescryptr8" = "" #Yescryptr8
 }
