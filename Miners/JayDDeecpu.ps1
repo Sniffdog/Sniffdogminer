@@ -33,6 +33,7 @@ $Commands = [PSCustomObject]@{
     #"m7m" = "" #M7M
     "lyra2h" = "" #Lyra2h
     "yescryptr8" = "" #Yescryptr8
+    "x16r" = "" #Ravencoin
 }
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
