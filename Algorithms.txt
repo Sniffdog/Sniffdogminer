@@ -37,5 +37,9 @@
     "groestlcoin":  "Groestl",
     "cryptonight":  "Cryptonight",
     "zuikkis":  "Scrypt",
-    "nist5":  "Nist5"
+    "nist5":  "Nist5",
+    "phi": "Phi",
+    "hsr": "Hsr",
+    "m7m": "M7M",
+    "x16r": "X16r"
 }
