@@ -1,8 +1,0 @@
-11:50:38:572	2d10	Check and remove old log files...
-11:50:38:575	2d10	args: -epool ethash -o stratum+tcp://: -u -p ESM: 2 
-11:50:38:577	2d10	
-11:50:38:578	2d10	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-11:50:38:580	2d10	บ     Claymore's Dual ETH + DCR/SC/LBC/PASC GPU Miner v10.2      บ
-11:50:38:582	2d10	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
-11:50:38:584	2d10	
-11:50:38:790	2d10	ETH: No pools specified! Specify at least one valid pool in "-epool" parameter. 
