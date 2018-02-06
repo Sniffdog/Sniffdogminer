@@ -1,8 +1,0 @@
-12:06:22:769	b18	Check and remove old log files...
-12:06:22:772	b18	args: -dpool us-east.ethash-hub.miningpoolhub.com:17020 -dwal Tyredas.Beeboop -dpsw x 
-12:06:22:774	b18	
-12:06:22:776	b18	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-12:06:22:778	b18	บ     Claymore's Dual ETH + DCR/SC/LBC/PASC GPU Miner v10.2      บ
-12:06:22:779	b18	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
-12:06:22:781	b18	
-12:06:22:986	b18	ETH: No pools specified! Specify at least one valid pool in "-epool" parameter. 
