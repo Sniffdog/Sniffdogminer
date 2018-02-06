@@ -1,8 +1,0 @@
-11:58:43:632	2d3c	Check and remove old log files...
-11:58:43:636	2d3c	args: -dpool : -dwal -dpsw -dcoin daggerhashimoto 
-11:58:43:637	2d3c	
-11:58:43:637	2d3c	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-11:58:43:637	2d3c	บ     Claymore's Dual ETH + DCR/SC/LBC/PASC GPU Miner v10.2      บ
-11:58:43:637	2d3c	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
-11:58:43:637	2d3c	
-11:58:43:853	2d3c	ETH: No pools specified! Specify at least one valid pool in "-epool" parameter. 
