@@ -1,8 +1,0 @@
-11:49:56:360	13b4	Check and remove old log files...
-11:49:56:362	13b4	args: -epool ethash -o stratum+tcp://: -u -p ESM: 2 
-11:49:56:364	13b4	
-11:49:56:366	13b4	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-11:49:56:367	13b4	บ     Claymore's Dual ETH + DCR/SC/LBC/PASC GPU Miner v10.2      บ
-11:49:56:369	13b4	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
-11:49:56:371	13b4	
-11:49:56:577	13b4	ETH: No pools specified! Specify at least one valid pool in "-epool" parameter. 
