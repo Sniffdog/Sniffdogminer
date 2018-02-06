@@ -1,8 +1,0 @@
-12:09:56:688	2f28	Check and remove old log files...
-12:09:56:692	2f28	args: -dpool us-east.ethash-hub.miningpoolhub.com:17020 -dwal Tyredas.Beeboop -dpsw x -dcoin ethash 
-12:09:56:693	2f28	
-12:09:56:695	2f28	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-12:09:56:697	2f28	บ     Claymore's Dual ETH + DCR/SC/LBC/PASC GPU Miner v10.2      บ
-12:09:56:698	2f28	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
-12:09:56:699	2f28	
-12:09:56:905	2f28	ETH: No pools specified! Specify at least one valid pool in "-epool" parameter. 
