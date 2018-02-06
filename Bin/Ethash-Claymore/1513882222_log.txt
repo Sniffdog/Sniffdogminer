@@ -1,8 +1,0 @@
-11:50:22:327	2a88	Check and remove old log files...
-11:50:22:330	2a88	args: -epool ethash -o stratum+tcp://: -u -p ESM: 2 
-11:50:22:332	2a88	
-11:50:22:333	2a88	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-11:50:22:335	2a88	บ     Claymore's Dual ETH + DCR/SC/LBC/PASC GPU Miner v10.2      บ
-11:50:22:337	2a88	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
-11:50:22:338	2a88	
-11:50:22:545	2a88	ETH: No pools specified! Specify at least one valid pool in "-epool" parameter. 
