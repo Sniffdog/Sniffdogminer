@@ -46,7 +46,7 @@ $Optimizations = [PSCustomObject]@{
     Lyra2z = ''
     Equihash = ''
     Cryptonight = ' --api-remote --api-allow=0/0'
-    Ethash = ' -esm 3 -allpools 1 -allcoins 1 -platform 2'
+    Ethash = ' -esm 2 -allpools 1 -allcoins 1 -platform 2'
     Sia = ' -esm 2'
     Yescrypt = ''
     BlakeVanilla = ''
