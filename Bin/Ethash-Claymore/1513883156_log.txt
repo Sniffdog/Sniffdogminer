@@ -1,8 +1,0 @@
-12:05:56:147	2454	Check and remove old log files...
-12:05:56:150	2454	args: -dpool us-east.ethash-hub.miningpoolhub.com:17020 -dwal Tyredas.Beeboop -dpsw x 
-12:05:56:152	2454	
-12:05:56:154	2454	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
-12:05:56:156	2454	บ     Claymore's Dual ETH + DCR/SC/LBC/PASC GPU Miner v10.2      บ
-12:05:56:157	2454	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
-12:05:56:159	2454	
-12:05:56:365	2454	ETH: No pools specified! Specify at least one valid pool in "-epool" parameter. 
