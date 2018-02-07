@@ -9,7 +9,8 @@ $Commands = [PSCustomObject]@{
     #"equihash" = @() 
     #"lbry" = @() 
     #"lyra2rev2" = @() 
-    #"nist5" = @() 
+    #"nist5" = @()
+    #"keccak" = @()
 }
 
 $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty BaseName
