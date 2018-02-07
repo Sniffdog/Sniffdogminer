@@ -86,7 +86,7 @@ $Algorithms | Get-Member -MemberType NoteProperty | Select -ExpandProperty Name 
     [PSCustomObject]@{
         Type = 'NVIDIA'
         Path = $Path
-        Arguments = -Join ( '-r -1 -mport 23333 -epool $($Pools.', $_, '.Host):$($Pools.', $_, '.Port) -ewal $($Pools.', $_, '.User) -eworker $($Pools.', $_, '.User)  -epsw $($Pools.', $_, '.Pass)', $Optimizations.$_)
+        Arguments = -Join ( '-r -1 -mport -23333 -epool $($Pools.', $_, '.Host):$($Pools.', $_, '.Port) -ewal $($Pools.', $_, '.User) -eworker $($Pools.', $_, '.User)  -epsw $($Pools.', $_, '.Pass)', $Optimizations.$_)
         HashRates = [PSCustomObject]@{$_ = -Join ('$($Stats.', $Name, '_', $_, '_HashRate.Week)')}
         API = 'Claymore'
         Port = 23333
