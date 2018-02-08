@@ -19,7 +19,7 @@ $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty Ba
      return 
  } 
   
-$Location = "US"
+$Location = "US", "Asia"
 
 $blazepool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Select-Object -ExpandProperty Name | foreach {
     $blazepool_Host = "$_.mine.blazepool.com"
