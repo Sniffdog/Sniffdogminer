@@ -1,4 +1,4 @@
-Claymore's Dual Ethereum + Decred/Siacoin/Lbry/Pascal AMD+NVIDIA GPU Miner.
+Claymore's Dual Ethereum + Decred/Siacoin/Lbry/Pascal/Blake2s/Keccak AMD+NVIDIA GPU Miner.
 =========================
 
 
@@ -12,15 +12,15 @@ MEGA: https://mega.nz/#F!O4YA2JgD!n2b4iSHQDruEsYUvTQP5_w
 
 FEATURES:
 
-- Supports new "dual mining" mode: mining both Ethereum and Decred/Siacoin/Lbry/Pascal at the same time, with no impact on Ethereum mining speed. Ethereum-only mining mode is supported as well.
+- Supports new "dual mining" mode: mining both Ethereum and Decred/Siacoin/Lbry/Pascal/Blake2s/Keccak at the same time, with no impact on Ethereum mining speed. Ethereum-only mining mode is supported as well.
 - Effective Ethereum mining speed is higher by 3-5% because of a completely different miner code - much less invalid and outdated shares, higher GPU load, optimized OpenCL code, optimized assembler kernels.
 - Supports both AMD and nVidia cards, even mixed.
 - No DAG files.
 - Supports all Stratum versions for Ethereum: can be used directly without any proxies with all pools that support eth-proxy, qtminer or miner-proxy.
 - Supports Ethereum and Siacoin solo mining.
 - Supports both HTTP and Stratum for Decred.
-- Supports both HTTP and Stratum for Siacoin. Note: not all Stratum versions are supported currently for Siacoin.
-- Supports Stratum for Lbry and Pascal.
+- Supports both HTTP and Stratum for Siacoin.
+- Supports Stratum for Lbry, Pascal, Blake2s, Keccak.
 - Supports failover.
 - Displays detailed mining information and hashrate for every card.
 - Supports remote monitoring and management.
@@ -30,9 +30,9 @@ FEATURES:
 
 
 
-This version is POOL/SOLO for Ethereum, POOL for Decred, POOL/SOLO for Siacoin, POOL for Lbry, POOL for Pascal.
+This version is POOL/SOLO for Ethereum, POOL for Decred, POOL/SOLO for Siacoin, POOL for Lbry, POOL for Pascal, POOL for Blake2s, POOL for Keccak.
 
-For AMD cards, Catalyst (Crimson) 15.12 is required for best performance and compatibility. You can get very bad results for different drivers version, or miner can fail on startup.
+For old AMD cards, Catalyst (Crimson) 15.12 is required for best performance and compatibility.
 For AMD 4xx/5xx cards (Polaris) you can use any recent drivers.
 For AMD cards, set the following environment variables, especially if you have 2GB cards:
 
@@ -42,18 +42,20 @@ GPU_USE_SYNC_OBJECTS 1
 GPU_MAX_ALLOC_PERCENT 100
 GPU_SINGLE_ALLOC_PERCENT 100
 
-For multi-GPU systems, set Virtual Memory size in Windows at least 16 GB:
+For multi-GPU systems, set Virtual Memory size in Windows at least 16 GB (better more):
 "Computer Properties / Advanced System Settings / Performance / Advanced / Virtual Memory".
 
-This miner is free-to-use, however, current developer fee is 1% for Ethereum-only mining mode (-mode 1) and 2% for dual mining mode (-mode 0), every hour the miner mines for 36 or 72 seconds for developer. 
-Decred/Siacoin/Lbry/Pascal is mined without developer fee.
-If you don't agree with the dev fee - don't use this miner, or use "-nofee" option.
+This miner is free-to-use, however, current developer fee is 1% for Ethereum-only mining mode (-mode 1) and 1.5% for dual mining mode (-mode 0), every hour the miner mines for 36 or 54 seconds for developer. 
+For 2GB cards (they cannot mine ETH/ETC anymore) devfee is 0%, so on 2GB cards you can mine all ETH forks without devfee, this miner is completely free in this case.
+If some cards are 2GB and some >2GB, 2GB cards still mine for you during devfee time, only cards that have more than 2GB memory will be used for devfee mining. Miner displays appropriate messages during startup.
+Second coin (Decred/Siacoin/Lbry/Pascal/Blake2s/Keccak) is mined without developer fee.
+So the developer fee is 0...1.5%, if you don't agree with the dev fee - don't use this miner, or use "-nofee" option.
 Attempts to cheat and remove dev fee will cause a bit slower mining speed (same as "-nofee 1") though miner will show same hashrate. 
 Miner cannot just stop if cheat is detected because creators of cheats would know that the cheat does not work and they would find new tricks. If miner does not show any errors or slowdowns, they are happy.
 
 This version is for recent AMD videocards only: 7xxx, 2xx and 3xx, 2GB or more. Recent nVidia videocards are supported as well.
 
-There are builds for Windows x64 and for Linux x64 (tested on Ubuntu 12.04). No 32-bit support. 
+There are builds for Windows x64 and for Linux x64 (tested on Ubuntu 14.04). No 32-bit support. 
 
 
 
@@ -78,11 +80,10 @@ COMMAND LINE OPTIONS:
 	You can also set this option for every card individually, for example "-etha 0,1,0".
 
 -asm	(AMD cards only) enables assembler GPU kernels. In this mode some tuning is required even in ETH-only mode, use "-dcri" option or or "+/-" keys in runtime to set best speed.
-	Currently ETH-LBRY mode is not supported in assembler.
 	Specify "-asm 0" to disable this option. You can also specify values for every card, for example "-asm 0,1,0". Default value is "1".
 	If ASM mode is enabled, miner must show "GPU #x: algorithm ASM" at startup.
 	Check "FINE-TUNING" section below for additional notes.
-	NEW: added alternative assembler kernels for Tonga and Polaris cards for ETH-only mode. Use them if you get best speed at "-dcri 1" (i.e. you cannot find speed peak), use "-asm 2" option to enable this mode.
+	NEW: added alternative assembler kernels for Tahiti, Tonga, Ellesmere, Baffin cards for ETH-only mode. Use them if you get best speed at "-dcri 1" (i.e. you cannot find speed peak), use "-asm 2" option to enable this mode.
 
 -ethi	Ethereum intensity. Default value is 8, you can decrease this value if you don't want Windows to freeze or if you have problems with stability. The most low GPU load is "-ethi 0".
 	Also "-ethi" now can set intensity for every card individually, for example "-ethi 1,8,6".
@@ -101,7 +102,6 @@ COMMAND LINE OPTIONS:
 	Therefore for this mode it is recommended to specify current Ethereum epoch (or a bit larger value), 
 	for example, "-allcoins 47" means that miner will expect DAG size for epoch #47 and will allocate appropriate GPU buffer at starting, instead of reallocating bigger GPU buffer (may crash) when it starts devfee mining.
 	Another option is to specify "-allcoins -1", in this mode miner will start devfee round immediately after start and therefore will get current epoch for Ethereum, after that it will be able to mine Ethereum fork.
-	If you mine Expanse, the best way is to specify "-allcoins exp", in this mode devfee mining will be on Expanse too and DAG won't be recreated at all.
 	If you mine ETC on some pool that does not accept wallet address but requires Username.Worker instead, the best way is to specify "-allcoins etc", in this mode devfee mining will be on ETC pools and DAG won't be recreated at all.
 
 -etht	Time period between Ethereum HTTP requests for new job in solo mode, in milliseconds. Default value is 200ms.
@@ -130,7 +130,7 @@ COMMAND LINE OPTIONS:
 	"-mode 1" means Ethereum-only mining mode. You can set this mode for every card individually, for example, "-mode 1-02" will set mode "1" for first and third GPUs (#0 and #2).
 	For systems with more than 10 GPUs: use letters to specify indexes more than 9, for example, "a" means index 10, "b" means index 11, etc.
 
--dcoin	select second coin to mine in dual mode. Possible options are "-dcoin dcr", "-dcoin sc", "-dcoin lbc", "-dcoin pasc". Default value is "dcr".
+-dcoin	select second coin to mine in dual mode. Possible options are "-dcoin dcr", "-dcoin sc", "-dcoin lbc", "-dcoin pasc", "-dcoin blake2s", "-dcoin keccak". Default value is "dcr".
 
 -dcri	Decred/Siacoin/Lbry/Pascal intensity, or Ethereum fine-tuning value in ETH-only ASM mode. Default value is 30, you can adjust this value to get the best Decred/Siacoin/Lbry mining speed without reducing Ethereum mining speed. 
 	You can also specify values for every card, for example "-dcri 30,100,50".
@@ -202,6 +202,10 @@ COMMAND LINE OPTIONS:
 	This feature is disabled by default ("-tstop 0"). You also should specify non-zero value for "-tt" option to enable this option.
 	If it turned off wrong card, it will close miner in 30 seconds.
 	You can also specify negative value to close miner immediately instead of stopping GPU, for example, "-tstop -95" will close miner as soon as any GPU reach 95C temperature.
+
+-tstart	set start temperature for overheated GPU that was previously stopped with "-tstop" option. For example, "-tstop 95 -tstart 50" disables GPU when it reaches 95C and re-enables it when it reaches 50C.
+	You can also specify values for every card, for example "-tstart 50,55,50". Note that "-tstart" option value must be less than "-tstop" option value.
+	This feature is disabled by default ("-tstart 0"). You also should specify non-zero value for "-tt" option to enable this option.
 
 -fanmax	set maximal fan speed, in percents, for example, "-fanmax 80" will set maximal fans speed to 80%. You can also specify values for every card, for example "-fanmax 50,60,70".
 	This option works only if miner manages cooling, i.e. when "-tt" option is used to specify target temperature. Default value is "100".
@@ -318,6 +322,13 @@ EthDcrMiner64.exe -epool stratum+tcp://daggerhashimoto.eu.nicehash.com:3353 -ewa
  ethpool+suprnova Ethereum+Pascal:
 	ethdcrminer64.exe -epool us1.ethpool.org:3333 -ewal 0xD69af2A796A737A103F12d2f0BCC563a13900E6F.YourWorkerName -epsw x -dpool stratum+tcp://pasc.suprnova.cc:5279 -dwal YourLogin.YourWorkerName -dpsw x -dcoin pasc -allpools 1
 
+ nicehash Ethereum+Blake2s:
+EthDcrMiner64.exe -epool stratum+tcp://daggerhashimoto.eu.nicehash.com:3353 -ewal 1LmMNkiEvjapn5PRY8A9wypcWJveRrRGWr -epsw x -esm 3 -allpools 1 -estale 0 -dpool stratum+tcp://blake2s.eu.nicehash.com:3361 -dwal 1LmMNkiEvjapn5PRY8A9wypcWJveRrRGWr -dcoin blake2s
+
+ nicehash Ethereum+Keccak:
+EthDcrMiner64.exe -epool stratum+tcp://daggerhashimoto.eu.nicehash.com:3353 -ewal 1LmMNkiEvjapn5PRY8A9wypcWJveRrRGWr -epsw x -esm 3 -allpools 1 -estale 0 -dpool stratum+tcp://keccak.eu.nicehash.com:3338 -dwal 1LmMNkiEvjapn5PRY8A9wypcWJveRrRGWr -dcoin keccak
+
+
 
 Ethereum-only mining:
 
@@ -381,6 +392,7 @@ KNOWN ISSUES
 
 - AMD cards: on some cards you can notice non-constant mining speed in dual mode, sometimes speed becomes a bit slower. This issue was mostly fixed in recent versions, but not completely.
 - AMD cards: in Linux with gpu-pro drivers, the list of GPUs may differ from the list of temperatures. You can use -di to change order of GPUs to match both lists.
+- nVidia cards: dual mode is not so effective as for AMD cards.
 - Windows 10 Defender recognizes miner as a virus, some antiviruses do the same. Miner is not a virus, add it to Defender exceptions. 
   I write miners since 2014. Most of them are recognized as viruses by some paranoid antiviruses, perhaps because I pack my miners to protect them from disassembling, perhaps because some people include them into their botnets, or perhaps these antiviruses are not good, I don't know. For these years, a lot of people used my miners and nobody confirmed that my miner stole anything or did something bad. 
   Note that I can guarantee clean binaries only for official links in my posts on this forum (bitcointalk). If you downloaded miner from some other link - it really can be a virus.
