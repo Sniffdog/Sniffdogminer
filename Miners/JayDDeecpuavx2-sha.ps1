@@ -2,7 +2,7 @@
 $Uri = "https://github.com/JayDDee/cpuminer-opt/files/1713005/cpuminer-opt-3.8.1.1-windows.zip"
 
 $Commands = [PSCustomObject]@{
-    #"lyra2z" = ",d=5" #Difficulty might be ignored - more testing needed.
+    #"lyra2z" = "" #Difficulty might be ignored - more testing needed.
     #"cryptonight" = " -t 16 --cpu-affinity 0x5555" #Threadripper 1950X
     #"timetravel" = ",d=0.5"
     #"x17" = ""  #needs a very fast CPU, so may not be practical to enable by default
