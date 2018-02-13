@@ -92,24 +92,11 @@ while($true)
         $WorkerName = $WorkerNameBackup
         $LastDonated = Get-Date
     }
-    
-   try {
-        Write-Host "Sniffin for updates from Coinbase..." -foregroundcolor "Yellow"
-        $Rates = Invoke-RestMethod "https://api.coinbase.com/v2/exchange-rates?currency=BTC" -UseBasicParsing | Select-Object -ExpandProperty data | Select-Object -ExpandProperty rates
-        $Currency | Where-Object {$Rates.$_} | ForEach-Object {$Rates | Add-Member $_ ([Double]$Rates.$_) -Force}
-    }
-    catch {
-        Write-Host -Level Warn "Pee's on Coinbase. "
-        
-        
-        Write-Host -ForegroundColor Yellow "Last Refresh: $(Get-Date)"
-        Write-host "tries Sniffin at Cryptonator.." -foregroundcolor "Yellow"
-       $Rates = [PSCustomObject]@{}
-       $Currency | ForEach {$Rates | Add-Member $_ (Invoke-WebRequest "https://api.cryptonator.com/api/ticker/btc-$_" -UseBasicParsing | ConvertFrom-Json).ticker.price}
-     
-  }  
-    
-    
+    Write-host "Loading BTC rate from 'api.coinbase.com'.." -foregroundcolor "Yellow"
+    $Rates = Invoke-RestMethod "https://api.coinbase.com/v2/exchange-rates?currency=BTC" -UseBasicParsing | Select-Object -ExpandProperty data | Select-Object -ExpandProperty rates
+    $Currency | Where-Object {$Rates.$_} | ForEach-Object {$Rates | Add-Member $_ ([Double]$Rates.$_) -Force}
+    Write-Host -ForegroundColor Yellow "Last Refresh: $(Get-Date)"
+
     #Load the Stats
     $Stats = [PSCustomObject]@{}
     if(Test-Path "Stats"){Get-ChildItemContent "Stats" | ForEach {$Stats | Add-Member $_.Name $_.Content}}
@@ -318,7 +305,10 @@ while($true)
         @{Label = "BTC/Day"; Expression={$_.Profits.PSObject.Properties.Value | ForEach {if($_ -ne $null){$_.ToString("N5")}else{"Benchmarking"}}}; Align='right'}, 
         @{Label = "BTC/GH/Day"; Expression={$_.Pools.PSObject.Properties.Value.Price | ForEach {($_*1000000000).ToString("N5")}}; Align='right'},
         @{Label = "$Currency/Day"; Expression={$_.Profits.PSObject.Properties.Value | ForEach {if($_ -ne $null){($_ * $Rates.$Currency).ToString("N3")}else{"Benchmarking"}}}; Align='right'}, 
-        @{Label = "Pool"; Expression={$_.Pools.PSObject.Properties.Value | ForEach {"$($_.Name)-$($_.Info)"}}}
+        @{Label = "Pool"; Expression={$_.Pools.PSObject.Properties.Value | ForEach {"$($_.Name)"}}},
+        @{Label = "Coins"; Expression={$_.Pools.PSObject.Properties.Value | ForEach {"$($_.Info)"}}},
+        @{Label = "Fees"; Expression={$_.Pools.PSObject.Properties.Value | ForEach {"$($_.Fees)% Pool Fees"}}}
+        
     ) | Out-Host
     
     #Display active miners list
@@ -328,7 +318,7 @@ while($true)
         @{Label = "Launched"; Expression={Switch($_.Activated){0 {"Never"} 1 {"Once"} Default {"$_ Times"}}}}, 
         @{Label = "Command"; Expression={"$($_.Path.TrimStart((Convert-Path ".\"))) $($_.Arguments)"}}
     ) | Out-Host
-    
+
     #Display profit comparison
     if (($BestMiners_Combo | Where-Object Profit -EQ $null | Measure-Object).Count -eq 0) {
         $MinerComparisons = 
@@ -355,7 +345,7 @@ while($true)
     }
 
 
-   #Do nothing for 15 seconds, and check if ccminer is actually running
+#Do nothing for 15 seconds, and check if ccminer is actually running
     $CheckMinerInterval = 15
     Sleep ($CheckMinerInterval)
     $ActiveMinerPrograms | ForEach {
@@ -376,7 +366,7 @@ while($true)
             }
         }
     }
-    
+
     #Reduce Memory
     Get-Job -State Completed | Remove-Job
     [GC]::Collect()
