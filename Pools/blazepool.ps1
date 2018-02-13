@@ -26,7 +26,9 @@ $blazepool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
     $blazepool_Port = $blazepool_Request.$_.port
     $blazepool_Algorithm = Get-Algorithm $blazepool_Request.$_.name
     $blazepool_Coin = $blazepool_Request.$_.coins
-    $blazepool_Fees = $blazepool_request.$_.fees
+    $blazepool_Fees = $blazepool_Request.$_.fees
+    $blazepool_Workers = $blazepool_Request.$_.workers
+
 
     $Divisor = 1000000
 	
@@ -57,6 +59,7 @@ $blazepool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
             Price = $Stat.Live
             Fees = $blazepool_Fees
             StablePrice = $Stat.Week
+	    Workers = $blazepool_Workers
             MarginOfError = $Stat.Fluctuation
             Protocol = "stratum+tcp"
             Host = $blazepool_Host
