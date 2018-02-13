@@ -50,7 +50,7 @@
     {
         [PSCustomObject]@{
             Algorithm = $Hashrefinery_Algorithm
-            Info = "$Hashrefinery_Coins-coin(s)" 
+            Info = "$Hashrefinery_Coins - coin(s)" 
             Price = $Stat.Live
 	    Fees = $Hashrefinery_Fees
             StablePrice = $Stat.Week
