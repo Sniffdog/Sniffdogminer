@@ -27,7 +27,8 @@ $Zpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Selec
     $Zpool_Port = $Zpool_Request.$_.port
     $Zpool_Algorithm = Get-Algorithm $Zpool_Request.$_.name
     $Zpool_Coin = $Zpool_Request.$_.coins
-    $Zpool_Fees = $Zpool_request.$_.fees
+    $Zpool_Fees = $Zpool_Request.$_.fees
+    $Zpool_Workers = $Zpool_Request.$_.workers
 
     $Divisor = 1000000
 	
@@ -52,6 +53,7 @@ $Zpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Selec
             Price = $Stat.Live
             Fees = $Zpool_Fees
             StablePrice = $Stat.Week
+	    Workers = $Zpool_Workers
             MarginOfError = $Stat.Fluctuation
             Protocol = "stratum+tcp"
             Host = $Zpool_Host
