@@ -19,13 +19,14 @@ $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty Ba
      return 
  } 
   
-$Location = "US", "Asia"
+$Location = "US"
 
 $blazepool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Select-Object -ExpandProperty Name | foreach {
     $blazepool_Host = "$_.mine.blazepool.com"
     $blazepool_Port = $blazepool_Request.$_.port
     $blazepool_Algorithm = Get-Algorithm $blazepool_Request.$_.name
     $blazepool_Coin = $blazepool_Request.$_.coins
+    $blazepool_Fees = $blazepool_request.$_.fees
 
     $Divisor = 1000000
 	
@@ -41,17 +42,20 @@ $blazepool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
         "keccak"{$Divisor *= 1000}
         "keccakc"{$Divisor *= 1000}
         "vanilla"{$Divisor *= 1000}
+        "tribus"{$Divisor *= 1000}
+        
     }
 
-    if((Get-Stat -Name "$($Name)_$($blazepool_Algorithm)_Profit") -eq $null){$Stat = Set-Stat -Name "$($Name)_$($blazepool_Algorithm)_Profit" -Value ([Double]$blazepool_Request.$_.estimate_last24h/$Divisor)}
-    else{$Stat = Set-Stat -Name "$($Name)_$($blazepool_Algorithm)_Profit" -Value ([Double]$blazepool_Request.$_.estimate_current/$Divisor)}
+    if((Get-Stat -Name "$($Name)_$($blazepool_Algorithm)_Profit") -eq $null){$Stat = Set-Stat -Name "$($Name)_$($blazepool_Algorithm)_Profit" -Value ([Double]$blazepool_Request.$_.estimate_last24h/$Divisor*(1-($blazepoolpool_Request.$_.fees/100)))}
+    else{$Stat = Set-Stat -Name "$($Name)_$($blazepool_Algorithm)_Profit" -Value ([Double]$blazepool_Request.$_.estimate_current/$Divisor *(1-($blazepool_Request.$_.fees/100)))}
 	
     if($Wallet)
     {
         [PSCustomObject]@{
             Algorithm = $blazepool_Algorithm
-            Info = "$blazepool_Coin-coin(s)"
+            Info = "$blazepool_Coin - Coins"
             Price = $Stat.Live
+            Fees = $blazepool_Fees
             StablePrice = $Stat.Week
             MarginOfError = $Stat.Fluctuation
             Protocol = "stratum+tcp"

@@ -3,11 +3,12 @@
 $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty BaseName 
  
  
- $ahashpool_Request = [PSCustomObject]@{} 
+ $ahashpoolCoins_Request = [PSCustomObject]@{} 
  
  
  try { 
      $ahashpool_Request = Invoke-RestMethod "https://www.ahashpool.com/api/status" -UseBasicParsing -TimeoutSec 10 -ErrorAction Stop 
+     $ahashpoolCoins_Request = Invoke-RestMethod "http://www.ahashpool.com/api/currencies" -UseBasicParsing -TimeoutSec 20 -ErrorAction Stop
  } 
  catch { 
      Write-Warning "Sniffdog howled at ($Name) for a failed API check. " 
@@ -21,11 +22,14 @@ $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty Ba
   
 $Location = "US"
 
+
+
 $ahashpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Select-Object -ExpandProperty Name | Where-Object {$ahashpool_Request.$_.hashrate -gt 0} | foreach {
     $ahashpool_Host = "$_.mine.ahashpool.com"
     $ahashpool_Port = $ahashpool_Request.$_.port
     $ahashpool_Algorithm = Get-Algorithm $ahashpool_Request.$_.name
     $ahashpool_Coin = $ahashpool_Request.$_.coins
+    $ahashpool_Fees = $ahashpool_request.$_.fees
 
     $Divisor = 1000000
 	
@@ -41,17 +45,20 @@ $ahashpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
         "keccak"{$Divisor *= 1000}
         "keccakc"{$Divisor *= 1000}
         "vanilla"{$Divisor *= 1000}
+        "tribus"{$Divisor *= 1000}
+         
     }
 
-    if((Get-Stat -Name "$($Name)_$($ahashpool_Algorithm)_Profit") -eq $null){$Stat = Set-Stat -Name "$($Name)_$($ahashpool_Algorithm)_Profit" -Value ([Double]$ahashpool_Request.$_.estimate_last24h/$Divisor)}
-    else{$Stat = Set-Stat -Name "$($Name)_$($ahashpool_Algorithm)_Profit" -Value ([Double]$ahashpool_Request.$_.estimate_current/$Divisor)}
+    if((Get-Stat -Name "$($Name)_$($ahashpool_Algorithm)_Profit") -eq $null){$Stat = Set-Stat -Name "$($Name)_$($ahashpool_Algorithm)_Profit" -Value ([Double]$ahashpool_Request.$_.estimate_last24h/$Divisor*(1-($ahashpool_Request.$_.fees/100)))}
+    else{$Stat = Set-Stat -Name "$($Name)_$($ahashpool_Algorithm)_Profit" -Value ([Double]$ahashpool_Request.$_.estimate_current/$Divisor *(1-($ahashpool_Request.$_.fees/100)))}
 	
     if($Wallet)
     {
         [PSCustomObject]@{
             Algorithm = $ahashpool_Algorithm
-            Info = "$ahashpool_Coin-coin(s)"
+            Info = "$ahashpool_Coin - Coins"
             Price = $Stat.Live
+            Fees = $ahashpool_Fees
             StablePrice = $Stat.Week
             MarginOfError = $Stat.Fluctuation
             Protocol = "stratum+tcp"

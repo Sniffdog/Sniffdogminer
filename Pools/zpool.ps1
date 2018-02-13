@@ -7,7 +7,8 @@ $Zpool_Request = [PSCustomObject]@{}
  
  
  try { 
-     $Zpool_Request = Invoke-RestMethod "http://www.zpool.ca/api/status" -UseBasicParsing -TimeoutSec 10 -ErrorAction Stop 
+     $Zpool_Request = Invoke-RestMethod "http://www.zpool.ca/api/status" -UseBasicParsing -TimeoutSec 10 -ErrorAction Stop
+     $ZpoolCoins_Request = Invoke-RestMethod "http://www.zpool.ca/api/currencies" -UseBasicParsing -TimeoutSec 10 -ErrorAction Stop 
  } 
  catch { 
      Write-Warning "Sniffdog howled at ($Name) for a failed API check. " 
@@ -26,6 +27,7 @@ $Zpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Selec
     $Zpool_Port = $Zpool_Request.$_.port
     $Zpool_Algorithm = Get-Algorithm $Zpool_Request.$_.name
     $Zpool_Coin = $Zpool_Request.$_.coins
+    $Zpool_Fees = $Zpool_request.$_.fees
 
     $Divisor = 1000000
 	
@@ -39,15 +41,16 @@ $Zpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Selec
 	    "keccak"{$Divisor *= 1000}
     }
 
-    if((Get-Stat -Name "$($Name)_$($Zpool_Algorithm)_Profit") -eq $null){$Stat = Set-Stat -Name "$($Name)_$($Zpool_Algorithm)_Profit" -Value ([Double]$Zpool_Request.$_.estimate_last24h/$Divisor)}
-    else{$Stat = Set-Stat -Name "$($Name)_$($Zpool_Algorithm)_Profit" -Value ([Double]$Zpool_Request.$_.estimate_current/$Divisor)}
+    if((Get-Stat -Name "$($Name)_$($Zpool_Algorithm)_Profit") -eq $null){$Stat = Set-Stat -Name "$($Name)_$($Zpool_Algorithm)_Profit" -Value ([Double]$Zpool_Request.$_.estimate_last24h/$Divisor*(1-($Zpool_Request.$_.fees/100)))}
+    else{$Stat = Set-Stat -Name "$($Name)_$($Zpool_Algorithm)_Profit" -Value ([Double]$Zpool_Request.$_.estimate_current/$Divisor *(1-($Zpool_Request.$_.fees/100)))}
 	
     if($Wallet)
     {
         [PSCustomObject]@{
             Algorithm = $Zpool_Algorithm
-            Info = "$Zpool_Coin-coin(s)"
+            Info = "$Zpool_Coin - Coins"
             Price = $Stat.Live
+            Fees = $Zpool_Fees
             StablePrice = $Stat.Week
             MarginOfError = $Stat.Fluctuation
             Protocol = "stratum+tcp"
