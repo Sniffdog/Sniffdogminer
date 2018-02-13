@@ -33,6 +33,7 @@ $Locations | ForEach {
             Info = $Coin
             Fees = $Fees 
             Price = $Price
+            Workers = 'N/A'
             StablePrice = $Stat.Week
             Protocol = 'stratum+tcp'
             Host = $_.all_host_list.split(";") | Sort -Descending {$_ -ilike "$Location*"} | Select -First 1
