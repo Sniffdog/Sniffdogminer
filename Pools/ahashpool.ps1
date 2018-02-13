@@ -45,7 +45,7 @@ $ahashpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
         "keccak"{$Divisor *= 1000}
         "keccakc"{$Divisor *= 1000}
         "vanilla"{$Divisor *= 1000}
-        "tribus"{$Divisor *= 1000}
+        
          
     }
 
