@@ -92,11 +92,19 @@ while($true)
         $WorkerName = $WorkerNameBackup
         $LastDonated = Get-Date
     }
-    Write-host "Loading BTC rate from 'api.coinbase.com'.." -foregroundcolor "Yellow"
-    $Rates = Invoke-RestMethod "https://api.coinbase.com/v2/exchange-rates?currency=BTC" -UseBasicParsing | Select-Object -ExpandProperty data | Select-Object -ExpandProperty rates
-    $Currency | Where-Object {$Rates.$_} | ForEach-Object {$Rates | Add-Member $_ ([Double]$Rates.$_) -Force}
-    Write-Host -ForegroundColor Yellow "Last Refresh: $(Get-Date)"
+    try {
+        Write-Host "Sniffin for updates from Coinbase..." -foregroundcolor "Yellow"
+        $Rates = Invoke-RestMethod "https://api.coinbase.com/v2/exchange-rates?currency=BTC" -UseBasicParsing | Select-Object -ExpandProperty data | Select-Object -ExpandProperty rates
+        $Currency | Where-Object {$Rates.$_} | ForEach-Object {$Rates | Add-Member $_ ([Double]$Rates.$_) -Force}
+    }
+    catch {
+    Write-Host -Level Warn "Pee's on Coinbase. "
 
+    Write-Host -ForegroundColor Yellow "Last Refresh: $(Get-Date)"
+    Write-host "tries Sniffin at Cryptonator.." -foregroundcolor "Yellow"
+        $Rates = [PSCustomObject]@{}
+        $Currency | ForEach {$Rates | Add-Member $_ (Invoke-WebRequest "https://api.cryptonator.com/api/ticker/btc-$_" -UseBasicParsing | ConvertFrom-Json).ticker.price}
+   }
     #Load the Stats
     $Stats = [PSCustomObject]@{}
     if(Test-Path "Stats"){Get-ChildItemContent "Stats" | ForEach {$Stats | Add-Member $_.Name $_.Content}}
