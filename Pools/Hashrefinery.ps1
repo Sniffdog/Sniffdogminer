@@ -31,6 +31,7 @@
     $Hashrefinery_Algorithm = Get-Algorithm $Hashrefinery_Request.$_.name
     $Hashrefinery_Coins = $Hashrefinery_Request.$_.coins
     $Hashrefinery_Fees = $Hashrefinery_Request.$_.fees
+    $Hashrefinery_Workers = $Hashrefinery_Request.$_.workers
 
     $Divisor = 1000000
 	
@@ -54,6 +55,7 @@
             Price = $Stat.Live
 	    Fees = $Hashrefinery_Fees
             StablePrice = $Stat.Week
+	    Workers = $Hashrefinery_Workers
             MarginOfError = $Stat.Fluctuation
             Protocol = "stratum+tcp"
             Host = $Hashrefinery_Host
