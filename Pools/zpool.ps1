@@ -35,10 +35,10 @@ $Zpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Selec
     {
         "equihash"{$Divisor /= 1000}
         "blake2s"{$Divisor *= 1000}
-	    "blakecoin"{$Divisor *= 1000}
+	"blakecoin"{$Divisor *= 1000}
         "decred"{$Divisor *= 1000}
-	    "x11"{$Divisor *= 100}
-	    "keccak"{$Divisor *= 1000}
+	"x11"{$Divisor *= 100}
+	"keccak"{$Divisor *= 1000}
     }
 
     if((Get-Stat -Name "$($Name)_$($Zpool_Algorithm)_Profit") -eq $null){$Stat = Set-Stat -Name "$($Name)_$($Zpool_Algorithm)_Profit" -Value ([Double]$Zpool_Request.$_.estimate_last24h/$Divisor*(1-($Zpool_Request.$_.fees/100)))}
@@ -48,7 +48,7 @@ $Zpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Selec
     {
         [PSCustomObject]@{
             Algorithm = $Zpool_Algorithm
-            Info = "$Zpool_Coin - Coins"
+            Info = "$Zpool_Coin - Coin(s)"
             Price = $Stat.Live
             Fees = $Zpool_Fees
             StablePrice = $Stat.Week
