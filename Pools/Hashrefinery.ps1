@@ -30,6 +30,7 @@
     $Hashrefinery_Port = $Hashrefinery_Request.$_.port
     $Hashrefinery_Algorithm = Get-Algorithm $Hashrefinery_Request.$_.name
     $Hashrefinery_Coins = $Hashrefinery_Request.$_.coins
+    $Hashrefinery_Fees = $Hasrefinery_request.$_.fees
 
     $Divisor = 1000000
 	
@@ -42,8 +43,8 @@
 	    "x11"{$Divisor *= 100}
     }
 
-    if((Get-Stat -Name "$($Name)_$($Hashrefinery_Algorithm)_Profit") -eq $null){$Stat = Set-Stat -Name "$($Name)_$($Hashrefinery_Algorithm)_Profit" -Value ([Double]$Hashrefinery_Request.$_.estimate_last24h/$Divisor)}
-    else{$Stat = Set-Stat -Name "$($Name)_$($Hashrefinery_Algorithm)_Profit" -Value ([Double]$Hashrefinery_Request.$_.estimate_current/$Divisor)}
+    if((Get-Stat -Name "$($Name)_$($Hashrefinery_Algorithm)_Profit") -eq $null){$Stat = Set-Stat -Name "$($Name)_$($Hashrefinery_Algorithm)_Profit" -Value ([Double]$Hashrefinery_Request.$_.estimate_last24h/$Divisor*(1-($Hashrefinery_request.$_.fees/100)))}
+    else{$Stat = Set-Stat -Name "$($Name)_$($Hashrefinery_Algorithm)_Profit" -Value ([Double]$Hashrefinery_Request.$_.estimate_current/$Divisor *(1-($Hashrefinery_request.$_.fees/100)))}
 	
     if($Wallet)
     {
@@ -51,6 +52,7 @@
             Algorithm = $Hashrefinery_Algorithm
             Info = "$Hashrefinery_Coins-coin(s)" 
             Price = $Stat.Live
+	    Fees = $Hashrefinery_Fees
             StablePrice = $Stat.Week
             MarginOfError = $Stat.Fluctuation
             Protocol = "stratum+tcp"
