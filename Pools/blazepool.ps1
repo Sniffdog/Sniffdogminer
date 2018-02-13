@@ -34,7 +34,7 @@ $blazepool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
     {
         "equihash"{$Divisor /= 1000}
         "blake2s"{$Divisor *= 1000}
-	    "yescrypt"{$Divisor /= 1000}
+	"yescrypt"{$Divisor /= 1000}
         "sha256"{$Divisor *= 1000}
         "sha256t"{$Divisor *= 1000}
         "blakecoin"{$Divisor *= 1000}
@@ -53,7 +53,7 @@ $blazepool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
     {
         [PSCustomObject]@{
             Algorithm = $blazepool_Algorithm
-            Info = "$blazepool_Coin - Coins"
+            Info = "$blazepool_Coin - Coin(s)"
             Price = $Stat.Live
             Fees = $blazepool_Fees
             StablePrice = $Stat.Week
