@@ -32,23 +32,24 @@ $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty Ba
     $zergpool_Algorithm = Get-Algorithm $zergpool_Request.$_.name
     $zergpool_Coin = $zergpool_Request.$_.coins
     $zergpool_Fees = $zergpool_request.$_.fees
+    
     $Divisor = 1000000
 	
     switch($zergpool_Algorithm)
     {
         "equihash"{$Divisor /= 1000}
         "blake2s"{$Divisor *= 1000}
-	    "sha256"{$Divisor *= 1000}
+	"sha256"{$Divisor *= 1000}
         "sha256t"{$Divisor *= 1000}
         "blakecoin"{$Divisor *= 1000}
         "decred"{$Divisor *= 1000}
         "keccak"{$Divisor *= 1000}
         "keccakc"{$Divisor *= 1000}
         "vanilla"{$Divisor *= 1000}
-	    "x11"{$Divisor *= 1000}
-	    "scrypt"{$Divisor *= 1000}
-	    "qubit"{$Divisor *= 1000}
-	    "yescrypt"{$Divisor /= 1000}
+	"x11"{$Divisor *= 1000}
+	"scrypt"{$Divisor *= 1000}
+	"qubit"{$Divisor *= 1000}
+	"yescrypt"{$Divisor /= 1000}
         
 				
     }
@@ -60,7 +61,7 @@ $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty Ba
     {
         [PSCustomObject]@{
             Algorithm = $zergpool_Algorithm
-            Info = "$zergpool_Coin - Coins"
+            Info = "$zergpool_Coin - Coin(s)"
             Price = $Stat.Live
             Fees = $zergpool_Fees
             StablePrice = $Stat.Week
