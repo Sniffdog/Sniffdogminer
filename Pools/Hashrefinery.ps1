@@ -30,7 +30,7 @@
     $Hashrefinery_Port = $Hashrefinery_Request.$_.port
     $Hashrefinery_Algorithm = Get-Algorithm $Hashrefinery_Request.$_.name
     $Hashrefinery_Coins = $Hashrefinery_Request.$_.coins
-    $Hashrefinery_Fees = $Hasrefinery_request.$_.fees
+    $Hashrefinery_Fees = $Hasrefinery_Request.$_.fees
 
     $Divisor = 1000000
 	
