@@ -37,7 +37,7 @@ $ahashpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
     {
         "equihash"{$Divisor /= 1000}
         "blake2s"{$Divisor *= 1000}
-	    "yescrypt"{$Divisor /= 1000}
+	"yescrypt"{$Divisor /= 1000}
         "sha256"{$Divisor *= 1000}
         "sha256t"{$Divisor *= 1000}
         "blakecoin"{$Divisor *= 1000}
@@ -56,7 +56,7 @@ $ahashpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
     {
         [PSCustomObject]@{
             Algorithm = $ahashpool_Algorithm
-            Info = "$ahashpool_Coin - Coins"
+            Info = "$ahashpool_Coin - Coin(s)"
             Price = $Stat.Live
             Fees = $ahashpool_Fees
             StablePrice = $Stat.Week
