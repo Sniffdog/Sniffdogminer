@@ -29,7 +29,9 @@ $ahashpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
     $ahashpool_Port = $ahashpool_Request.$_.port
     $ahashpool_Algorithm = Get-Algorithm $ahashpool_Request.$_.name
     $ahashpool_Coin = $ahashpool_Request.$_.coins
-    $ahashpool_Fees = $ahashpool_request.$_.fees
+    $ahashpool_Fees = $ahashpool_Request.$_.fees
+    $ahashpool_Workers = $ahashpool_Request.$_.workers
+
 
     $Divisor = 1000000
 	
@@ -60,6 +62,7 @@ $ahashpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
             Price = $Stat.Live
             Fees = $ahashpool_Fees
             StablePrice = $Stat.Week
+	    Workers = $ahashpool_Workers
             MarginOfError = $Stat.Fluctuation
             Protocol = "stratum+tcp"
             Host = $ahashpool_Host
