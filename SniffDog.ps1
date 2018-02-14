@@ -93,7 +93,7 @@ while($true)
         $LastDonated = Get-Date
     }
     try {
-        Write-Host "Sniffin for updates from Coinbase..." -foregroundcolor "Yellow"
+        
         $Rates = Invoke-RestMethod "https://api.coinbase.com/v2/exchange-rates?currency=BTC" -UseBasicParsing | Select-Object -ExpandProperty data | Select-Object -ExpandProperty rates
         $Currency | Where-Object {$Rates.$_} | ForEach-Object {$Rates | Add-Member $_ ([Double]$Rates.$_) -Force}
     }
@@ -305,7 +305,35 @@ while($true)
     
     #Display mining information
     Clear-Host
-    Write-Host "1BTC = " $Rates.$Currency "$Currency"
+    #Display active miners list
+    $ActiveMinerPrograms | Sort -Descending Status,{if($_.Process -eq $null){[DateTime]0}else{$_.Process.StartTime}} | Select -First (1+6+6) | Format-Table -Wrap -GroupBy Status (
+        @{Label = "Speed"; Expression={$_.HashRate | ForEach {"$($_ | ConvertTo-Hash)/s"}}; Align='right'}, 
+        @{Label = "Active"; Expression={"{0:dd} Days {0:hh} Hours {0:mm} Minutes" -f $(if($_.Process -eq $null){$_.Active}else{if($_.Process.HasExited){($_.Active)}else{($_.Active+((Get-Date)-$_.Process.StartTime))}})}}, 
+        @{Label = "Launched"; Expression={Switch($_.Activated){0 {"Never"} 1 {"Once"} Default {"$_ Times"}}}}, 
+        @{Label = "Command"; Expression={"$($_.Path.TrimStart((Convert-Path ".\"))) $($_.Arguments)"}}
+    ) | Out-Host
+        Write-Host "..........Excavator is dormant in Sniffdog for Neoscrypt,Keccak,Lyra2rev2, and Nist5..............." -foregroundcolor "Green"
+        Write-Host "..........Remove # in front of Algo in ExcavatorNvidianeo.ps1 file in Miners Folder......................" -foregroundcolor "Green"  
+        Write-Host "................Then restart SniffDog and let Excavator Download to Bin Folder..........................." -foregroundcolor "Green"
+        Write-Host "................Shutdown SniffDog....Goto Bin Folder and to Excavator Folder............................." -foregroundcolor "Green"
+        Write-Host "...........Find Files and move back one folder so it's Bin\Excavator\excavator.exe......................." -foregroundcolor "Green"
+        Write-Host ""
+        Write-Host "..........All miners algos in Miners Folder can be opened by removing # or closed by adding a #.........." -foregroundcolor "Green"
+        Write-Host ""
+        Write-Host ""
+        Write-Host ""
+        Write-Host ""
+        Write-Host ""
+        Write-Host ""
+        Write-Host ""
+        Write-Host ""
+        Write-Host ""
+        Write-Host "                      Thank you Everyone For using SniffDog!!!!!" -foregroundcolor "Yellow"
+        Write-Host ""
+        Write-Host ""
+        Write-Host ""
+        Write-Host ""
+     Write-Host "1BTC = " $Rates.$Currency "$Currency" -foregroundcolor "Yellow"
     $Miners | Where {$_.Profit -ge 1E-5 -or $_.Profit -eq $null} | Sort -Descending Type,Profit | Format-Table -GroupBy Type (
         @{Label = "Miner"; Expression={$_.Name}}, 
         @{Label = "Algorithm"; Expression={$_.HashRates.PSObject.Properties.Name}}, 
@@ -320,13 +348,6 @@ while($true)
         
     ) | Out-Host
     
-    #Display active miners list
-    $ActiveMinerPrograms | Sort -Descending Status,{if($_.Process -eq $null){[DateTime]0}else{$_.Process.StartTime}} | Select -First (1+6+6) | Format-Table -Wrap -GroupBy Status (
-        @{Label = "Speed"; Expression={$_.HashRate | ForEach {"$($_ | ConvertTo-Hash)/s"}}; Align='right'}, 
-        @{Label = "Active"; Expression={"{0:dd} Days {0:hh} Hours {0:mm} Minutes" -f $(if($_.Process -eq $null){$_.Active}else{if($_.Process.HasExited){($_.Active)}else{($_.Active+((Get-Date)-$_.Process.StartTime))}})}}, 
-        @{Label = "Launched"; Expression={Switch($_.Activated){0 {"Never"} 1 {"Once"} Default {"$_ Times"}}}}, 
-        @{Label = "Command"; Expression={"$($_.Path.TrimStart((Convert-Path ".\"))) $($_.Arguments)"}}
-    ) | Out-Host
 
     #Display profit comparison
     if (($BestMiners_Combo | Where-Object Profit -EQ $null | Measure-Object).Count -eq 0) {
@@ -376,8 +397,21 @@ while($true)
         }
     }
 
+     
+
+    #You can examine the difference before and after with:
+    ps powershell* | Select *memory* | ft -auto `
+    @{Name='Virtual Memory Size (MB)';Expression={($_.VirtualMemorySize64)/1MB}; Align='center'}, `
+    @{Name='Private Memory Size (MB)';Expression={(  $_.PrivateMemorySize64)/1MB}; Align='center'},
+    @{Name='Memory Used This Session (MB)';Expression={([System.gc]::gettotalmemory("forcefullcollection") /1MB)}; Align='center'}
+
+   
+
+
     #Reduce Memory
     Get-Job -State Completed | Remove-Job
+    [GC]::Collect()
+    [GC]::WaitForPendingFinalizers()
     [GC]::Collect()
 
     #Do nothing for a set Interval to allow miner to run
@@ -386,6 +420,8 @@ while($true)
     } else {
         Sleep ($Interval)
     }
+
+     Write-Host "SniffDog Dumps and goes back to Fetching" -foregroundcolor "Yellow"
 
     #Save current hash rates
     $ActiveMinerPrograms | ForEach {
@@ -426,6 +462,7 @@ while($true)
                 }
             }
         }
+        
     }
 }
 
