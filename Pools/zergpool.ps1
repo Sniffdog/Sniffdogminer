@@ -59,7 +59,7 @@ $zergpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Se
     {
         [PSCustomObject]@{
             Algorithm = $zergpool_Algorithm
-            Info = "$zergpool_Coin-coin(s)"
+            Info = "$zergpool_Coin - Coin(s)"
             Price = $Stat.Live
             Fees = $zergpool_Fees
             StablePrice = $Stat.Week
