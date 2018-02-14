@@ -7,7 +7,7 @@ $Uri = "https://github.com/nicehash/excavator/releases/download/v1.4.3a/excavato
 
 $Commands = [PSCustomObject]@{
     
-    "neoscrypt" = @() 
+    #"neoscrypt" = @() 
     
 }
 
