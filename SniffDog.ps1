@@ -312,13 +312,13 @@ while($true)
         @{Label = "Launched"; Expression={Switch($_.Activated){0 {"Never"} 1 {"Once"} Default {"$_ Times"}}}}, 
         @{Label = "Command"; Expression={"$($_.Path.TrimStart((Convert-Path ".\"))) $($_.Arguments)"}}
     ) | Out-Host
-        Write-Host "..........Excavator is dormant in Sniffdog for Neoscrypt,Keccak,Lyra2rev2, and Nist5..............." -foregroundcolor "Green"
-        Write-Host "..........Remove # in front of Algo in ExcavatorNvidianeo.ps1 file in Miners Folder......................" -foregroundcolor "Green"  
-        Write-Host "................Then restart SniffDog and let Excavator Download to Bin Folder..........................." -foregroundcolor "Green"
-        Write-Host "................Shutdown SniffDog....Goto Bin Folder and to Excavator Folder............................." -foregroundcolor "Green"
-        Write-Host "...........Find Files and move back one folder so it's Bin\Excavator\excavator.exe......................." -foregroundcolor "Green"
-        Write-Host ""
-        Write-Host "..........All miners algos in Miners Folder can be opened by removing # or closed by adding a #.........." -foregroundcolor "Green"
+        #Write-Host "..........Excavator is dormant in Sniffdog for Neoscrypt,Keccak,Lyra2rev2, and Nist5..............." -foregroundcolor "Green"
+        #Write-Host "..........Remove # in front of Algo in ExcavatorNvidianeo.ps1 file in Miners Folder......................" -foregroundcolor "Green"  
+        #Write-Host "................Then restart SniffDog and let Excavator Download to Bin Folder..........................." -foregroundcolor "Green"
+        #Write-Host "................Shutdown SniffDog....Goto Bin Folder and to Excavator Folder............................." -foregroundcolor "Green"
+        #Write-Host "...........Find Files and move back one folder so it's Bin\Excavator\excavator.exe......................." -foregroundcolor "Green"
+        #Write-Host ""
+        #Write-Host "..........All miners algos in Miners Folder can be opened by removing # or closed by adding a #.........." -foregroundcolor "Green"
         Write-Host ""
         Write-Host ""
         Write-Host ""
