@@ -42,4 +42,5 @@
     "hsr": "Hsr",
     "m7m": "M7M",
     "x16r": "X16r"
+    "yescryptx16r": "Yescryptx16r"
 }
