@@ -41,6 +41,6 @@
     "phi": "Phi",
     "hsr": "Hsr",
     "m7m": "M7M",
-    "x16r": "X16r"
+    "x16r": "X16r",
     "yescryptR16": "YescryptR16"
 }
