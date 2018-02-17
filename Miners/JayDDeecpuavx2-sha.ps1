@@ -1,5 +1,5 @@
 ﻿$Path = ".\Bin\CPU-JayDDee\cpuminer-avx2-sha.exe"
-$Uri = "https://github.com/JayDDee/cpuminer-opt/files/1713005/cpuminer-opt-3.8.1.1-windows.zip"
+$Uri = "https://github.com/JayDDee/cpuminer-opt/files/1729154/cpuminer-opt-3.8.2-windows.zip"
 
 $Commands = [PSCustomObject]@{
     #"lyra2z" = "" #Difficulty might be ignored - more testing needed.
