@@ -1,5 +1,5 @@
 
-***SniffDog Tested and Recommended***
+***SniffDog Tested and Recommended for Solo Mining Algo's***
 
 You can find all these Batch Files at https://github.com/Sniffdog/FarmWatchBot
 
