@@ -1,6 +1,8 @@
 
 ***SniffDog Tested and Recommended for Solo Mining Algo's***
 
+***Please Read about Each Pool's Policies on First Page at Their Pool***
+
 You can find all these Batch Files at https://github.com/Sniffdog/FarmWatchBot
 
 
