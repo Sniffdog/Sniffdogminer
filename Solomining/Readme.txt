@@ -1,3 +1,8 @@
+
+***SniffDog Tested and Recommended***
+
+
+
 Donations:
 •ZEC: t1S8HRoMoyhBhwXq6zY5vHwqhd9MHSiHWKv
 •BTC: 1wdJBYkVromPoiYk82JfSGSSVVyFJnenB
@@ -25,7 +30,7 @@ Functions:
 Instruction:
 1.Create a blank .txt file and rename it to autorun.bat.
 2.Follow the link at the top of this post, copy the entire script code into the autorun.bat file.
-3.Move autorun.bat file to the folder with the EWBF/Claymore/Dstm miner, double click the autorun.bat file. New config.ini file will be created with default settings at first run.
+3.Move autorun.bat file to the folder with the Bminer or the CCminer, double click the autorun.bat file. New config.ini file will be created with default settings at first run.
 4.Close autorun.bat CMD window and open the created config.ini file for editing. Configure settings in this file according to your needs using notepad. Before the next step, check config.ini again to ensure your settings are correct!
 5.Delete the old batch file you were using to run your miner. Autorun.bat will create a new one, with the settings that you set in the config.ini. Double check miner.bat and config.ini files before you start!
 6.Run autorun.bat if you are satisfied with settings in the above mentioned files and enjoy the automation!
