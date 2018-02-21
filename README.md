@@ -12,7 +12,7 @@ How to set in StartSniff.bat:
 
 1) Place your Bitcoin address after -Wallet in StartSniffin.bat
 
-2) Register at Multipool and input your -Username and -Workername to StartSniff.bat (your Workername will also be used at hashrefinery and at Zpool for identification of your rig) ***Please leave password as 'x' at Miningpoolhub
+2) Register at MiningPoolHub and input your -Username and -Workername to StartSniff.bat (your Workername will also be used at hashrefinery and at Zpool for identification of your rig) ***Please leave password as 'x' at Miningpoolhub
 
 3) Add a -RigName for your mining rig for Ahashpool.com, Hashrefinery.com, Zpool.ca, and zergpool.com
 
