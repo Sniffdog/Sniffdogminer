@@ -38,17 +38,22 @@ $ahashpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
     switch($ahashpool_Algorithm)
     {
         
+        "sha256"{$Divisor *= 1000000}
+        "sha256t"{$Divisor *= 1000000}
+        "blake"{$Divisor *= 1000}
         "blake2s"{$Divisor *= 1000}
-	"x11"{$Divisor *= 1000}
-	"equihash"{$Divisor /= 1000}
-        "yescrypt"{$Divisor /= 1000}
-        "blakecoin"{$Divisor *= 1000}
+	"blakecoin"{$Divisor *= 1000}
         "decred"{$Divisor *= 1000}
         "keccak"{$Divisor *= 1000}
         "keccakc"{$Divisor *= 1000}
+	"lbry"{$Divisor *= 1000}
+	"myr-gr"{$Divisor *= 1000}
+	"quark"{$Divisor *= 1000}
+        "qubit"{$Divisor *= 1000}
         "vanilla"{$Divisor *= 1000}
-	"sha256"{$Divisor *= 1000000}
-        "sha256t"{$Divisor *= 1000000}
+	"x11"{$Divisor *= 1000}
+	"equihash"{$Divisor /= 1000}
+        "yescrypt"{$Divisor /= 1000}
         
          
     }
