@@ -12,7 +12,7 @@ How to set in StartSniff.bat:
 
 1) Place your Bitcoin address after -Wallet in StartSniffin.bat
 
-***NEW***  If you want to mine Litecoin......Place litecoin address in StartSniffin_Litecoin.bat (***Only*** three Pools out of the SniffDog family responds to Litecoin payouts!!!!!!! )
+***NEW***  If you want to mine Litecoin......Place litecoin address in StartSniffin_Litecoin.bat (***Only*** three Pools out of the SniffDog family responds to Litecoin payouts for auto conversion!!!!!!! )
 
 2) Register at MiningPoolHub and input your -Username and -Workername to StartSniff.bat (your Workername will also be used at hashrefinery and at Zpool for identification of your rig) ***Please leave password as 'x' at Miningpoolhub
 
