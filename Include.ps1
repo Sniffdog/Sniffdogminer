@@ -527,7 +527,7 @@ function Expand-WebRequest {
  
  
      if (Test-Path $FileName) {Remove-Item $FileName}
-     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+     [Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls11 -bor [System.Net.SecurityProtocolType]::Tls12
      Invoke-WebRequest $Uri -OutFile $FileName -UseBasicParsing 
  
  
