@@ -93,7 +93,7 @@ while($true)
         $LastDonated = Get-Date
     }
     try {
-        
+        Write-Host "SniffDog dumps then checks for updates from Coinbase..." -foregroundcolor "Yellow"
         $Rates = Invoke-RestMethod "https://api.coinbase.com/v2/exchange-rates?currency=BTC" -UseBasicParsing | Select-Object -ExpandProperty data | Select-Object -ExpandProperty rates
         $Currency | Where-Object {$Rates.$_} | ForEach-Object {$Rates | Add-Member $_ ([Double]$Rates.$_) -Force}
     }
@@ -413,6 +413,8 @@ while($true)
     [GC]::Collect()
     [GC]::WaitForPendingFinalizers()
     [GC]::Collect()
+    
+    Write-Host "1BTC = " $Rates.$Currency "$Currency" -foregroundcolor "Yellow"
 
     #Do nothing for a set Interval to allow miner to run
     If ([int]$Interval -gt [int]$CheckMinerInterval) {
@@ -421,7 +423,7 @@ while($true)
         Sleep ($Interval)
     }
 
-     Write-Host "SniffDog Dumps and goes back to Fetching" -foregroundcolor "Yellow"
+     
 
     #Save current hash rates
     $ActiveMinerPrograms | ForEach {
