@@ -133,7 +133,7 @@ while($true)
             if((Split-Path $Miner.URI -Leaf) -eq (Split-Path $Miner.Path -Leaf))
             {
                 New-Item (Split-Path $Miner.Path) -ItemType "Directory" | Out-Null
-                [Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls11 -bor [System.Net.SecurityProtocolType]::Tls12
+                [System.Net.ServicePointManager]::SecurityProtocol = ("Tls12","Tls11","Tls")
                 Invoke-WebRequest $Miner.URI -OutFile $_.Path -UseBasicParsing
             }
             elseif(([IO.FileInfo](Split-Path $_.URI -Leaf)).Extension -eq '')
