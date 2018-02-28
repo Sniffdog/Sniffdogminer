@@ -13,6 +13,8 @@
     [String]$API_Key = "", 
     [Parameter(Mandatory=$false)]
     [Int]$Interval = 90, #seconds before reading hash rate from miners
+    [Parameter(Mandatory=$false)] 
+    [Int]$StatsInterval = 1, #seconds of current active to gather hashrate if not gathered yet 
     [Parameter(Mandatory=$false)]
     [String]$Location = "US", #europe/us/asia
     [Parameter(Mandatory=$false)]
@@ -269,6 +271,7 @@ while($true)
                 Status = "Idle"
                 HashRate = 0
                 Benchmarked = 0
+                Hashrate_Gathered = ($_.HashRates.PSObject.Properties.Value -ne $null)
             }
         }
     }
@@ -432,6 +435,10 @@ while($true)
         }
         else
         {
+        
+            $WasActive = [math]::Round(((Get-Date)-$_.Process.StartTime).TotalSeconds) 
+             if ($WasActive -ge $StatsInterval) {
+             
             $_.HashRate = 0  
             $Miner_HashRates = $null  
    
@@ -449,8 +456,11 @@ while($true)
                 }
 
                 $_.New = $false
+                $_.Hashrate_Gathered = $true 
+                Write-Host "SniffDog chews on"$_.Algorithms" then saves hashrate" -foregroundcolor "Yellow"
             }
         }
+   }     
 
         #Benchmark timeout
         if($_.Benchmarked -ge 6 -or ($_.Benchmarked -ge 2 -and $_.Activated -ge 2))
