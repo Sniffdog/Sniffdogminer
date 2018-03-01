@@ -20,7 +20,7 @@ $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty Ba
      return 
  } 
   
-$Location = 'Europe', 'US'
+$Location = 'US'
 $zergpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Select -ExpandProperty Name | foreach {
 #$zergpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Select-Object -ExpandProperty Name | Where-Object {$zergpool_Request.$_.hashrate -gt 0} | foreach {
     $zergpool_Host = "mine.zergpool.com"
