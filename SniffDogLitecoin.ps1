@@ -14,7 +14,7 @@
     [Parameter(Mandatory=$false)]
     [Int]$Interval = 90, #seconds before reading hash rate from miners
     [Parameter(Mandatory=$false)] 
-    [Int]$StatsInterval = 1, #seconds of current active to gather hashrate if not gathered yet 
+    [Int]$StatsInterval = $null, #seconds of current active to gather hashrate if not gathered yet 
     [Parameter(Mandatory=$false)]
     [String]$Location = "US", #europe/us/asia
     [Parameter(Mandatory=$false)]
@@ -45,6 +45,8 @@
     [Int]$Delay = 1 #seconds before opening each miner
 )
 
+
+[Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
 Set-Location (Split-Path $script:MyInvocation.MyCommand.Path)
 
 Get-ChildItem . -Recurse | Unblock-File
@@ -63,6 +65,14 @@ $ActiveMinerPrograms = @()
 
 #Start the log
 Start-Transcript ".\Logs\$(Get-Date -Format "yyyy-MM-dd_HH-mm-ss").txt"
+
+#Set process priority to BelowNormal to avoid hash rate drops on systems with weak CPUs
+(Get-Process -Id $PID).PriorityClass = "BelowNormal"
+
+if (Get-Command "Unblock-File" -ErrorAction SilentlyContinue) {Get-ChildItem . -Recurse | Unblock-File}
+if ((Get-Command "Get-MpPreference" -ErrorAction SilentlyContinue) -and (Get-MpComputerStatus -ErrorAction SilentlyContinue) -and (Get-MpPreference).ExclusionPath -notcontains (Convert-Path .)) {
+    Start-Process (@{desktop = "powershell"; core = "pwsh"}.$PSEdition) "-Command Import-Module '$env:Windir\System32\WindowsPowerShell\v1.0\Modules\Defender\Defender.psd1'; Add-MpPreference -ExclusionPath '$(Convert-Path .)'" -Verb runAs
+}
 
 #Update stats with missing data and set to today's date/time
 if(Test-Path "Stats"){Get-ChildItemContent "Stats" | ForEach {$Stat = Set-Stat $_.Name $_.Content.Week}}
@@ -95,7 +105,7 @@ while($true)
         $LastDonated = Get-Date
     }
     try {
-        
+        Write-Host "SniffDog dumps then checks for updates from Coinbase..." -foregroundcolor "Yellow"
         $Rates = Invoke-RestMethod "https://api.coinbase.com/v2/exchange-rates?currency=BTC" -UseBasicParsing | Select-Object -ExpandProperty data | Select-Object -ExpandProperty rates
         $Currency | Where-Object {$Rates.$_} | ForEach-Object {$Rates | Add-Member $_ ([Double]$Rates.$_) -Force}
     }
@@ -135,7 +145,6 @@ while($true)
             if((Split-Path $Miner.URI -Leaf) -eq (Split-Path $Miner.Path -Leaf))
             {
                 New-Item (Split-Path $Miner.Path) -ItemType "Directory" | Out-Null
-                [System.Net.ServicePointManager]::SecurityProtocol = ("Tls12","Tls11","Tls")
                 Invoke-WebRequest $Miner.URI -OutFile $_.Path -UseBasicParsing
             }
             elseif(([IO.FileInfo](Split-Path $_.URI -Leaf)).Extension -eq '')
@@ -163,6 +172,19 @@ while($true)
             $Miner
         }
     }
+# Open firewall ports for all miners
+    if (Get-Command "Get-MpPreference" -ErrorAction SilentlyContinue) {
+        if ((Get-Command "Get-MpComputerStatus" -ErrorAction SilentlyContinue) -and (Get-MpComputerStatus -ErrorAction SilentlyContinue)) {
+            if (Get-Command "Get-NetFirewallRule" -ErrorAction SilentlyContinue) {
+                if ($MinerFirewalls -eq $null) {$MinerFirewalls = Get-NetFirewallApplicationFilter | Select-Object -ExpandProperty Program}
+                if (@($AllMiners | Select-Object -ExpandProperty Path -Unique) | Compare-Object @($MinerFirewalls) | Where-Object SideIndicator -EQ "=>") {
+                    Start-Process (@{desktop = "powershell"; core = "pwsh"}.$PSEdition) ("-Command Import-Module '$env:Windir\System32\WindowsPowerShell\v1.0\Modules\NetSecurity\NetSecurity.psd1'; ('$(@($AllMiners | Select-Object -ExpandProperty Path -Unique) | Compare-Object @($MinerFirewalls) | Where-Object SideIndicator -EQ '=>' | Select-Object -ExpandProperty InputObject | ConvertTo-Json -Compress)' | ConvertFrom-Json) | ForEach {New-NetFirewallRule -DisplayName 'MultiPoolMiner' -Program `$_}" -replace '"', '\"') -Verb runAs
+                    $MinerFirewalls = $null
+                }
+            }
+        }
+    }
+
     if($Miners.Count -eq 0){"No Miners!" | Out-Host; sleep $Interval; continue}
     $Miners | ForEach {
         $Miner = $_
@@ -417,6 +439,8 @@ while($true)
     [GC]::Collect()
     [GC]::WaitForPendingFinalizers()
     [GC]::Collect()
+    
+    Write-Host "1BTC = " $Rates.$Currency "$Currency" -foregroundcolor "Yellow"
 
     #Do nothing for a set Interval to allow miner to run
     If ([int]$Interval -gt [int]$CheckMinerInterval) {
@@ -425,7 +449,7 @@ while($true)
         Sleep ($Interval)
     }
 
-     Write-Host "SniffDog Dumps and goes back to Fetching" -foregroundcolor "Yellow"
+     
 
     #Save current hash rates
     $ActiveMinerPrograms | ForEach {
@@ -435,10 +459,10 @@ while($true)
         }
         else
         {
-        
+
             $WasActive = [math]::Round(((Get-Date)-$_.Process.StartTime).TotalSeconds) 
              if ($WasActive -ge $StatsInterval) {
-             
+
             $_.HashRate = 0  
             $Miner_HashRates = $null  
    
@@ -460,7 +484,7 @@ while($true)
                 Write-Host "SniffDog chews on"$_.Algorithms" then saves hashrate" -foregroundcolor "Yellow"
             }
         }
-   }     
+    }
 
         #Benchmark timeout
         if($_.Benchmarked -ge 6 -or ($_.Benchmarked -ge 2 -and $_.Activated -ge 2))
