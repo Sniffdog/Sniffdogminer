@@ -7,7 +7,7 @@ $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty Ba
  
  
  try { 
-     $zergpool_Request = Invoke-RestMethod "http://europe.mine.zergpool.com/api/status" -UseBasicParsing -TimeoutSec 10 -ErrorAction Stop 
+     $zergpool_Request = Invoke-RestMethod "http://api.zergpool.com:8080/api/status" -UseBasicParsing -TimeoutSec 10 -ErrorAction Stop 
      
  } 
  catch { 
@@ -23,7 +23,7 @@ $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty Ba
 $Location = 'Europe'
 $zergpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Select -ExpandProperty Name | foreach {
 #$zergpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Select-Object -ExpandProperty Name | Where-Object {$zergpool_Request.$_.hashrate -gt 0} | foreach {
-    $zergpool_Host = "mine.zergpool.com"
+    $zergpool_Host = "europe.mine.zergpool.com"
     $zergpool_Port = $zergpool_Request.$_.port
     $zergpool_Algorithm = Get-Algorithm $zergpool_Request.$_.name
     $zergpool_Coin = $zergpool_Request.$_.coins
