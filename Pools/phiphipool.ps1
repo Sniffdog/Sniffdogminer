@@ -68,7 +68,7 @@ $phiphipool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | 
             Protocol = "stratum+tcp"
             Host = $phiphipool_Host
             Port = $phiphipool_Port
-            User = $Wallet.$RigName
+            User = $Wallet
             Pass = "ID=$RigName,c=$Passwordcurrency"
             Location = $Location
             SSL = $false
