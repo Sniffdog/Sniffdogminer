@@ -69,7 +69,7 @@ $phiphipool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | 
             Host = $phiphipool_Host
             Port = $phiphipool_Port
             User = $Wallet.$RigName
-            Pass = "stats,c=$Passwordcurrency"
+            Pass = "ID=$RigName,c=$Passwordcurrency"
             Location = $Location
             SSL = $false
         }
