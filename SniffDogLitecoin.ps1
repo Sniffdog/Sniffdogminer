@@ -104,19 +104,11 @@ while($true)
         $WorkerName = $WorkerNameBackup
         $LastDonated = Get-Date
     }
-    try {
-        Write-Host "SniffDog dumps then checks for updates from Coinbase..." -foregroundcolor "Yellow"
-        $Rates = Invoke-RestMethod "https://api.coinbase.com/v2/exchange-rates?currency=LTC" -UseBasicParsing | Select-Object -ExpandProperty data | Select-Object -ExpandProperty rates
-        $Currency | Where-Object {$Rates.$_} | ForEach-Object {$Rates | Add-Member $_ ([Double]$Rates.$_) -Force}
-    }
-    catch {
-    Write-Host -Level Warn "Pee's on Coinbase. "
-
-    Write-Host -ForegroundColor Yellow "Last Refresh: $(Get-Date)"
-    Write-host "tries Sniffin at Cryptonator.." -foregroundcolor "Yellow"
+   
         $Rates = [PSCustomObject]@{}
-        $Currency | ForEach {$Rates | Add-Member $_ (Invoke-WebRequest "https://api.cryptonator.com/api/ticker/ltc-$_" -UseBasicParsing | ConvertFrom-Json).ticker.price}
-   }
+        $Currency | ForEach {$Rates | Add-Member $_ (Invoke-WebRequest "https://api.cryptonator.com/api/ticker/ltc-btc" -UseBasicParsing | ConvertFrom-Json).ticker.price}
+        
+   
     #Load the Stats
     $Stats = [PSCustomObject]@{}
     if(Test-Path "Stats"){Get-ChildItemContent "Stats" | ForEach {$Stats | Add-Member $_.Name $_.Content}}
@@ -359,14 +351,17 @@ while($true)
         Write-Host ""
         Write-Host ""
         Write-Host ""
-     Write-Host "1LTC = " $Rates.$Currency "$Currency" -foregroundcolor "Yellow"
-    $Miners | Where {$_.Profit -ge 1E-5 -or $_.Profit -eq $null} | Sort -Descending Type,Profit | Format-Table -GroupBy Type (
+        $Rates2 = Invoke-RestMethod "https://api.coinbase.com/v2/exchange-rates?currency=LTC" -UseBasicParsing | Select-Object -ExpandProperty data | Select-Object -ExpandProperty rates
+        $Currency | Where-Object {$Rates2.$_} | ForEach-Object {$Rates2 | Add-Member $_ ([Double]$Rates2.$_) -Force}
+      Write-Host "1LTC = " $Rates2.$Currency " $Currency" -foregroundcolor "Yellow"  
+     Write-Host "1LTC = " $Rates.$Currency " of a Bitcoin" -foregroundcolor "Yellow"
+     $Miners | Where {$_.Profit -ge 1E-5 -or $_.Profit -eq $null} | Sort -Descending Type,Profit | Format-Table -GroupBy Type (
         @{Label = "Miner"; Expression={$_.Name}}, 
         @{Label = "Algorithm"; Expression={$_.HashRates.PSObject.Properties.Name}}, 
         @{Label = "Speed"; Expression={$_.HashRates.PSObject.Properties.Value | ForEach {if($_ -ne $null){"$($_ | ConvertTo-Hash)/s"}else{"Bench"}}}; Align='center'}, 
-        @{Label = "LTC/Day"; Expression={$_.Profits.PSObject.Properties.Value | ForEach {if($_ -ne $null){  $_.ToString("N5")}else{"Bench"}}}; Align='right'}, 
-        @{Label = "LTC/GH/Day"; Expression={$_.Pools.PSObject.Properties.Value.Price | ForEach {($_*1000000000).ToString("N5")}}; Align='center'},
-        @{Label = "$Currency/Day"; Expression={$_.Profits.PSObject.Properties.Value | ForEach {if($_ -ne $null){($_ * $Rates.$Currency).ToString("N3")}else{"Bench"}}}; Align='center'}, 
+        @{Label = "BTC/Day"; Expression={$_.Profits.PSObject.Properties.Value | ForEach {if($_ -ne $null){  $_.ToString("N5")}else{"Bench"}}}; Align='right'},
+        @{Label = "LTC/Day"; Expression={$_.Profits.PSObject.Properties.Value | ForEach {if($_ -ne $null){  ($_ / $Rates.$Currency).ToString("N5")}else{"Bench"}}}; Align='right'}, 
+        @{Label = "$Currency/Day"; Expression={$_.Profits.PSObject.Properties.Value | ForEach {if($_ -ne $null){($_ / $Rates.$Currency * $Rates2.$Currency).ToString("N3")}else{"Bench"}}}; Align='center'}, 
         @{Label = "Pool"; Expression={$_.Pools.PSObject.Properties.Value | ForEach {"$($_.Name)"}}; Align='center'},
         @{Label = "Coins"; Expression={$_.Pools.PSObject.Properties.Value | ForEach {"  $($_.Info)"}}; Align='center'},
         @{Label = "Pool Fees"; Expression={$_.Pools.PSObject.Properties.Value | ForEach {"$($_.Fees)%"}}; Align='center'},
@@ -440,7 +435,8 @@ while($true)
     [GC]::WaitForPendingFinalizers()
     [GC]::Collect()
     
-    Write-Host "1LTC = " $Rates.$Currency "$Currency" -foregroundcolor "Yellow"
+     Write-Host "1LTC = " $Rates2.$Currency " $Currency" -foregroundcolor "Yellow"  
+     Write-Host "1LTC = " $Rates.$Currency " of a Bitcoin" -foregroundcolor "Yellow"
 
     #Do nothing for a set Interval to allow miner to run
     If ([int]$Interval -gt [int]$CheckMinerInterval) {
