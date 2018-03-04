@@ -115,7 +115,7 @@ while($true)
     Write-Host -ForegroundColor Yellow "Last Refresh: $(Get-Date)"
     Write-host "tries Sniffin at Cryptonator.." -foregroundcolor "Yellow"
         $Rates = [PSCustomObject]@{}
-        $Currency | ForEach {$Rates | Add-Member $_ (Invoke-WebRequest "https://api.cryptonator.com/api/ticker/btc-$_" -UseBasicParsing | ConvertFrom-Json).ticker.price}
+        $Currency | ForEach {$Rates | Add-Member $_ (Invoke-WebRequest "https://api.cryptonator.com/api/ticker/ltc-$_" -UseBasicParsing | ConvertFrom-Json).ticker.price}
    }
     #Load the Stats
     $Stats = [PSCustomObject]@{}
