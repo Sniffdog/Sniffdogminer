@@ -359,7 +359,7 @@ while($true)
         Write-Host ""
         Write-Host ""
         Write-Host ""
-     Write-Host "1BTC = " $Rates.$Currency "$Currency" -foregroundcolor "Yellow"
+     Write-Host "1LTC = " $Rates.$Currency "$Currency" -foregroundcolor "Yellow"
     $Miners | Where {$_.Profit -ge 1E-5 -or $_.Profit -eq $null} | Sort -Descending Type,Profit | Format-Table -GroupBy Type (
         @{Label = "Miner"; Expression={$_.Name}}, 
         @{Label = "Algorithm"; Expression={$_.HashRates.PSObject.Properties.Name}}, 
