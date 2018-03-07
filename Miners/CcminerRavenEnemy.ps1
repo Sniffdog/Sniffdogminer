@@ -1,6 +1,6 @@
 . .\Include.ps1
 
-$Path = '.\Bin\NVIDIA-TPruvotEnemy\ccminer.exe'
+$Path = '.\Bin\NVIDIA-Enemy\ccminer.exe'
 $Uri = 'https://mega.nz/#!JDAm3TJb!BMQPYJz5_nmkZEZB0UUwWicopIdgnHG82Ht5buWxZxo'
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
