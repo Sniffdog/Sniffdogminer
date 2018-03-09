@@ -106,7 +106,7 @@ while($true)
     }
         Write-Host "SniffDog dumps then checks for updates from Cryptonator..." -foregroundcolor "Yellow"
         $Rates = [PSCustomObject]@{}
-        $Currency | ForEach {$Rates | Add-Member $_ (Invoke-WebRequest "https://api.cryptonator.com/api/ticker/ltc-btc" -UseBasicParsing | ConvertFrom-Json).ticker.price}
+        $Currency | ForEach {$Rates | Add-Member $_ (Invoke-WebRequest "https://api.cryptonator.com/api/full/ltc-btc" -UseBasicParsing | ConvertFrom-Json).ticker.price}
         
    
     #Load the Stats
