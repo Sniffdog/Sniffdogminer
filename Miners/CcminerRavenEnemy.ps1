@@ -78,7 +78,7 @@ $Optimizations = [PSCustomObject]@{
     Hsr = ' --api-remote --api-allow=0/0'
     Polytimos = ' --api-remote --api-allow=0/0'
     Decred = ' --api-remote --api-allow=0/0'
-    X16r = ' --api-remote --api-allow=0/0'
+    X16r = ''
     
 }
 
