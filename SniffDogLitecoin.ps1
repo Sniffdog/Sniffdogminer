@@ -104,7 +104,7 @@ while($true)
         $WorkerName = $WorkerNameBackup
         $LastDonated = Get-Date
     }
-        Write-Host "SniffDog dumps then checks for updates from Cryptonator..." -foregroundcolor "Yellow"
+        Write-Host "SniffDog dumps then checks for updates from Coinbase..." -foregroundcolor "Yellow"
         $Rates = Invoke-RestMethod "https://api.coinbase.com/v2/exchange-rates?currency=LTC" -UseBasicParsing | Select-Object -ExpandProperty data | Select-Object -ExpandProperty rates
         $Currency | Where-Object {$Rates.$_} | ForEach-Object {$Rates | Add-Member $_ ([Double]$Rates.$_) -Force}
         
