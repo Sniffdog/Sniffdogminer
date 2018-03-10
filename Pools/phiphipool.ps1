@@ -46,6 +46,7 @@ $phiphipool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | 
 	"scrypt"{$Divisor *= 1000}
 	"qubit"{$Divisor *= 1000}
 	"yescrypt"{$Divisor /= 1000}
+	"skunk"{$Divisor *= 10000}
     
     
 				
