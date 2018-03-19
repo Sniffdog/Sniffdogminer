@@ -8,7 +8,7 @@ $Name = Get-Item $MyInvocation.MyCommand.Path | Select-Object -ExpandProperty Ba
  
  try { 
      $zergpool_Request = Invoke-RestMethod "http://api.zergpool.com:8080/api/status" -UseBasicParsing -TimeoutSec 10 -ErrorAction Stop 
-     
+     #$ZergpoolCoins_Request = Invoke-RestMethod "http://api.zergpool.com:8080/api/currencies" -UseBasicParsing -TimeoutSec 10 -ErrorAction Stop 
  } 
  catch { 
      Write-Warning "Sniffdog howled at ($Name) for a failed API check. " 
@@ -24,6 +24,24 @@ $Location = 'US'
 $zergpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Select -ExpandProperty Name | foreach {
 #$zergpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Select-Object -ExpandProperty Name | Where-Object {$zergpool_Request.$_.hashrate -gt 0} | foreach {
     $zergpool_Host = "mine.zergpool.com"
+        try { 
+		$requestCallback = $state = $null
+		$client = New-Object System.Net.Sockets.TcpClient
+		$beginConnect = $client.BeginConnect("mine.zergpool.com",$zergpool_Request.$_.port,$requestCallback,$state)
+		Start-Sleep -milli 100
+		if ($client.Connected) { 
+			#Write-Host "$Name host selected.."  
+		} 
+		else { 
+			#Write-Host "EU host selected as unable to connect to $Name."  
+			$zergpool_Host = "europe.mine.zergpool.com" 
+		}
+		$client.Close()
+	 } 
+	 catch { 
+		 #Write-Warning "Error when do tcp test. directed to EU host. " 
+		 $zergpool_Host = "europe.mine.zergpool.com"
+ }
     $zergpool_Port = $zergpool_Request.$_.port
     $zergpool_Algorithm = Get-Algorithm $zergpool_Request.$_.name
     $zergpool_Coin = $zergpool_Request.$_.coins
@@ -47,8 +65,8 @@ $zergpool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | Se
 	"scrypt"{$Divisor *= 1000}
 	"qubit"{$Divisor *= 1000}
 	"yescrypt"{$Divisor /= 1000}
-	"yescryptr16"{$Divisor /= 1000}
-	"quark"{$Divisor *= 1000}
+    "yescryptr16"{$Divisor /= 1000}
+    
     
     
 				
