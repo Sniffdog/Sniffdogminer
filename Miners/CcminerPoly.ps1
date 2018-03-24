@@ -36,7 +36,7 @@ $Algorithms = [PSCustomObject]@{
     #Tribus = 'tribus'
     #Phi = 'phi'
     #Hsr = 'hsr'
-    Polytimos = 'poly'
+    #Polytimos = 'poly'
 }
 
 $Optimizations = [PSCustomObject]@{
