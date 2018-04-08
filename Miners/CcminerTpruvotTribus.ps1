@@ -42,6 +42,8 @@ $Algorithms = [PSCustomObject]@{
     #Decred = 'decred'
     #X16r = 'x16r'
     Keccakc = 'keccakc'
+    X16r = 'x16r'
+    X16s = 'x16s'
 }
 
 $Optimizations = [PSCustomObject]@{
