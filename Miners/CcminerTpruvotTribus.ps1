@@ -42,7 +42,6 @@ $Algorithms = [PSCustomObject]@{
     #Decred = 'decred'
     #X16r = 'x16r'
     Keccakc = 'keccakc'
-    X16r = 'x16r'
     X16s = 'x16s'
 }
 
@@ -83,6 +82,7 @@ $Optimizations = [PSCustomObject]@{
     Decred = ' --api-remote --api-allow=0/0'
     X16r = ' --api-remote --api-allow=0/0'
     Keccakc = ' --api-remote --api-allow=0/0'
+    X16s = ' --api-remote --api-allow=0/0'
     
 }
 
