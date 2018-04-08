@@ -1,7 +1,7 @@
 . .\Include.ps1
 
 $Path = '.\Bin\NVIDIA-Nevermore\ccminer.exe'
-$Uri = 'https://github.com/brian112358/nevermore-miner/releases/download/v0.1-alpha/nevermore-v0.1-alpha-win32-fixed.zip'
+$Uri = 'https://github.com/brian112358/nevermore-miner/releases/download/v0.2.2/nevermore-v0.2.2-win64.zip'
 
 #64 bit version
 #$Uri = 'https://github.com/brian112358/nevermore-miner/releases/download/v0.1-alpha/nevermore-v0.1-alpha-win64-fixed.zip'
@@ -44,6 +44,7 @@ $Algorithms = [PSCustomObject]@{
     #Polytimos = 'polytimos'
     #Decred = 'decred'
     X16r = 'x16r'
+    X16s = 'x16s'
 }
 
 $Optimizations = [PSCustomObject]@{
@@ -82,6 +83,7 @@ $Optimizations = [PSCustomObject]@{
     Polytimos = ' --api-remote --api-allow=0/0'
     Decred = ' --api-remote --api-allow=0/0'
     X16r = ''
+    X16s = ''
     
 }
 
