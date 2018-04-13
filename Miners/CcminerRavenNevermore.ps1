@@ -3,9 +3,6 @@
 $Path = '.\Bin\NVIDIA-Nevermore\ccminer.exe'
 $Uri = 'https://github.com/brian112358/nevermore-miner/releases/download/v0.2.2/nevermore-v0.2.2-win64.zip'
 
-#64 bit version
-#$Uri = 'https://github.com/brian112358/nevermore-miner/releases/download/v0.1-alpha/nevermore-v0.1-alpha-win64-fixed.zip'
-
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
 
 $Algorithms = [PSCustomObject]@{
