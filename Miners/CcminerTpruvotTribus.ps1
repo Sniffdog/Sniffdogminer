@@ -1,7 +1,7 @@
 . .\Include.ps1
 
 $Path = '.\Bin\NVIDIA-TPruvot2.2.4\ccminer.exe'
-$Uri = 'https://github.com/tpruvot/ccminer/releases/download/2.2.4-tpruvot/ccminer-x86-2.2.4-cuda9.7z'
+$Uri = 'https://github.com/tpruvot/ccminer/releases/download/2.2.5-tpruvot/ccminer-x86-2.2.5-cuda9.7z'
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
 
@@ -42,6 +42,7 @@ $Algorithms = [PSCustomObject]@{
     #Decred = 'decred'
     #X16r = 'x16r'
     Keccakc = 'keccakc'
+    X16s = 'x16s'
 }
 
 $Optimizations = [PSCustomObject]@{
@@ -81,6 +82,7 @@ $Optimizations = [PSCustomObject]@{
     Decred = ' --api-remote --api-allow=0/0'
     X16r = ' --api-remote --api-allow=0/0'
     Keccakc = ' --api-remote --api-allow=0/0'
+    X16s = ' --api-remote --api-allow=0/0'
     
 }
 
