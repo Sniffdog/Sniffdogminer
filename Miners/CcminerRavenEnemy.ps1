@@ -1,6 +1,6 @@
 . .\Include.ps1
 
-$Path = '.\Bin\NVIDIA-Enemy\ccminer.exe'
+$Path = '.\Bin\NVIDIA-Enemy\z-enemy.exe'
 
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
