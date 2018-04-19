@@ -41,6 +41,7 @@ $Algorithms = [PSCustomObject]@{
     #Polytimos = 'polytimos'
     #Decred = 'decred'
     X16r = 'x16r'
+    X16s = 'x16s'
 }
 
 $Optimizations = [PSCustomObject]@{
@@ -60,7 +61,7 @@ $Optimizations = [PSCustomObject]@{
     Groestl = ''
     Keccak = ' --api-remote --api-allow=0/0'
     Scrypt = ''
-    Bitcore = ' --api-remote --api-allow=0/0'
+    Bitcore = ''
     Blake2s = ''
     Sib = ''
     X17 = ''
@@ -74,11 +75,12 @@ $Optimizations = [PSCustomObject]@{
     Jha = ' --api-remote --api-allow=0/0'
     Skunk = ' --api-remote --api-allow=0/0'
     Tribus = ' --api-remote --api-allow=0/0'
-    Phi = ' -i 23 --api-remote --api-allow=0/0'
+    Phi = ''
     Hsr = ' --api-remote --api-allow=0/0'
     Polytimos = ' --api-remote --api-allow=0/0'
     Decred = ' --api-remote --api-allow=0/0'
     X16r = ''
+    X16s = ''
     
 }
 
