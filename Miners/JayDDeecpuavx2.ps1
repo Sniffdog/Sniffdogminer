@@ -1,5 +1,5 @@
 ﻿$Path = ".\Bin\CPU-JayDDee\cpuminer-avx2.exe"
-$Uri = "https://github.com/JayDDee/cpuminer-opt/files/1884641/cpuminer-opt-3.8.6.1-windows.zip"
+$Uri = "https://github.com/JayDDee/cpuminer-opt/files/1899884/cpuminer-opt-3.8.7.2-windows.zip"
 
 $Commands = [PSCustomObject]@{
     #"bitcore" = "" #Bitcore
