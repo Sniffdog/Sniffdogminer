@@ -47,6 +47,7 @@ $blazepool_Request | Get-Member -MemberType NoteProperty -ErrorAction Ignore | S
         "x11"{$Divisor *= 1000}
         "equihash"{$Divisor /= 1000}
         "yescrypt"{$Divisor /= 1000}
+	"hmq1725"{$Divisor *= 1000}
         
         
     }
