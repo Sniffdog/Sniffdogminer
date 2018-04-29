@@ -14,7 +14,8 @@ $Commands = [PSCustomObject]@{
     #"lyra2h" = "" #Lyra2h
     #"yescryptr8" = "" #Yescryptr8
     #"x16r" = "" #Ravencoin
-    #"yescryptr16" = "" #Yenten Zergpool
+    #"yescryptr16" = "" #Yenten
+    #"cryptonightv7" = "" #Cryptonightv7
 
 }
 
