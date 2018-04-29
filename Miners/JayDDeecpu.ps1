@@ -35,6 +35,7 @@ $Commands = [PSCustomObject]@{
     "yescryptr8" = "" #Yescryptr8
     #"x16r" = "" #Ravencoin
     "yescryptr16" = "" #Yenten
+    "cryptonightv7" = "" #cryptonightv7
 }
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
