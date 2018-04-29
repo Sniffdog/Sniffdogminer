@@ -45,5 +45,6 @@
     "yescryptR16": "YescryptR16",
     "keccakc": "Keccakc",
     "x16r": "X16r",
-    "x16s": "X16s"
+    "x16s": "X16s",
+    "cryptonightv7": "Cryptonightv7"
 }
