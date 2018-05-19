@@ -42,6 +42,7 @@ $Algorithms = [PSCustomObject]@{
     #Decred = 'decred'
     X16r = 'x16r'
     X16s = 'x16s'
+    Xevan = 'xevan'
 }
 
 $Optimizations = [PSCustomObject]@{
@@ -81,6 +82,7 @@ $Optimizations = [PSCustomObject]@{
     Decred = ' --api-remote --api-allow=0/0'
     X16r = ''
     X16s = ''
+    Xevan = ''
     
 }
 
