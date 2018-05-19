@@ -43,6 +43,7 @@ $Algorithms = [PSCustomObject]@{
     X16r = 'x16r'
     X16s = 'x16s'
     Xevan = 'xevan'
+    Vitality = 'vit'
 }
 
 $Optimizations = [PSCustomObject]@{
@@ -83,6 +84,7 @@ $Optimizations = [PSCustomObject]@{
     X16r = ''
     X16s = ''
     Xevan = ''
+    Vitality = ''
     
 }
 
