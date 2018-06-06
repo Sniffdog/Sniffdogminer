@@ -46,5 +46,7 @@
     "keccakc": "Keccakc",
     "x16r": "X16r",
     "x16s": "X16s",
-    "cryptonightv7": "Cryptonightv7"
+    "cryptonightv7": "Cryptonightv7",
+    "vitality": "Vitality",
+    "aeriumx": "AeriumX"
 }
