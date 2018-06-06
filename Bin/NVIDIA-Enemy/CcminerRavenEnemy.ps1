@@ -30,7 +30,7 @@ $Algorithms = [PSCustomObject]@{
     #Hmq1725 = 'hmq1725'
     #Veltor = 'veltor'
     #X11evo = 'x11evo'
-    #Timetravel = 'timetravel'
+    Timetravel = 'timetravel'
     #Blakecoin = 'blakecoin'
     #Lbry = 'lbry'
     #Jha = 'jha'
@@ -38,12 +38,14 @@ $Algorithms = [PSCustomObject]@{
     Tribus = 'tribus'
     Phi = 'phi'
     #Hsr = 'hsr'
-    #Polytimos = 'polytimos'
+    Polytimos = 'polytimos'
     #Decred = 'decred'
     X16r = 'x16r'
     X16s = 'x16s'
     Xevan = 'xevan'
     Vitality = 'vit'
+    AeriumX = 'aeriumx'
+    C11 = 'c11'
 }
 
 $Optimizations = [PSCustomObject]@{
@@ -71,7 +73,7 @@ $Optimizations = [PSCustomObject]@{
     Hmq1725 = ' --api-remote --api-allow=0/0'
     Veltor = ''
     X11evo = ' --api-remote --api-allow=0/0'
-    Timetravel = ' --api-remote --api-allow=0/0'
+    Timetravel = ''
     Blakecoin = ''
     Lbry = ''
     Jha = ' --api-remote --api-allow=0/0'
@@ -79,12 +81,14 @@ $Optimizations = [PSCustomObject]@{
     Tribus = ' --api-remote --api-allow=0/0'
     Phi = ''
     Hsr = ' --api-remote --api-allow=0/0'
-    Polytimos = ' --api-remote --api-allow=0/0'
+    Polytimos = ''
     Decred = ' --api-remote --api-allow=0/0'
     X16r = ''
     X16s = ''
     Xevan = ''
     Vitality = ''
+    Aeriumx = ''
+    C11 = ''
     
 }
 
