@@ -1,7 +1,7 @@
 . .\Include.ps1
 
-$Path = '.\Bin\NVIDIA-TPruvot2.2.4\ccminer.exe'
-$Uri = 'https://github.com/tpruvot/ccminer/releases/download/2.3-tpruvot/ccminer-2.3-cuda9.7z'
+$Path = '.\Bin\NVIDIA-Enemy\z-enemy.exe'
+
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
 
@@ -15,12 +15,12 @@ $Algorithms = [PSCustomObject]@{
     #BlakeVanilla = 'vanilla'
     #Lyra2RE2 = 'lyra2v2'
     #Skein = 'skein'
-    Qubit = 'qubit'
+    #Qubit = 'qubit'
     #NeoScrypt = 'neoscrypt'
     #X11 = 'x11'
     #MyriadGroestl = 'myr-gr'
     #Groestl = 'groestl'
-    Keccak = 'keccak'
+    #Keccak = 'keccak'
     #Scrypt = 'scrypt'
     #Bitcore = 'bitcore'
     #Blake2s = 'blake2s'
@@ -35,15 +35,22 @@ $Algorithms = [PSCustomObject]@{
     #Lbry = 'lbry'
     #Jha = 'jha'
     #Skunk = 'skunk'
-    Tribus = 'tribus'
-    Phi = 'phi'
+    #Tribus = 'tribus'
+    #Phi = 'phi'
     #Hsr = 'hsr'
     #Polytimos = 'polytimos'
     #Decred = 'decred'
     #X16r = 'x16r'
-    Keccakc = 'keccakc'
     #X16s = 'x16s'
-    X12 = 'x12'
+    Xevan = 'xevan'
+    #Vitality = 'vit'
+    Aergo = 'aergo'
+    #Bcd = 'bcd'
+    #C11 = 'c11'
+    Phi2 = 'phi2'
+    #Sonoa = 'sonoa'
+    Hex = 'hex'
+   
 }
 
 $Optimizations = [PSCustomObject]@{
@@ -56,14 +63,14 @@ $Optimizations = [PSCustomObject]@{
     BlakeVanilla = ''
     Lyra2RE2 = ' --api-remote --api-allow=0/0'
     Skein = ''
-    Qubit = ' --api-remote --api-allow=0/0'
+    Qubit = ''
     NeoScrypt = ''
     X11 = ''
     MyriadGroestl = ''
     Groestl = ''
     Keccak = ' --api-remote --api-allow=0/0'
     Scrypt = ''
-    Bitcore = ' --api-remote --api-allow=0/0'
+    Bitcore = ''
     Blake2s = ''
     Sib = ''
     X17 = ''
@@ -77,14 +84,14 @@ $Optimizations = [PSCustomObject]@{
     Jha = ' --api-remote --api-allow=0/0'
     Skunk = ' --api-remote --api-allow=0/0'
     Tribus = ' --api-remote --api-allow=0/0'
-    Phi = ' -i 23 --api-remote --api-allow=0/0'
+    Phi = ''
     Hsr = ' --api-remote --api-allow=0/0'
     Polytimos = ' --api-remote --api-allow=0/0'
     Decred = ' --api-remote --api-allow=0/0'
-    X16r = ' --api-remote --api-allow=0/0'
-    Keccakc = ' --api-remote --api-allow=0/0'
-    X16s = ' --api-remote --api-allow=0/0'
-    X12 = ' --api-remote --api-allow=0/0'
+    X16r = ''
+    X16s = ''
+    Xevan = ''
+    Vitality = ''
     
 }
 
@@ -93,7 +100,7 @@ $Algorithms | Get-Member -MemberType NoteProperty | Select -ExpandProperty Name 
         Type = 'NVIDIA'
         Path = $Path
         Arguments = -Join ('-a ', $Algorithms.$_, ' -o stratum+tcp://$($Pools.', $_, '.Host):$($Pools.', $_, '.Port) -u $($Pools.', $_, '.User) -p $($Pools.', $_, '.Pass)', $Optimizations.$_)
-        HashRates = [PSCustomObject]@{$_ = -Join ('$($Stats.', $Name, '_', $_, '_HashRate.Day)')}
+        HashRates = [PSCustomObject]@{$_ = -Join ('$($Stats.', $Name, '_', $_, '_HashRate.Week)')}
         API = 'Ccminer'
         Port = 4068
         Wrap = $false

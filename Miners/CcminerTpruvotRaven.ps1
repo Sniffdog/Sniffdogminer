@@ -1,12 +1,12 @@
 . .\Include.ps1
 
 $Path = '.\Bin\NVIDIA-TPruvot2.2.5\ccminer-x64.exe'
-$Uri = 'https://github.com/MSFTserver/ccminer/releases/download/2.2.5-rvn/ccminer-x64-2.2.5-rvn-cuda9.7z'
+$Uri = 'https://github.com/tpruvot/ccminer/releases/download/2.3-tpruvot/ccminer-2.3-cuda9.7z'
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
 
 $Algorithms = [PSCustomObject]@{
-    Lyra2z = 'lyra2z'
+    #Lyra2z = 'lyra2z'
     #Equihash = 'equihash' #not supported
     Cryptonight = 'cryptonight'
     #Ethash = 'ethash' #not supported
@@ -22,7 +22,7 @@ $Algorithms = [PSCustomObject]@{
     #Groestl = 'groestl'
     #Keccak = 'keccak'
     #Scrypt = 'scrypt'
-    Bitcore = 'bitcore'
+    #Bitcore = 'bitcore'
     #Blake2s = 'blake2s'
     #Sib = 'sib'
     #X17 = 'x17'
@@ -33,14 +33,16 @@ $Algorithms = [PSCustomObject]@{
     Timetravel = 'timetravel'
     #Blakecoin = 'blakecoin'
     #Lbry = 'lbry'
-    Jha = 'jha'
+    #Jha = 'jha'
     #Skunk = 'skunk'
     #Tribus = 'tribus'
     #Phi = 'phi'
     #Hsr = 'hsr'
-    #Polytimos = 'polytimos'
-    Decred = 'decred'
+    Polytimos = 'polytimos'
+    #Decred = 'decred'
     #X16r = 'x16r'
+    
+
 }
 
 $Optimizations = [PSCustomObject]@{

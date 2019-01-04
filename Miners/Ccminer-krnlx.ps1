@@ -34,7 +34,7 @@ $Commands = [PSCustomObject]@{
     #"quark" = "" #Quark
     #"skunk" = "" #skunk
     #"c11" = "" #C11
-    "xevan" = " --api-remote" #Xevan
+    #"xevan" = " --api-remote" #Xevan
 }
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
