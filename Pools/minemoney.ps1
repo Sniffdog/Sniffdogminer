@@ -25,6 +25,14 @@ $MineMoney_Request | Get-Member -MemberType NoteProperty | Select -ExpandPropert
 	    "blakecoin" {$Divisor *= 1000}
         "decred" {$Divisor *= 1000}
 	    "keccak" {$Divisor *= 1000}
+	    "lyra2re2"{$Divisor *= 1000}
+        "sib"{$Divisor *= 1000}
+        "skein"{$Divisor *= 1000}
+        "bcd"{$Divisor *= 1000}
+        "nist5"{$Divisor *= 1000}
+        "hex"{$Divisor *= 1000}
+        "tribus"{$Divisor *= 1000}
+        "blakecoin"{$Divisor *= 1000}
     }
 
     if((Get-Stat -Name "$($Name)_$($MineMoney_Algorithm)_Profit") -eq $null){$Stat = Set-Stat -Name "$($Name)_$($MineMoney_Algorithm)_Profit" -Value ([Double]$MineMoney_Request.$_.estimate_last24h/$Divisor*(1-($MineMoney_Request.$_.fees/100)))}
