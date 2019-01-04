@@ -42,6 +42,13 @@
 	    "blakecoin"{$Divisor *= 1000}
         "decred"{$Divisor *= 1000}
 	    "x11"{$Divisor *= 100}
+	    "lyra2re2"{$Divisor *= 1000}
+        "sib"{$Divisor *= 1000}
+        "skein"{$Divisor *= 1000}
+        "bcd"{$Divisor *= 1000}
+        "nist5"{$Divisor *= 1000}
+        "hex"{$Divisor *= 1000}
+        "tribus"{$Divisor *= 1000}
     }
 
     if((Get-Stat -Name "$($Name)_$($Hashrefinery_Algorithm)_Profit") -eq $null){$Stat = Set-Stat -Name "$($Name)_$($Hashrefinery_Algorithm)_Profit" -Value ([Double]$Hashrefinery_Request.$_.estimate_last24h/$Divisor*(1-($Hashrefinery_Request.$_.fees/100)))}
