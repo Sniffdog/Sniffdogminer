@@ -47,6 +47,17 @@
     "x16r": "X16r",
     "x16s": "X16s",
     "cryptonightv7": "Cryptonightv7",
-    "vitality": "Vitality",
-    "aeriumx": "AeriumX"
+    "sonoa": "Sonoa",
+    "phi2": "Phi2",
+    "aergo": "Aergo",
+    "hex": "Hex",
+    "x22i": "X22I",
+    "argon2d-dyn": "Argon2d-dyn",
+    "bcd": "BCD",
+    "binarium-v1": "Binarium-V1",
+    "lbk3": "Lbk3",
+    "x11-ld": "X11-ld",
+    "yespower": "Yespower",
+    "scrypt-ld": "Scrypt-ld"
+    
 }
