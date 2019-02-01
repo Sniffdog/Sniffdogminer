@@ -1,5 +1,5 @@
 $Path = ".\Bin\NVIDIA-Trex\t-rex.exe"
-$Uri = "https://github.com/trexminer/T-Rex/releases/download/0.8.9/t-rex-0.8.9-win-cuda10.0.zip"
+$Uri = "https://github.com/trexminer/T-Rex/releases/download/0.9.1/t-rex-0.9.1-win-cuda10.0.zip"
 
 $Commands = [PSCustomObject]@{
     #"astralhash" = "" #Astralhash
