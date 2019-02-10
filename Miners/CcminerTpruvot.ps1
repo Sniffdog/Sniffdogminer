@@ -1,7 +1,7 @@
 . .\Include.ps1
 
 $Path = '.\Bin\NVIDIA-TPruvot\ccminer-x64.exe'
-$Uri = 'https://github.com/tpruvot/ccminer/releases/download/2.3-tpruvot/ccminer-2.3-cuda9.7z'
+$Uri = 'https://github.com/tpruvot/ccminer/releases/download/2.3.1-tpruvot/ccminer-2.3.1-cuda10.7z'
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
 
