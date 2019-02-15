@@ -1,5 +1,5 @@
 ﻿$Path = '.\Bin\NVIDIA-KlausT\ccminer.exe'
-$Uri = 'https://github.com/KlausT/ccminer/releases/download/8.23/ccminer-823-cuda10-x64.zip'
+$Uri = 'https://github.com/KlausT/ccminer/releases/download/8.24/ccminer-824-cuda10-x64.zip'
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
 
@@ -14,13 +14,14 @@ $Algorithms = [PSCustomObject]@{
     #Lyra2RE2 = 'lyra2v2' 
     #Skein = 'skein' #use TpruvoT
     #Qubit = 'qubit' #use TpruvoT
-    NeoScrypt = 'neoscrypt'
+    #NeoScrypt = 'neoscrypt'
     #X11 = 'x11' #use TpruvoT
     #MyriadGroestl = 'myr-gr'
     Groestl = 'groestl'
     #Keccak = 'keccak' 
     #Scrypt = 'scrypt' #use TpruvoT
     #Nist5 = 'nist5'
+    #Lyra2v3 = 'lyra2v3'
 }
 
 $Optimizations = [PSCustomObject]@{

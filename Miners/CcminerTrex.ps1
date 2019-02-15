@@ -1,5 +1,5 @@
 $Path = ".\Bin\NVIDIA-Trex\t-rex.exe"
-$Uri = "https://github.com/trexminer/T-Rex/releases/download/0.9.1/t-rex-0.9.1-win-cuda10.0.zip"
+$Uri = "https://github.com/trexminer/T-Rex/releases/download/0.9.2/t-rex-0.9.2-win-cuda10.0.zip"
 
 $Commands = [PSCustomObject]@{
     #"astralhash" = "" #Astralhash
@@ -22,7 +22,7 @@ $Commands = [PSCustomObject]@{
     #"keccak" = "" #Keccak
     #"lbry" = "" #Lbry
     #"lyra2v2" = " --api-remote" #Lyra2RE2
-    "lyra2z" = "" #Lyra2z
+    #"lyra2z" = "" #Lyra2z
     #"myr-gr" = "" #MyriadGroestl
     #"neoscrypt" = "" #NeoScrypt
     #"nist5" = "" #Nist5
@@ -43,13 +43,15 @@ $Commands = [PSCustomObject]@{
     #"x11" = "" #X11
     #"x11evo" = " --api-remote" #X11evo
     "x16r" = "" #X16r
+    "x16rt" = "" #X16rt
     "x16s" = "" #X16s
     "x17" = "" #X17
     "x21s" = "" #X21s
     "x22i" = "" #X22i
     #"yescrypt" = "" #Yescrypt
     #"quark" = "" #Quark
-    
+    "jeonghash" = "" #Jeonghash
+    "pawelhash" = "" #Pawelhash
     
     #"xevan" = " --api-remote" #Xevan
 }
