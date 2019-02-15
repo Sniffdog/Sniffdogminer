@@ -6,7 +6,7 @@ $Uri = 'https://github.com/ocminer/suprminer/releases/download/2.0/suprminer-2.0
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
 
 $Algorithms = [PSCustomObject]@{
-    X16rt = 'x16rt'
+   #X16rt = 'x16rt'
     
 
     
