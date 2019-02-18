@@ -1,7 +1,7 @@
 . .\Include.ps1
 
 $Path = '.\Bin\NVIDIA-CryptoDredge\CryptoDredge.exe'
-$Uri = 'https://github.com/technobyl/CryptoDredge/releases/download/v0.16.2/CryptoDredge_0.16.2_cuda_10.0_windows.zip'
+$Uri = 'https://github.com/technobyl/CryptoDredge/releases/download/v0.17.0/CryptoDredge_0.17.0_cuda_10.0_windows.zip'
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
 
@@ -29,6 +29,10 @@ $Algorithms = [PSCustomObject]@{
     X21i = 'x21i'
     Tribus = 'tribus'
     Skunkhash = 'skunkhash'
+    CryptoNightTurtle = 'cryptonightturtle'
+    CryptonightGPU = 'cryptonightgpu'
+    Cuckaroo29 = 'cuckroo29'
+
 
 
 
