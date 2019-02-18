@@ -8,7 +8,7 @@ $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
 $Algorithms = [PSCustomObject]@{
     
     Allium = 'allium'
-    Exosis = 'exosis'
+    #Exosis = 'exosis'
     #BCD = 'bcd'
     #Bitcore = 'bitcore'
     #Blake2s = 'blake2s'
