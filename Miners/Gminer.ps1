@@ -1,5 +1,5 @@
 $Path = ".\Bin\NVIDIA-Gminer\\miner.exe"
-$Uri = "https://github.com/develsoftware/GMinerRelease/releases/download/1.32/gminer_1_32_minimal_windows64.zip"
+$Uri = "https://github.com/develsoftware/GMinerRelease/releases/download/1.33/gminer_1_33_minimal_windows64.zip"
 $Commands = [PSCustomObject]@{
     #"bitcore" = "" #Bitcore
     #"blake2s" = "" 
