@@ -2,58 +2,36 @@ $Path = ".\Bin\NVIDIA-Trex\t-rex.exe"
 $Uri = "https://github.com/trexminer/T-Rex/releases/download/0.12.1/t-rex-0.12.1-win-cuda10.0.zip"
 
 $Commands = [PSCustomObject]@{
-    #"astralhash" = "" #Astralhash
-    #"balloon" = "" #Balloon
+    "astralhash" = "" #Astralhash
+    "balloon" = "" #Balloon
     "bcd" = "" #Bcd
     "bitcore" = "" #Bitcore
-    #"blake2s" = "" #Blake2s
-    #"blakecoin" = "" #Blakecoin
-    #"vanilla" = "" #BlakeVanilla
     "c11" = "" #C11
-    #"cryptonight" = "" #Cryptonight
-    "dedal" = "" #Dedal
-    #"decred" = "" #Decred
-    #"equihash" = "" #Equihash
-    #"ethash" = "" #Ethash
-    #"geek" = "" #Geek
-    #"groestl" = "" #Groestl
+    "geek" = "" #Geek
     "hmq1725" = "" #hmq1725
-    #"jeonghash" = "" #Jeonghash
-    #"keccak" = "" #Keccak
-    #"lbry" = "" #Lbry
-    #"lyra2v2" = " --api-remote" #Lyra2RE2
-    #"lyra2z" = "" #Lyra2z
-    #"myr-gr" = "" #MyriadGroestl
-    #"neoscrypt" = "" #NeoScrypt
-    #"nist5" = "" #Nist5
-    #"padihash" = "" #Padihash
-    #"pascal" = "" #Pascal
-    #"pawelhash" = "" #Pawelhash
-    #"qubit" = "" #Qubit
-    #"scrypt" = "" #Scrypt
-    #"sha256T" = "" #Sha256T
-    #"sia" = "" #Sia
-    #"sib" = "" #Sib
-    #"skein" = "" #Skein
+    "jeonghash" = "" #Jeonghash
+    "padihash" = "" #Padihash
+    "pascal" = "" #Pascal
+    "pawelhash" = "" #Pawelhash
+    "sha256q" = #Sha256Q
+    "sha256T" = "" #Sha256T
     "skunk" = "" #skunk
     "sonoa" = "" #Sonoa
     "timetravel" = "" #Timetravel
     "tribus" = "" #Tribus
-    #"veltor" = "" #Veltor
-    #"x11" = "" #X11
-    #"x11evo" = " --api-remote" #X11evo
     "x16r" = "" #X16r
     "x16rt" = "" #X16rt
     "x16s" = "" #X16s
     "x17" = "" #X17
     "x21s" = "" #X21s
     "x22i" = "" #X22i
-    #"yescrypt" = "" #Yescrypt
-    #"quark" = "" #Quark
-    "jeonghash" = "" #Jeonghash
-    "pawelhash" = "" #Pawelhash
+    "x25x" = #X25X
     
-    #"xevan" = " --api-remote" #Xevan
+    
+    
+    
+    
+    
 }
 
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
