@@ -47,6 +47,7 @@ $Algorithms = [PSCustomObject]@{
     #Allium = 'allium'
     Exosis = 'exosis'
     Sha256q = 'sha256q'
+    Blake2b = 'blake2b'
 
     
 
