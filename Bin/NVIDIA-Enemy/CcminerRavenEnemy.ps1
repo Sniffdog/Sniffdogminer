@@ -6,49 +6,34 @@ $Path = '.\Bin\NVIDIA-Enemy\z-enemy.exe'
 $Name = (Get-Item $script:MyInvocation.MyCommand.Path).BaseName
 
 $Algorithms = [PSCustomObject]@{
-    #Lyra2z = 'lyra2z'
-    #Equihash = 'equihash' #not supported
-    #Cryptonight = 'cryptonight'
-    #Ethash = 'ethash' #not supported
-    #Sia = 'sia'
-    #Yescrypt = 'yescrypt'
-    #BlakeVanilla = 'vanilla'
-    #Lyra2RE2 = 'lyra2v2'
-    #Skein = 'skein'
-    #Qubit = 'qubit'
-    #NeoScrypt = 'neoscrypt'
-    #X11 = 'x11'
-    #MyriadGroestl = 'myr-gr'
-    #Groestl = 'groestl'
-    #Keccak = 'keccak'
-    #Scrypt = 'scrypt'
-    #Bitcore = 'bitcore'
-    #Blake2s = 'blake2s'
-    #Sib = 'sib'
-    #X17 = 'x17'
-    #Quark = 'quark'
-    #Hmq1725 = 'hmq1725'
-    #Veltor = 'veltor'
-    #X11evo = 'x11evo'
-    #Timetravel = 'timetravel'
-    #Blakecoin = 'blakecoin'
-    #Lbry = 'lbry'
-    #Jha = 'jha'
-    #Skunk = 'skunk'
-    #Tribus = 'tribus'
-    #Phi = 'phi'
-    #Hsr = 'hsr'
-    #Polytimos = 'polytimos'
-    #Decred = 'decred'
-    #X16r = 'x16r'
-    #X16s = 'x16s'
-    Xevan = 'xevan'
-    #Vitality = 'vit'
     Aergo = 'aergo'
     #Bcd = 'bcd'
+    #Bitcore = 'bitcore'
     #C11 = 'c11'
-    Phi2 = 'phi2'
+    #Phi = 'phi'
+     Phi2 = 'phi2'
+    #Polytimos = 'polytimos'
+    #Skunk = 'skunk'
     #Sonoa = 'sonoa'
+    #X16r = 'x16r'
+    #X16s = 'x16s'
+    #X17 = 'x17'
+    #Timetravel = 'timetravel'
+    #Tribus = 'tribus'
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     Hex = 'hex'
    
 }
