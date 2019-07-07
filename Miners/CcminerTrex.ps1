@@ -19,6 +19,7 @@ $Commands = [PSCustomObject]@{
     "sonoa" = "" #Sonoa
     "timetravel" = "" #Timetravel
     "tribus" = "" #Tribus
+    "veil" = "" #Veil
     "x16r" = "" #X16r
     "x16rt" = "" #X16rt
     "x16s" = "" #X16s
